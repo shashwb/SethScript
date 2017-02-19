@@ -3,15 +3,23 @@
 using namespace std;
 
 interpreter::interpreter() {
-	//create a tree
+	
+
+	Node * root = new Node;
+
 	//create an enviornment
+
 }
+
+
+interpreter::~interpreter() {
+
+}
+
 
 void interpreter::tokenize(string expression) {
 
 	vector<string> vector_of_strings;
-	string holder;
-	string token = "";
 	string str = expression;
 	cout << "Original String: " << str << endl;
 	cout << endl;
@@ -34,6 +42,7 @@ void interpreter::tokenize(string expression) {
 			// cout << "\"" << str[str_index - 1] << "\"," << endl;
 			str_special = "\"begin\",";
 			cout << str_special << endl;
+			vector_of_strings.push_back(str_special);
 			str_index = str_index + 5;
 		}
 
@@ -45,6 +54,7 @@ void interpreter::tokenize(string expression) {
 			// cout << "\"" << str[str_index - 1] << "\"," << endl;
 			str_special = "\"define,\"";
 			cout << str_special << endl;
+			vector_of_strings.push_back(str_special);
 			str_index = str_index + 6;
 		}
 
@@ -54,10 +64,8 @@ void interpreter::tokenize(string expression) {
 			// cout << "\"" << str[str_index - 1] << "\"," << endl;
 			str_special = "\"if\",";
 			cout << str_special << endl;
+			vector_of_strings.push_back(str_special);
 			str_index = str_index + 2;
-		}
-		else if (str[str_index] == ' ') {
-			str_index++;	//SKIP
 		}
 		else if (str_index == str.length() - 1) {
 			string prepend = "\"";
@@ -65,7 +73,11 @@ void interpreter::tokenize(string expression) {
 			string together(1, str[str_index]);
 			prepend.insert(1, together);
 			prepend.insert(2, append);
-			cout << prepend;
+			cout << prepend << endl;
+			vector_of_strings.push_back(prepend);
+			str_index++;
+		}
+		else if (str[str_index] == ' ') {
 		}
 		else {
 			//for everything else 
@@ -74,26 +86,33 @@ void interpreter::tokenize(string expression) {
 			string together(1, str[str_index]);
 			prepend.insert(1, together);
 			prepend.insert(2, append);
-			cout << prepend;
+			cout << prepend << endl;
+			vector_of_strings.push_back(prepend);
 		}
 
 		str_index++;
 	}
 
+	cout << endl;
+	cout << "VECTOR CONTENTS: " << endl;
+
+	for (int vector_index = 0; vector_index < vector_of_strings.size();
+	 vector_index++) {
+		cout << vector_of_strings[vector_index] << endl;
+	}
 
 }
 
-bool interpreter::parse(std::istream & expression) {
 
+bool interpreter::parse(std::istream & expression) noexcept
+{
 	cout << endl;
 	cout << "Calling the parse() function" << endl;
 	cout << endl;
-
 	string read_from_expression = "";
 	getline(expression, read_from_expression);
-	cout << "read_from_description: " << read_from_expression << endl;;
-
-	// tokenize("hello world");
+	cout << "read_from_description: " << read_from_expression << endl;
+	tokenize(read_from_expression);
 	return true;
 
 }
@@ -101,6 +120,8 @@ bool interpreter::parse(std::istream & expression) {
 
 //should return an expression
 int interpreter::eval() {
-
 	return 0;
 }
+
+
+
