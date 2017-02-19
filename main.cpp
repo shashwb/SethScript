@@ -9,26 +9,26 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 
-
-	cout << "We are in the main function" << endl;
-
-	//creates a tree
-	//creates a default environment
 	interpreter inter;
 
-	//read in data and parse it into "tokens"
-	//put the tokens into a list, or something
+	ifstream expression;
 
+	//if there are no arguments
+	if (!argv[1]) {
+		cout << endl;
+		cout << "ERROR: please set a filename in the directory or type in a valid expression" << endl;
+	}
+	// if (strcmp(argv[2], "-e")) {
+	// 	cout << "READ IN FROM THE CONSOLE" << endl;
+	// 	ifstream expression;
+	// }
+	if (argv[1]) {
+		expression.open(argv[1]);
+	}
 
-	ifstream expression("example.txt");
+	inter.parse(expression);
 
-	inter.tokenize(expression);
-
-	//go through the tree and populate it with the tokens
-	//returns true or false if it is possible to parse
-	inter.parse();
-
-	//go through and evaulaute the tree, cross referencing the enironment
+	//go through and evaulaute the tree, cross referencing the environment
 	inter.eval();
 
 	return 0;
