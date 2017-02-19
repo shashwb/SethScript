@@ -15,9 +15,8 @@ public:
 	//public functions
 	interpreter();
 	~interpreter();
-	void tokenize(string expression);
 	bool parse(std::istream & expression) noexcept;
-	int eval();
+	int eval();	//FIX THIS
 
 private:
 	

@@ -2,7 +2,7 @@
 
 
 Expression::Expression() {
-
+	
 }
 
 Expression::Expression(bool value) {
