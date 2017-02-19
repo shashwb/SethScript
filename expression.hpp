@@ -1,12 +1,12 @@
 #include <string>
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
 class Expression {
 
 public:
-	//public functions
 	Expression();
 	Expression(bool value);
 	Expression(double value);
@@ -26,8 +26,8 @@ public:
 			double number_value;
 			bool boolean_value;
 			char * string_value;
-		} data;
-	};
+		};
+	} data;
 
 private:
 

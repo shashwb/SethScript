@@ -3,8 +3,10 @@
 #include <fstream>
 #include <vector>
 #include <algorithm>
+#include <sstream>
 
-#include "expression.hpp"
+// #include "expression.hpp"
+#include "environment.hpp"
 
 
 using namespace std;
@@ -21,7 +23,7 @@ public:
 private:
 	
 	struct Node {
-		// Expression data;
+		Expression data;
 		vector<Node *> children;
 	};
 

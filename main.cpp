@@ -18,6 +18,7 @@ int main(int argc, char* argv[]) {
 		inter.parse(expression);
 	}
 	else if (argv[1] && !argv[2]) {
+		// ifstream expression;
 		expression.open(argv[1]);
 	}
 	else if (!argv[1]) {
@@ -26,6 +27,7 @@ int main(int argc, char* argv[]) {
 	}
 	else {
 		cout << "ERROR: Please try again..." << endl;
+		// ifstream expression;
 	}
 
 	inter.parse(expression);

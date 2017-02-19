@@ -1,5 +1,7 @@
 #include "interpreter.hpp"
 #include "tokenize.hpp"
+// #include "environment.hpp"
+// #include "expression.hpp"
 
 using namespace std;
 
@@ -7,8 +9,7 @@ interpreter::interpreter() {
 	
 	// Tokenize token;
 	Node * root = new Node;
-
-	//create an enviornment
+	Environment environment;
 
 }
 
@@ -32,8 +33,6 @@ bool interpreter::parse(std::istream & expression) noexcept
 	cout << endl;
 	Tokenize token;
 	token.tokenize(read_from_expression);
-	// token.tokenize(read_from_expression);
-	// token.tokenize(read_from_expression);
 	return true;
 
 }
