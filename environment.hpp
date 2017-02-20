@@ -12,12 +12,12 @@ public:
 	~Environment();
 
 	bool isInMap(Expression symbol);
-	// Expression valueOfElement(Expression symbol);
-	// void Environment::updateSymbol(Expression symbol, Expression value);
+	// Expression elems(Expression symbol);
+	// void Environment::update_map(Expression symbol, Expression value);
 
 private:
-	typedef unordered_map<string, double> Map;
-	Map SymbolsToAtoms;
+	// typedef unordered_map<Expression, Expression> Map;
+	// Map TheGreatMap;
 
 };
 

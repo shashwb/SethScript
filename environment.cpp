@@ -20,11 +20,11 @@ bool Environment::isInMap(Expression symbol) {
 	return true;
 }
 
-// Expression Environment::valueOfElement(Expression symbol) {
-// 	unordered_map<Expression, Expression>::const_iterator found = SymbolsToAtoms.find(symbol);
+// Expression Environment::elems(Expression symbol) {
+// 	unordered_map<Expression, Expression>::const_iterator found = TheGreatMap.find(symbol);
 // 	return found;
 // }
 
-// void Environment::updateSymbol(Expression symbol, Expression value) {
+// void Environment::update_map(Expression symbol, Expression value) {
 
 // }
