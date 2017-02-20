@@ -10,12 +10,9 @@ using namespace std;
 int main(int argc, char* argv[]) {
 
 	interpreter inter;
-
 	ifstream expression;
 
-	//IF THERE IS LESS THAN ONE ARGUMENT (ONLY RUNNING SCRIPT)
-	if (argc <=	 1) {
-
+	if (argc <=	1) {
 		while (argc) {
 			string arguments_from_command_line;
 			cout << "vtscript> ";
@@ -24,28 +21,21 @@ int main(int argc, char* argv[]) {
 			inter.parse(stream);
 		}
 	}
-	else if (argv[1]) {
-		bool is_this_shit_true = strcmp(argv[1], "-e");
-		if (is_this_shit_true) {
-			cout << "in the -e function" << endl;
-		}
-		// cout << "in the -e function" << endl;
-
-		// inter.parse(expression);
-	}
-
-	else if (argv[1] && !argv[2]) {
-		// ifstream expression;
-		expression.open(argv[1]);
-	}
 	else {
-		cout << "ERROR: Please try again..." << endl;
+		string argument_string(argv[1]);
+		if (argv[1] && !argv[2]) {
+			expression.open(argv[1]);
+		}
+		else if (argument_string == "-e"){
+			cout << "we're in the -e with the arg: " << argv[2] << endl;
+			istringstream stream(argv[2]);
+			inter.parse(stream);
+		}
+		else {
+			cout << "ERROR" << endl;
+		}
 	}
-
-
 	inter.parse(expression);
-
-	//go through and evaulaute the tree, cross referencing the environment
 	inter.eval();
 
 	return 0;

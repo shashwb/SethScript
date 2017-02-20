@@ -7,6 +7,6 @@ using namespace std;
 class Tokenize {
 
 public:
-	void tokenize(string expression);
+	vector<string> tokenize(string expression);
 
 };

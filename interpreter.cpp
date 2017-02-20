@@ -6,11 +6,9 @@
 using namespace std;
 
 interpreter::interpreter() {
-	// Tokenize token;
 	root = new Node;
 	Environment environment;
 }
-
 
 interpreter::~interpreter() {
 	root = NULL;
@@ -19,9 +17,6 @@ interpreter::~interpreter() {
 
 bool interpreter::parse(std::istream & expression) noexcept
 {
-	cout << endl;
-	cout << "Calling the parse() function" << endl;
-	cout << endl;
 	string output = "";
 	string read_from_expression = "";
 	while (getline(expression, output)) {
@@ -33,11 +28,8 @@ bool interpreter::parse(std::istream & expression) noexcept
 	Tokenize token;
 	token.tokenize(read_from_expression);
 	return true;
-
 }
 
-
-//should return an expression
 Expression interpreter::eval() {
 	Expression e;
 	return e;

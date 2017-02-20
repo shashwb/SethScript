@@ -3,7 +3,7 @@
 using namespace std;
 
 
-void Tokenize::tokenize(string expression) {
+vector<string> Tokenize::tokenize(string expression) {
 
 	vector<string> vector_of_strings;
 	string str = expression;
@@ -86,5 +86,7 @@ void Tokenize::tokenize(string expression) {
 	 vector_index++) {
 		cout << vector_of_strings[vector_index] << endl;
 	}
+
+	return vector_of_strings;
 
 }
