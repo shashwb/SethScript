@@ -1,3 +1,6 @@
+#ifndef ENVIRONMENT_H					// avoid repeated expansion
+#define ENVIRONMENT_H
+
 #include <unordered_map>
 #include "expression.hpp"
 
@@ -17,3 +20,6 @@ private:
 	Map SymbolsToAtoms;
 
 };
+
+
+#endif

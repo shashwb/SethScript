@@ -1,3 +1,7 @@
+#ifndef TOKENIZE_H					// avoid repeated expansion
+#define TOKENIZE_H
+
+
 #include <string>
 #include <iostream>
 #include <vector>
@@ -10,3 +14,5 @@ public:
 	vector<string> tokenize(string expression);
 
 };
+
+#endif

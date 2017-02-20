@@ -17,7 +17,6 @@ Expression::Expression(double value) {
 	data.number_value = value;
 }
 
-//FIX THIS todo todo todo
 Expression::Expression(const std::string & value) {
 	data.type = SymbolType;
 	// char *c = value.c_str();

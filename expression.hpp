@@ -1,3 +1,6 @@
+#ifndef EXPRESSION_H
+#define EXPRESSION_H
+
 #include <string>
 #include <iostream>
 #include <cstring>
@@ -20,6 +23,8 @@ public:
 		SymbolType
 	};
 
+	//a struct called data that has a type AND one of the union values
+	//any object of this class has a structure like this
 	struct {
 		Type type;
 		union {
@@ -38,3 +43,5 @@ private:
 	//private enviornment
 
 };
+
+#endif
