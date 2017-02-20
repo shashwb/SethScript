@@ -62,6 +62,10 @@ bool interpreter::logical_or(Expression x, Expression y) {
 bool interpreter::equals(Expression x, Expression y) {
 	if (x.data.boolean_value == y.data.boolean_value) {
 		return true;
+	} else if (x.data.number_value == y.data.number_value) {
+		return true;
+	} else if (x.data.string_value == y.data.string_value) {
+		return true;
 	} else {
 		return false;
 	}
