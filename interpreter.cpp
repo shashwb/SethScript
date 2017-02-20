@@ -6,16 +6,15 @@
 using namespace std;
 
 interpreter::interpreter() {
-	
 	// Tokenize token;
-	Node * root = new Node;
+	root = new Node;
 	Environment environment;
-
 }
 
 
 interpreter::~interpreter() {
-
+	root = NULL;
+	delete root;
 }
 
 bool interpreter::parse(std::istream & expression) noexcept
@@ -39,8 +38,9 @@ bool interpreter::parse(std::istream & expression) noexcept
 
 
 //should return an expression
-int interpreter::eval() {
-	return 0;
+Expression interpreter::eval() {
+	Expression e;
+	return e;
 }
 
 

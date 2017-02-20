@@ -13,22 +13,35 @@ int main(int argc, char* argv[]) {
 
 	ifstream expression;
 
-	if (strcmp(argv[1], "-e") && argv[2]) {
-		cout << "READ IN FROM THE CONSOLE" << endl;
-		inter.parse(expression);
+	//IF THERE IS LESS THAN ONE ARGUMENT (ONLY RUNNING SCRIPT)
+	if (argc <=	 1) {
+
+		while (argc) {
+			string arguments_from_command_line;
+			cout << "vtscript> ";
+			while (!(getline(cin, arguments_from_command_line))) {}	//wait for input
+			istringstream stream(arguments_from_command_line);
+			inter.parse(stream);
+		}
 	}
+	else if (argv[1]) {
+		bool is_this_shit_true = strcmp(argv[1], "-e");
+		if (is_this_shit_true) {
+			cout << "in the -e function" << endl;
+		}
+		// cout << "in the -e function" << endl;
+
+		// inter.parse(expression);
+	}
+
 	else if (argv[1] && !argv[2]) {
 		// ifstream expression;
 		expression.open(argv[1]);
 	}
-	else if (!argv[1]) {
-		cout << endl;
-		cout << "ERROR: Please set a filename in the directory or type in a valid expression" << endl;
-	}
 	else {
 		cout << "ERROR: Please try again..." << endl;
-		// ifstream expression;
 	}
+
 
 	inter.parse(expression);
 
