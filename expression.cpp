@@ -1,4 +1,6 @@
 #include "expression.hpp"
+#include <cstring>
+#include <string>
 
 
 Expression::Expression() {
@@ -19,8 +21,9 @@ Expression::Expression(double value) {
 
 Expression::Expression(const std::string & value) {
 	data.type = SymbolType;
-	// char *c = value.c_str();
-	// data.string_value = value.c_str();
+	data.string_value = new char[value.length() +1];
+	strcpy(data.string_value, value.c_str());
+	
 }
 
 bool Expression::operator==(const Expression & exp) const noexcept {

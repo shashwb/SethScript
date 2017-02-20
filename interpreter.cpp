@@ -31,8 +31,8 @@ bool interpreter::parse(std::istream & expression) noexcept
 }
 
 Expression interpreter::eval() {
-	Expression e;
-	return e;
+	Expression expression_evaluate;
+	return expression_evaluate;
 }
 
 
