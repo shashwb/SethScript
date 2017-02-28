@@ -23,25 +23,29 @@ public:
 		SymbolType
 	};
 
-	//a struct called data that has a type AND one of the union values
-	//any object of this class has a structure like this
+	struct data {
+		double number_value;
+		bool boolean_value;
+		string string_value;
+	};
+
+	//this struct "expression", has a enum Type and actual data that it can be
 	struct {
 		Type type;
-		union {
-			double number_value;
-			bool boolean_value;
-			char * string_value;
-		};
-	} data;
+		data Data;
+	} Express;
+
 
 private:
-
-
 	//private tree
-
-
 	//private enviornment
-
 };
+
+
+
+
+
+
+
 
 #endif

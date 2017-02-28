@@ -2,6 +2,8 @@
 #include "tokenize.hpp"
 #include "environment.hpp"
 #include "expression.hpp"
+#include <stack>
+#include <algorithm>
 
 using namespace std;
 
@@ -17,6 +19,10 @@ interpreter::~interpreter() {
 
 bool interpreter::parse(std::istream & expression) noexcept
 {
+	stack<string> parentheses_checker;
+	int parentheses_counter_open = 0;
+	int parentheses_checker_closed = 0;
+
 	string output = "";
 	string read_from_expression = "";
 	while (getline(expression, output)) {
@@ -25,19 +31,62 @@ bool interpreter::parse(std::istream & expression) noexcept
 	getline(expression, read_from_expression);
 	cout << "READ FROM FILE: " << read_from_expression << endl;
 	cout << endl;
-	Tokenize token;
-	token.tokenize(read_from_expression);
+	Tokenize token;	//tokenize returns a vector
+
+	vector<string> vector_of_strings = token.tokenize(read_from_expression);
+
+	for (int vector_index = 0; vector_index < vector_of_strings.size(); vector_index++) {
+		if (vector_of_strings.front() != "\"(\"," || vector_of_strings.back() != "\")\"") {
+			cout << "ERROR: OUTER PARENTHESIS DO NOT MATCH" << endl;
+			return false;
+		}
+		if (vector_of_strings[vector_index] == "\"(\",") {
+			parentheses_checker.push(vector_of_strings[vector_index]);
+			parentheses_counter_open++;
+		}
+		if (vector_of_strings[vector_index] == "\")\"," ||
+					vector_of_strings[vector_index] == "\")\"") {
+			parentheses_checker.push(vector_of_strings[vector_index]);
+			parentheses_checker_closed++;
+		}
+		if ((vector_of_strings[vector_index] == "\"(\"," && 
+				vector_of_strings[vector_index+1] == "\")\"") || 
+				(vector_of_strings[vector_index] == "\"(\"," && 
+				vector_of_strings[vector_index+1] == "\")\",")) {
+
+			cout << "ERROR: WRONG" << endl;
+			return false;
+
+		}
+	}
+
+	if (parentheses_counter_open != parentheses_checker_closed) {
+		cout << "ERROR: PARENTHESES DONT MATCH NOT VALID" << endl;
+		return false;
+	}
+	if (parentheses_checker_closed == 0 || parentheses_counter_open == 0) {
+		cout << "ERROR: NO PARENTHESES REQUIRED" << endl;
+		return false;
+	}
+	cout << "SUCCESS: PARSED CORRECTLY" << endl;
+	cout << "opening parentheses: " << parentheses_counter_open << endl;
+	cout << "closing parentheses: " << parentheses_checker_closed << endl;
+	cout << endl;
+	cout << endl;
+
 	return true;
 }
 
 Expression interpreter::eval() {
+
 	Expression expression_evaluate;
 	return expression_evaluate;
+
 }
 
 
 bool interpreter::logical_not(Expression x) {
-	if (x.data.boolean_value == false) {
+	if (x.Express.Data.boolean_value == false) {
 		return true;
 	} else {
 		return false;
@@ -45,7 +94,7 @@ bool interpreter::logical_not(Expression x) {
 }
 
 bool interpreter::logical_and(Expression x, Expression y) {
-	if ((x.data.boolean_value && y.data.boolean_value) == true) {
+	if ((x.Express.Data.boolean_value && y.Express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
@@ -53,46 +102,51 @@ bool interpreter::logical_and(Expression x, Expression y) {
 }
 
 bool interpreter::logical_or(Expression x, Expression y) {
-	if ((x.data.boolean_value || y.data.boolean_value) == true) {
+	if ((x.Express.Data.boolean_value || y.Express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
 	}
 }
+
 bool interpreter::equals(Expression x, Expression y) {
-	if (x.data.boolean_value == y.data.boolean_value) {
+	if (x.Express.Data.boolean_value == y.Express.Data.boolean_value) {
 		return true;
-	} else if (x.data.number_value == y.data.number_value) {
+	} else if (x.Express.Data.number_value == y.Express.Data.number_value) {
 		return true;
-	} else if (x.data.string_value == y.data.string_value) {
+	} else if (x.Express.Data.string_value == y.Express.Data.string_value) {
 		return true;
 	} else {
 		return false;
 	}
 }
+
 bool interpreter::greater_than(Expression x, Expression y) {
-	if ((x.data.boolean_value > y.data.boolean_value) == true) {
+	if ((x.Express.Data.boolean_value > y.Express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
 	}
 }
+
 bool interpreter::greater_than_or_equal(Expression x, Expression y) {
-	if ((x.data.boolean_value >= y.data.boolean_value) == true) {
+	if ((x.Express.Data.boolean_value >= y.Express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
 	}
 }
+
 bool interpreter::less_than_or_equal(Expression x, Expression y) {
-	if ((x.data.boolean_value <= y.data.boolean_value) == true) {
+	if ((x.Express.Data.boolean_value <= y.Express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
 	}
 }
+
 bool interpreter::less_than(Expression x, Expression y) {
-	if ((x.data.boolean_value < y.data.boolean_value) == true) {
+	if ((x.Express.Data.boolean_value < y.Express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
@@ -100,27 +154,27 @@ bool interpreter::less_than(Expression x, Expression y) {
 }
 
 double interpreter::subtract_expression(Expression x, Expression y) {
-	double result = x.data.number_value - y.data.number_value;
+	double result = x.Express.Data.number_value - y.Express.Data.number_value;
 	return result;
 }
 
 double interpreter::negation(Expression x) {
-	double result = (x.data.number_value * (-1));
+	double result = (x.Express.Data.number_value * (-1));
 	return result;
 }
 
 double interpreter::division(Expression x, Expression y) {
-	double result = x.data.number_value / y.data.number_value;
+	double result = x.Express.Data.number_value / y.Express.Data.number_value;
 	return result;
 }
 
 double interpreter::addition(Expression x, Expression y) {
-	double result = x.data.number_value + y.data.number_value;
+	double result = x.Express.Data.number_value + y.Express.Data.number_value;
 	return result;
 }
 
 double interpreter::multiplication(Expression x, Expression y) {
-	double result = x.data.number_value * y.data.number_value;
+	double result = x.Express.Data.number_value * y.Express.Data.number_value;
 	return result;
 }
 

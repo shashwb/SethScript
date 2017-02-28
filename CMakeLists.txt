@@ -24,7 +24,7 @@ set(test_src
 set(vtscript_src
   ${interpreter_src}
   vtscript.cpp
-  )
+  )cd ~
 
 # ------------------------------------------------
 # You should not need to edit any files below here

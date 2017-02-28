@@ -12,6 +12,7 @@ int main(int argc, char* argv[]) {
 	interpreter inter;
 	ifstream expression;
 
+
 	if (argc <=	1) {
 		while (argc) {
 			string arguments_from_command_line;
@@ -35,6 +36,8 @@ int main(int argc, char* argv[]) {
 			cout << "ERROR" << endl;
 		}
 	}
+
+	Environment enviornment;
 	inter.parse(expression);
 	inter.eval();
 

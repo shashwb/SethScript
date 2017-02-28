@@ -17,7 +17,6 @@ vector<string> Tokenize::tokenize(string expression) {
 	string str_normal;
 
 	int str_index = 0;
-	int j_index = 0;
 
 	while (str_index < str.length()) {
 		//BEGIN
@@ -82,10 +81,6 @@ vector<string> Tokenize::tokenize(string expression) {
 	cout << endl;
 	cout << "VECTOR CONTENTS: " << endl;
 
-	for (int vector_index = 0; vector_index < vector_of_strings.size();
-	 vector_index++) {
-		cout << vector_of_strings[vector_index] << endl;
-	}
 
 	return vector_of_strings;
 
