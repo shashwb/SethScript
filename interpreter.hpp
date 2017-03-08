@@ -16,14 +16,30 @@
 
 using namespace std;
 
+struct Node {
+	public:
+		vector<Node*> children;
+		string data;
+		Node(string data) {
+			this->data = data;
+		}
+};
+
+
 class interpreter {
 
+
 public:
-	//public functions
+
 	interpreter();
 	~interpreter();
 	bool parse(std::istream & expression) noexcept;
 	Expression eval();
+	void createTree();
+	Node * processTokensToTree(vector<string> recursive_vector);
+	string evaluate_helper(Node * node);
+	Expression expression_factory(string changeToExpression);
+
 
 
 	bool logical_not(Expression x);
@@ -40,13 +56,9 @@ public:
 	double addition(Expression x, Expression y);
 	double multiplication(Expression x, Expression y);
 
+
 private:
 	
-	struct Node {
-		Expression expression;
-		vector<Node *> children;
-		Node * parent;
-	};
 
 	//private tree default (empty tree)
 	Node * root;

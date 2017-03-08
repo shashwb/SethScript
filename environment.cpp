@@ -2,33 +2,62 @@
 
 using namespace std;
 
+typedef unordered_map<string, double> UnorderedMapDynamic;
+extern UnorderedMapDynamic tree_map;
+
 Environment::Environment() {
 
+	PI = M_PI;
 	pair<string,double> pi_insert("pi", PI);
 	default_map.insert(pi_insert);
-	PI = M_PI;
-	cout << "an Environment is created with a default " << PI << endl;
+	cout << "an Environment is created with a default " << default_map["pi"] << endl;
 
 }
 
 Environment::~Environment() {
 	default_map.clear();
+	tree_map.clear();
+
 }
 
-bool Environment::isInMap(string symbol) {
+bool Environment::is_present_in_map(string symbol) {
 	
-	std::unordered_map<string, double>::const_iterator got = default_map.find(symbol);
-	if (got == default_map.end()) {
-		cout << "not found!" << endl;
+	std::unordered_map<string, double>::const_iterator got_default = default_map.find(symbol); 
+	// unordered_map<string.c_str(), string.c_str()>::const_iterator got_tree = tree_map.find(symbol);
+
+	//if default map
+	if (got_default == default_map.end()) {
+		cout << "not found in DEFAULT_MAP" << endl;
 		return false;
-	}
-	else {
-		cout << got->first << " is " << got->second;
+	} else {
+		cout << got_default->first << " is " << got_default->second;
 		return true;
 	}
+
+	//if dynamic tree map
+
+	for (auto it = tree_map.begin(); it != tree_map.end(); ++it) {
+		if (it->first == symbol) {
+			cout << endl;
+			cout << "if symbol is found in tree_map" << endl;
+			return true;
+		} else {
+			cout << "symbol not found in tree_map" << endl;
+			return false;
+		}
+	}
+
+	// if (got_tree == tree_map.end()) {
+	// 	cout << "not found in TREE_MAP" << endl;
+	// 	return false;
+	// } else {
+	// 	cout << got_tree->first << " is " << got_tree->second;
+	// 	return true;
+	// }
+
 }
 
-double Environment::value_at_element(string symbol) {
+double Environment::value_at_element_in_map(string symbol) {
 	std::unordered_map<string, double>::const_iterator got = default_map.find(symbol);
 	if (got == default_map.end()) {
 		cout << "ERROR NOT IN MAP" << endl;
@@ -40,7 +69,7 @@ double Environment::value_at_element(string symbol) {
 
 }
 
-void Environment::update_map(string symbol, double new_value) {
+void Environment::update_map_with_value(string symbol, double new_value) {
 	auto it = default_map.find(symbol);
 	if (it != default_map.end()) {
 		it->second = new_value;

@@ -17,6 +17,10 @@ set(test_src
   catch.hpp
   unittests.cpp
   test_interpreter.cpp
+  interpreter.cpp 
+  expression.cpp 
+  environment.cpp 
+  tokenize.cpp
 )
 
 # EDIT
@@ -24,7 +28,7 @@ set(test_src
 set(vtscript_src
   ${interpreter_src}
   vtscript.cpp
-  )cd ~
+  )
 
 # ------------------------------------------------
 # You should not need to edit any files below here

@@ -31,7 +31,6 @@ TEST_CASE("Testing Subtraction", "interpreter.hpp")
 	positive.data.type = Expression::NumberType;
 	positive.data.number_value = 30;
 
-
 	REQUIRE(inter.subtract_expression(bigger.data.number_value,
 	 smaller.data.number_value) == 998);
 
