@@ -20,17 +20,23 @@ int main(int argc, char* argv[]) {
 	interpreter inter;
 	ifstream expression;
 
-	cout << endl;
-	cout << "TESTING//////////////////////////////////" << endl;
-	cout << "testing determine_operation_for_symbols() function" << endl;
-	string result = "\"true\",";
-	string symbol = "\"not\",";
-	Environment environment;
-	bool result_bool;
-	result_bool = environment.determine_operation_for_procedures(inter, symbol, result);
-	cout << "result from the function outside : " << result_bool << endl;
-	cout << "TESTING//////////////////////////////////" << endl;
-	cout << endl;
+	// cout << "testing is_number()" << endl;
+	// string number = "1";
+	// bool result_is_number = inter.is_number(number);
+	// cout << "result of is_number() call on " << number << " is " << result_is_number << endl;
+	//
+	//
+	// cout << endl;
+	// cout << "TESTING//////////////////////////////////" << endl;
+	// cout << "testing determine_operation_for_symbols() function" << endl;
+	// string result = "\"true\",";
+	// string symbol = "\"not\",";
+	// Environment environment;
+	// bool result_bool;
+	// result_bool = environment.determine_operation_for_procedures(inter, symbol, result);
+	// cout << "result from the function outside : " << result_bool << endl;
+	// cout << "TESTING//////////////////////////////////" << endl;
+	// cout << endl;
 
 
 	if (argc <=	1) {
@@ -58,10 +64,10 @@ int main(int argc, char* argv[]) {
 		}
 		else {
 			cout << "ERROR" << endl;
+			return EXIT_FAILURE;
 		}
 	}
 
-	// inter.parse(expression);
 	inter.eval();
 
 	return 0;

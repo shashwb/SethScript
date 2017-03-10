@@ -37,10 +37,10 @@ bool Environment::determine_operation_for_procedures(interpreter &inter, string 
 	cout << "determine_operation_for_symbols CALLED()" << endl;
 
 	Expression expression = inter.expression_factory(other);
-	cout << "NOT CONDITIONAL RESULT EXPRESSION: " << expression.Express.Data.boolean_value << endl;
+	cout << "NOT CONDITIONAL RESULT EXPRESSION: " << expression.express.Data.boolean_value << endl;
 	if (symbol == "not") {
 		Expression expression = inter.expression_factory(other);
-		cout << "NOT CONDITIONAL RESULT EXPRESSION: " << expression.Express.Data.boolean_value << endl;
+		cout << "NOT CONDITIONAL RESULT EXPRESSION: " << expression.express.Data.boolean_value << endl;
 		return inter.logical_not(expression);
 	}
 	//fill in the rest of the procedures that have boolean values
@@ -86,27 +86,6 @@ bool Environment::is_present_in_map(string symbol) {
 		cout << got_default->first << " is " << got_default->second;
 		return true;
 	}
-
-	//if dynamic tree map
-	//THIS WORKS
-	// for (auto it = tree_map.begin(); it != tree_map.end(); ++it) {
-	// 	if (it->first == symbol) {
-	// 		cout << endl;
-	// 		cout << "if symbol is found in tree_map" << endl;
-	// 		return true;
-	// 	} else {
-	// 		cout << "symbol not found in tree_map" << endl;
-	// 		return false;
-	// 	}
-	// }
-
-	// if (got_tree == tree_map.end()) {
-	// 	cout << "not found in TREE_MAP" << endl;
-	// 	return false;
-	// } else {
-	// 	cout << got_tree->first << " is " << got_tree->second;
-	// 	return true;
-	// }
 
 }
 

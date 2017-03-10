@@ -4,6 +4,7 @@
 #include "expression.hpp"
 #include <stack>
 #include <algorithm>
+#include <regex>
 
 using namespace std;
 
@@ -37,20 +38,21 @@ Node * interpreter::processTokensToTree(vector<string> recursive_vector) {
 	if (recursive_vector[0] == "\"(\"," && (recursive_vector.back() == "\")\""
 		|| recursive_vector.back() == "\")\",")) {
 		cout << "Valid data" << endl;
+		cout << endl;
 
 		//pop matching parentheses
 		recursive_vector.erase(recursive_vector.begin());
 		recursive_vector.pop_back();
 
-		Node* newNode = new Node(recursive_vector[0]); // new node holds first value
+		Node* newNode = new Node(expression_factory(recursive_vector[0])); // new node holds first value
 		Expression newExpress = expression_factory(recursive_vector[0]);
-		newNode->data_expression = newExpress;
-		newNode->data_expression.Express.Data.number_value = round(newNode->data_expression.Express.Data.number_value);
+		newNode->data_expression.express = newExpress.express;
+		// newNode->data_expression.express.Data.number_value = round(newNode->data_expression.express.Data.number_value);
 		//cout << newNode->data_expression << endl;
 		cout << endl;
-		cout << "HEY" << newNode->data_expression.Express.Data.number_value << endl;
-		cout << "newNode value: " << newNode->data_expression.Express.Data.number_value << endl;
-		cout << "newNode type: " << newNode->data_expression.Express.type << endl;
+		cout << "EXPRESSION value " << newNode->data_expression.express.Data.string_value << endl;
+		cout << "EXPRESSION newNode value: " << newNode->data_expression.express.Data.boolean_value << endl;
+		cout << "EXPRESSION newNode type: " << newNode->data_expression.express.type << endl;
 		cout << endl;
 
 		recursive_vector.erase(recursive_vector.begin());
@@ -61,7 +63,16 @@ Node * interpreter::processTokensToTree(vector<string> recursive_vector) {
 			if (recursive_vector[0] != "\"(\",") {
 				cout << "NEW SIMPLE CHILD: ";
 				cout << recursive_vector[0] << endl;
-				new_child = new Node(recursive_vector[0]);
+				new_child = new Node(expression_factory(recursive_vector[0]));
+				Expression child_express = expression_factory(recursive_vector[0]);
+				new_child->data_expression.express = child_express.express;
+
+				cout << endl;
+				cout << "EXPRESSION value " << new_child->data_expression.express.Data.string_value << endl;
+				cout << "EXPRESSION child_value: " << new_child->data_expression.express.Data.number_value << endl;
+				cout << "EXPRESSION child_type: " << new_child->data_expression.express.type << endl;
+				cout << endl;
+
 				recursive_vector.erase(recursive_vector.begin());
 			}
 			else {
@@ -111,40 +122,67 @@ Node * interpreter::processTokensToTree(vector<string> recursive_vector) {
 //this is how I can return expressions and put it into the nodes
 Expression interpreter::expression_factory(string changeToExpression) {
 
-	bool boolean_expression;
-	double number_expression;
-	string symbol_expression;
-
-	cout << "changeToExpression value: " << changeToExpression << endl;
-
 	//get rid of parentheses;
 	changeToExpression.erase(changeToExpression.begin());
 	changeToExpression.pop_back();
 	changeToExpression.pop_back();
 
-	cout << "changeToExpression value after POPS(): " << changeToExpression << endl;
 
-	// if (isdigit(changeToExpression[0])) {
-	// 	number_expression = stod(changeToExpression);
-	// 	return Expression(number_expression);
-	// }
-	if (changeToExpression == "false") {
-		cout << "gets to boolean condition false" << endl;
-		boolean_expression = false;
-		return Expression(boolean_expression);
+	cout << "THIS IS BEING PASSED INTO EXPRESSION_FACTORY: " << changeToExpression << endl;
+	cout << endl;
+
+	// IF ITS A NUMBER
+	// && (!is_bool(changeToExpression))
+	if (is_number(changeToExpression)) {
+		cout << "ITS A NUMBER" << endl;
+		double double_expression = stod(changeToExpression);
+		return Expression(double_expression);
 	}
-	else if (changeToExpression == "true") {
-		cout << "gets to boolean condition true" << endl;
-		boolean_expression = true;
-		return Expression(boolean_expression);
+
+	//IF ITS A BOOLEAN
+	else if (is_bool(changeToExpression) && (!is_number(changeToExpression))) {
+		cout << "ITS A STRING" << endl;
+		if (changeToExpression == "True") {
+			bool boolean_expression = true;
+			return Expression(boolean_expression);
+		} else if (changeToExpression == "False") {
+			bool boolean_expression = false;
+			return Expression(boolean_expression);
+		}
+		cout << "does not go through the BOOLEAN LOOP for expression_factory()" << endl;
 	}
-	else {
-		cout << "gets to what I want!!!!" << endl;
-		symbol_expression = changeToExpression;
-		cout << endl;
-		cout << "symbol_expression WHY ISNT THIS WORKING???: " << symbol_expression << endl;
-		return Expression(symbol_expression);
+	//OTHERWISE IT IS A STRING (SYMBOL)
+	else if (is_string(changeToExpression)) {
+		cout << "ITS A STRING" << endl;
+		return Expression(changeToExpression);
 	}
+	cout << "ERROR: IT DIDNT GO THROUGH FUNCTION :: RETURN EMPTY EXPRESSION" << endl;
+	// return Expression(changeToExpression);
+	return Expression();
+
+
+}
+
+
+
+//helper
+bool interpreter::is_number(string s) {
+	return( strspn( s.c_str(), "-.0123456789" ) == s.size() );
+	// return std::regex_match(s, std::regex("[(-|+)|][0-9]+"));
+}
+
+bool interpreter::is_bool(string value) {
+	if (value == "true" || value == "True" || value == "false" || value == "False") {
+		return true;
+	}
+	return false;
+}
+
+bool interpreter::is_string(string str) {
+	if (is_bool(str) || is_number(str)) {
+		return false;
+	}
+	return true;
 }
 
 
@@ -219,16 +257,16 @@ Expression interpreter::evaluate_helper(Node * node) {
 	if (add.compare(node->data)) {
 		cout << "IN THE + CONDITION" << endl;
 		Expression expression;
-		expression.Express.type = Expression::NumberType;
-		cout << "Expression Type: " << expression.Express.type << endl;
+		expression.express.type = NumberType;
+		cout << "Expression Type: " << expression.express.type << endl;
 		double sum = 0;
 		for (int i = 0; i < node->children.size(); i++) {
 			expression = evaluate_helper(node->children[i]);
-			sum += expression.Express.Data.number_value;
+			sum += expression.express.Data.number_value;
 			cout << "sum in loop: " << sum << endl;
 		}
-		expression.Express.Data.number_value = sum;
-		cout << "sum out of loop: " << expression.Express.Data.number_value << endl;
+		expression.express.Data.number_value = sum;
+		cout << "sum out of loop: " << expression.express.Data.number_value << endl;
 
 
 		// cout << "INSIDE OF THE + FUNCTION" << endl;
@@ -306,7 +344,7 @@ Expression interpreter::eval() {
 
 //_-nary functions
 bool interpreter::logical_not(Expression x) {
-	if (x.Express.Data.boolean_value == false) {
+	if (x.express.Data.boolean_value == false) {
 		return true;
 	} else {
 		return false;
@@ -314,7 +352,7 @@ bool interpreter::logical_not(Expression x) {
 }
 
 bool interpreter::logical_and(Expression x, Expression y) {
-	if ((x.Express.Data.boolean_value && y.Express.Data.boolean_value) == true) {
+	if ((x.express.Data.boolean_value && y.express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
@@ -322,7 +360,7 @@ bool interpreter::logical_and(Expression x, Expression y) {
 }
 
 bool interpreter::logical_or(Expression x, Expression y) {
-	if ((x.Express.Data.boolean_value || y.Express.Data.boolean_value) == true) {
+	if ((x.express.Data.boolean_value || y.express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
@@ -330,11 +368,11 @@ bool interpreter::logical_or(Expression x, Expression y) {
 }
 
 bool interpreter::equals(Expression x, Expression y) {
-	if (x.Express.Data.boolean_value == y.Express.Data.boolean_value) {
+	if (x.express.Data.boolean_value == y.express.Data.boolean_value) {
 		return true;
-	} else if (x.Express.Data.number_value == y.Express.Data.number_value) {
+	} else if (x.express.Data.number_value == y.express.Data.number_value) {
 		return true;
-	} else if (x.Express.Data.string_value == y.Express.Data.string_value) {
+	} else if (x.express.Data.string_value == y.express.Data.string_value) {
 		return true;
 	} else {
 		return false;
@@ -342,7 +380,7 @@ bool interpreter::equals(Expression x, Expression y) {
 }
 
 bool interpreter::greater_than(Expression x, Expression y) {
-	if ((x.Express.Data.boolean_value > y.Express.Data.boolean_value) == true) {
+	if ((x.express.Data.boolean_value > y.express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
@@ -350,7 +388,7 @@ bool interpreter::greater_than(Expression x, Expression y) {
 }
 
 bool interpreter::greater_than_or_equal(Expression x, Expression y) {
-	if ((x.Express.Data.boolean_value >= y.Express.Data.boolean_value) == true) {
+	if ((x.express.Data.boolean_value >= y.express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
@@ -358,7 +396,7 @@ bool interpreter::greater_than_or_equal(Expression x, Expression y) {
 }
 
 bool interpreter::less_than_or_equal(Expression x, Expression y) {
-	if ((x.Express.Data.boolean_value <= y.Express.Data.boolean_value) == true) {
+	if ((x.express.Data.boolean_value <= y.express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
@@ -366,7 +404,7 @@ bool interpreter::less_than_or_equal(Expression x, Expression y) {
 }
 
 bool interpreter::less_than(Expression x, Expression y) {
-	if ((x.Express.Data.boolean_value < y.Express.Data.boolean_value) == true) {
+	if ((x.express.Data.boolean_value < y.express.Data.boolean_value) == true) {
 		return true;
 	} else {
 		return false;
@@ -374,26 +412,26 @@ bool interpreter::less_than(Expression x, Expression y) {
 }
 
 double interpreter::subtract_expression(Expression x, Expression y) {
-	double result = x.Express.Data.number_value - y.Express.Data.number_value;
+	double result = x.express.Data.number_value - y.express.Data.number_value;
 	return result;
 }
 
 double interpreter::negation(Expression x) {
-	double result = (x.Express.Data.number_value * (-1));
+	double result = (x.express.Data.number_value * (-1));
 	return result;
 }
 
 double interpreter::division(Expression x, Expression y) {
-	double result = x.Express.Data.number_value / y.Express.Data.number_value;
+	double result = x.express.Data.number_value / y.express.Data.number_value;
 	return result;
 }
 
 double interpreter::addition(Expression x, Expression y) {
-	double result = x.Express.Data.number_value + y.Express.Data.number_value;
+	double result = x.express.Data.number_value + y.express.Data.number_value;
 	return result;
 }
 
 double interpreter::multiplication(Expression x, Expression y) {
-	double result = x.Express.Data.number_value * y.Express.Data.number_value;
+	double result = x.express.Data.number_value * y.express.Data.number_value;
 	return result;
 }

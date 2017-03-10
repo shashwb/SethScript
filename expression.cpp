@@ -5,28 +5,34 @@
 //empty constructor
 //whe we create an Expression, it starts with the following values
 Expression::Expression() {
-	Express.type = NoneType;
-	Express.Data.number_value = 0.0;
+	express.type = NoneType;
+	express.Data.number_value = 0.0;
 }
 
 //when given a boolean value, return an Expression structure
 //	this structure will have the type BooleanType and the value in the parameter
 Expression::Expression(bool value) {
-	Express.type = BooleanType;
-	Express.Data.boolean_value = value;
+	cout << "BOOL Arg to expression constructor: " << value << endl;
+	express.type = BooleanType;
+	cout << "BOOL Type: " << express.type << endl;
+	express.Data.boolean_value = value;
+	cout << "bool: " << express.Data.boolean_value << endl;
 }
 
 Expression::Expression(double value) {
-	Express.type = NumberType;
-	Express.Data.number_value = value;
+	cout << "DOUBLE Arg to expression constructor: " << value << endl;
+	express.type = NumberType;
+	cout << "DOUBLE Type: " << express.type << endl;
+	express.Data.number_value = value;
+	cout << "Double: " << express.Data.number_value << endl;
 }
 
 Expression::Expression(const std::string & value) {
-	cout << "Arg to expression constructor: " << value << endl;
-	Express.type = SymbolType;
-	cout << "Type: " << Express.type;
-	Express.Data.string_value = value;
-	cout << "String: " << Express.Data.string_value << endl;
+	cout << "STRING Arg to expression constructor: " << value << endl;
+	express.type = SymbolType;
+	cout << "STRING Type: " << express.type << endl;
+	express.Data.string_value = value;
+	cout << "String: " << express.Data.string_value << endl;
 }
 
 
@@ -34,36 +40,36 @@ Expression::Expression(const std::string & value) {
 //overrride the "==" operator so that we can compare expressions
 bool Expression::operator==(const Expression & exp) const noexcept {
 	//if the two types are the same
-	if (this->Express.type == exp.Express.type) {
+	if (this->express.type == exp.express.type) {
 		//if its a number type
-		if (this->Express.type == Expression::NumberType
-			&& exp.Express.type == Expression::NumberType) {
+		if (this->express.type == NumberType
+			&& exp.express.type == NumberType) {
 			//check the value
-			if (this->Express.Data.number_value == exp.Express.Data.number_value) {
+			if (this->express.Data.number_value == exp.express.Data.number_value) {
 				return true;
-			} else if (this->Express.Data.number_value != exp.Express.Data.number_value) {
+			} else if (this->express.Data.number_value != exp.express.Data.number_value) {
 				return false;
 			}
 		}
 
 		//if its a boolean value
-		if (this->Express.type == Expression::BooleanType
-			&& exp.Express.type == Expression::BooleanType) {
+		if (this->express.type == BooleanType
+			&& exp.express.type == BooleanType) {
 			//if the values of boolean are equal
-			if (this->Express.Data.boolean_value == exp.Express.Data.boolean_value) {
+			if (this->express.Data.boolean_value == exp.express.Data.boolean_value) {
 				return true;
-			} else if (this->Express.Data.boolean_value != exp.Express.Data.boolean_value) {
+			} else if (this->express.Data.boolean_value != exp.express.Data.boolean_value) {
 				return false;
 			}
 		}
 
 		//if it's a string value (symbol)
-		if (this->Express.type == Expression::SymbolType
-			&& exp.Express.type == Expression::SymbolType) {
+		if (this->express.type == SymbolType
+			&& exp.express.type == SymbolType) {
 			//if the values of boolean are equal
-			if (this->Express.Data.string_value == exp.Express.Data.string_value) {
+			if (this->express.Data.string_value == exp.express.Data.string_value) {
 				return true;
-			} else if (this->Express.Data.string_value != exp.Express.Data.string_value) {
+			} else if (this->express.Data.string_value != exp.express.Data.string_value) {
 				return false;
 			}
 		}

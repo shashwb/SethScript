@@ -25,6 +25,9 @@ struct Node {
 		Node(string data) {
 			this->data = data;
 		}
+		Node(Expression data_expression) {
+			this->data_expression = data_expression;
+		}
 };
 
 
@@ -48,6 +51,10 @@ public:
 	Node * processTokensToTree(vector<string> recursive_vector);
 	Expression evaluate_helper(Node * node);
 	Expression expression_factory(string changeToExpression);
+
+	bool is_number(string s);
+	bool is_bool(string value);
+	bool is_string(string str);
 
 
 
