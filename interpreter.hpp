@@ -11,18 +11,27 @@
 #include <queue>
 
 #include "expression.hpp"
-#include "environment.hpp"
+// #include "environment.hpp"
 
 
 using namespace std;
+
 
 struct Node {
 	public:
 		vector<Node*> children;
 		string data;
+		Expression data_expression;
 		Node(string data) {
 			this->data = data;
 		}
+};
+
+
+class test {
+public:
+	test(){};
+	~test(){};
 };
 
 
@@ -37,7 +46,7 @@ public:
 	Expression eval();
 	void createTree();
 	Node * processTokensToTree(vector<string> recursive_vector);
-	string evaluate_helper(Node * node);
+	Expression evaluate_helper(Node * node);
 	Expression expression_factory(string changeToExpression);
 
 
@@ -46,9 +55,9 @@ public:
 	bool logical_and(Expression x, Expression y);
 	bool logical_or(Expression x, Expression y);
 	bool equals(Expression x, Expression y);
-	bool greater_than(Expression x, Expression y); 
-	bool greater_than_or_equal(Expression x, Expression y); 
-	bool less_than_or_equal(Expression x, Expression y); 
+	bool greater_than(Expression x, Expression y);
+	bool greater_than_or_equal(Expression x, Expression y);
+	bool less_than_or_equal(Expression x, Expression y);
 	bool less_than(Expression x, Expression y);
 	double subtract_expression(Expression x, Expression y);
 	double negation(Expression x);
@@ -56,16 +65,17 @@ public:
 	double addition(Expression x, Expression y);
 	double multiplication(Expression x, Expression y);
 
+	// double addition(string x, string y);
+
 
 private:
-	
+	test e;
 
 	//private tree default (empty tree)
 	Node * root;
 
-	//default enviornment variable 
-	Environment * environment;
-	queue<Expression *> ValuesToTree;
+	//default enviornment variable
+	// Environment * environment;
 
 };
 

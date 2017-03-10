@@ -7,7 +7,7 @@
 
 using namespace std;
 
-	//GLOBAL	
+	//GLOBAL
 	typedef unordered_map<string, string> UnorderedMapDynamic;
 	UnorderedMapDynamic tree_map;
 
@@ -34,21 +34,31 @@ Node * interpreter::processTokensToTree(vector<string> recursive_vector) {
 	cout << "Done printing" << endl;
 	cout << "Front is " << recursive_vector[0] << endl;
 	cout << "Back is " << recursive_vector.back() << endl;
-	if (recursive_vector[0] == "\"(\"" && recursive_vector.back() == "\")\"") {
+	if (recursive_vector[0] == "\"(\"," && (recursive_vector.back() == "\")\""
+		|| recursive_vector.back() == "\")\",")) {
 		cout << "Valid data" << endl;
-		// cout << "IN IF STATEMENT (processTokensToTree()" << endl;
-		//if the first or last element in the vector is a parentheses
+
+		//pop matching parentheses
 		recursive_vector.erase(recursive_vector.begin());
-		recursive_vector.pop_back();	//pop matching parentheses
+		recursive_vector.pop_back();
 
 		Node* newNode = new Node(recursive_vector[0]); // new node holds first value
+		Expression newExpress = expression_factory(recursive_vector[0]);
+		newNode->data_expression = newExpress;
+		newNode->data_expression.Express.Data.number_value = round(newNode->data_expression.Express.Data.number_value);
+		//cout << newNode->data_expression << endl;
+		cout << endl;
+		cout << "HEY" << newNode->data_expression.Express.Data.number_value << endl;
+		cout << "newNode value: " << newNode->data_expression.Express.Data.number_value << endl;
+		cout << "newNode type: " << newNode->data_expression.Express.type << endl;
+		cout << endl;
+
 		recursive_vector.erase(recursive_vector.begin());
 		cout << "Ready to loop" << endl;
 		while (recursive_vector.size() > 0) {
 			Node * new_child;
 			// cout << "IN WHILE LOOP (processTokensToTree()" << endl;
-
-			if (recursive_vector[0] != "\"(\"") {
+			if (recursive_vector[0] != "\"(\",") {
 				cout << "NEW SIMPLE CHILD: ";
 				cout << recursive_vector[0] << endl;
 				new_child = new Node(recursive_vector[0]);
@@ -60,23 +70,19 @@ Node * interpreter::processTokensToTree(vector<string> recursive_vector) {
 				// cout << "IF HIT ANOTHER PARENTHESES(processTokensToTree()" << endl;
 				int open_parentheses_counter = 1;
 				vector<string> children_of_node;
-				children_of_node.push_back(recursive_vector[0]); //parentheses loaded into vector
+				children_of_node.push_back(recursive_vector[0]);
 				recursive_vector.erase(recursive_vector.begin());
 				cout << "Building " << endl;
 				while (open_parentheses_counter > 0) {
 					cout << "parens: " << open_parentheses_counter << ": " << recursive_vector[0] << endl;
-					if (recursive_vector[0] == "\"(\"") {
+					if (recursive_vector[0] == "\"(\",") {
 						open_parentheses_counter = open_parentheses_counter + 1;
 					}
-					else if (recursive_vector[0] == "\")\"") {
+					else if (recursive_vector[0] == "\")\"" || recursive_vector[0] == "\")\",") {
 						open_parentheses_counter = open_parentheses_counter - 1;
 					}
-
-					//else {
-						//push everything that isn't a parentheses into the vector
-						children_of_node.push_back(recursive_vector[0]);
-						recursive_vector.erase(recursive_vector.begin());
-					//}
+					children_of_node.push_back(recursive_vector[0]);
+					recursive_vector.erase(recursive_vector.begin());
 				}
 				cout << "tokens:" << endl;
 				for(int i=0;i<children_of_node.size();i++)
@@ -87,55 +93,65 @@ Node * interpreter::processTokensToTree(vector<string> recursive_vector) {
 			}
 			cout << "Pushed back " << new_child->data << endl;
 			newNode->children.push_back(new_child);	//add to children vector
-		}
 
+		}
 		cout << "RETURNING: " << newNode->data << endl;
 		cout << "WITH " << newNode->children.size() << " CHILDREN" << endl;
 		for (int i = 0; i < newNode->children.size(); ++i) {
-			cout << "!!!recursive_vector[" << i << "] : " << newNode->children[i]->data << endl;
+			cout << "!!!children[" << i << "] : " << newNode->children[i]->data << endl;
 		}
 		return newNode;
 	}
 	else {
 		return nullptr;
-	} 	//badly formed
-
-	// return nullptr;
+	}
 
 }
 
-
+//this is how I can return expressions and put it into the nodes
 Expression interpreter::expression_factory(string changeToExpression) {
 
 	bool boolean_expression;
 	double number_expression;
 	string symbol_expression;
 
-	if (isdigit(changeToExpression[0])) {
-		number_expression = stod(changeToExpression);
-		return Expression(number_expression);
-	}
-	else if (changeToExpression == "false") {
+	cout << "changeToExpression value: " << changeToExpression << endl;
+
+	//get rid of parentheses;
+	changeToExpression.erase(changeToExpression.begin());
+	changeToExpression.pop_back();
+	changeToExpression.pop_back();
+
+	cout << "changeToExpression value after POPS(): " << changeToExpression << endl;
+
+	// if (isdigit(changeToExpression[0])) {
+	// 	number_expression = stod(changeToExpression);
+	// 	return Expression(number_expression);
+	// }
+	if (changeToExpression == "false") {
+		cout << "gets to boolean condition false" << endl;
 		boolean_expression = false;
 		return Expression(boolean_expression);
 	}
 	else if (changeToExpression == "true") {
+		cout << "gets to boolean condition true" << endl;
 		boolean_expression = true;
 		return Expression(boolean_expression);
 	}
 	else {
+		cout << "gets to what I want!!!!" << endl;
 		symbol_expression = changeToExpression;
+		cout << endl;
+		cout << "symbol_expression WHY ISNT THIS WORKING???: " << symbol_expression << endl;
 		return Expression(symbol_expression);
 	}
 }
+
 
 bool interpreter::parse(std::istream & expression) noexcept
 {
 	cout << endl;
 	cout << "parse() function called" << endl;
-	stack<string> parentheses_checker;
-	int parentheses_counter_open = 0;
-	int parentheses_checker_closed = 0;
 
 	string output = "";
 	string read_from_expression = "";
@@ -147,7 +163,7 @@ bool interpreter::parse(std::istream & expression) noexcept
 	Tokenize token;	//tokenize returns a vector
 
 	vector<string> vector_of_strings = token.tokenize(read_from_expression);
-	
+
 	for (int i = 0; i < vector_of_strings.size(); ++i) {
 		cout << "vector_of_strings[" << i << "] : " << vector_of_strings[i] << endl;
 	}
@@ -159,8 +175,8 @@ bool interpreter::parse(std::istream & expression) noexcept
 	cout << "what is in the tree: " << endl;
 	cout << "ROOT DATA: " << root->data << endl;
 	cout << "ROOT CHILD[0]: " << root->children[0]->data << endl;
-	cout << "ROOT CHILD[0][0]: " << root->children[0]->children[0]->data << endl;
-	cout << "ROOT CHILD[0][1]: " << root->children[0]->children[1]->data << endl;
+	// cout << "ROOT CHILD[0][0]: " << root->children[0]->children[0]->data << endl;
+	// cout << "ROOT CHILD[0][1]: " << root->children[0]->children[1]->data << endl;
 
 
 	cout << endl;
@@ -170,42 +186,95 @@ bool interpreter::parse(std::istream & expression) noexcept
 
 
 //this should return an expression
-string interpreter::evaluate_helper(Node * node) {
+Expression interpreter::evaluate_helper(Node * node) {
 
 	string result;
 	cout << "evaluate_helper() called" << std::endl;
-
-
 	cout << endl;
 	cout << "node children size: " << node->children.size() << endl;
 
+	//SHOULD I ITERATE THROUGH THE TREE HERE AND ADD THE EXPRESSION VARIABLES TO EVERYTHING?
+
+	//all functions
+	string add = "+";
+	// string subtract_binary = "-";
+	string subtract= "-";
+	string multiplication = "*";
+	string division = "/";
+	string not_symbol = "not";
+	string or_symbol = "or";
+	string less_than = "<";
+	string less_than_equal = "<=";
+	string greater_than = ">";
+	string greater_than_equal = ">=";
+	string equals = "=";
+
+
+	//if its the last node, then just return that
 	if (node->children.size() == 0) {
-	// if (true) {
- 		if (environment->is_present_in_map(node->data)) {
-			// return node.data;
-			cout << "the data is in the map, return it" << endl;
+		cout << "INSIDE OF THE CHILDREN SIZE 0" << endl;
+
+	}
+
+	if (add.compare(node->data)) {
+		cout << "IN THE + CONDITION" << endl;
+		Expression expression;
+		expression.Express.type = Expression::NumberType;
+		cout << "Expression Type: " << expression.Express.type << endl;
+		double sum = 0;
+		for (int i = 0; i < node->children.size(); i++) {
+			expression = evaluate_helper(node->children[i]);
+			sum += expression.Express.Data.number_value;
+			cout << "sum in loop: " << sum << endl;
 		}
-		else {
-			cout << "may be a constant" << endl;
-		}
+		expression.Express.Data.number_value = sum;
+		cout << "sum out of loop: " << expression.Express.Data.number_value << endl;
+
+
+		// cout << "INSIDE OF THE + FUNCTION" << endl;
+		// double sum = 0;
+		// string sum_string = "";
+		// for (int index = 0; index < node->children.size(); index++) {
+		// 	string addition = evaluate_helper(node->children[index]);
+		// 	cout << "evaluated STRING: " << addition << endl;
+		// 	int add_int = atoi(addition.substr(1, 2).c_str());
+		// 	cout << "evaluated DOUBLE: " << add_int << endl;
+		// 	// cout << "result of stoi(addition) : " << add << endl;
+		// 	// sum = sum + addition;
+		// 	sum = sum + add_int;
+		// 	sum_string = to_string(sum);
+		// 	cout << "final sum string " << sum_string << endl;
+		// }
+	// return sum_string;
+	}
+
+	else if (subtract.compare(node->data)) {
+		cout << "IN THE - CONDITION" << endl;
+		// cout << "INSIDE OF THE - FUNCTION" << endl;
+		// double sum = 0;
+		// string subtract_string = "";
+		// for (int i = 0; i < node->children.size(); i++) {
+		// 	string subtraction = evaluate_helper(node->children[i]);
+		// 	cout << "evaluated STRING: " << subtraction << endl;
+		// 	int sub_int = atoi(subtraction.substr(1, 2).c_str());
+		// 	cout << "evaluated DOUBLE: " << sub_int << endl;
+		// 	sum = sum - sub_int;
+		// 	subtract_string = to_string(sum);
+		// 	cout << "final subtract string " << subtract_string << endl;
+		// }
 	}
 
 
-	if (node->data == "+") {
-		// int sum = 0;
-		
+	else {
+		cout << "didnt go through any of the if statements" << endl;
 	}
-	if (node->data == "*") {
-		int product = 1;
-		for (int i = 0; i < node->children.size() - 1; i++) {
-			int eval_int = atoi(evaluate_helper(node->children[i]).c_str());
-			product = product * eval_int;
-		}
-		return to_string(product);
-	}
-	//etc for the other functions HAVE TO DO THE OTHER FUNCTIONS
+	return node->data;
 
-	return result;
+
+
+
+
+	// return result;
 }
 
 
@@ -220,7 +289,7 @@ Expression interpreter::eval() {
 	Expression expression_evaluate;
 
 	string result = "";
-	result = evaluate_helper(root);
+	expression_evaluate = evaluate_helper(root);
 	cout << endl;
 	cout << "RESULT: " << result << endl;
 	cout << endl;
@@ -328,17 +397,3 @@ double interpreter::multiplication(Expression x, Expression y) {
 	double result = x.Express.Data.number_value * y.Express.Data.number_value;
 	return result;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -4,9 +4,9 @@
 #include <sstream>
 
 #include "interpreter.hpp"
+#include "environment.hpp"
 
 using namespace std;
-
 
 
 int main(int argc, char* argv[]) {
@@ -19,6 +19,18 @@ int main(int argc, char* argv[]) {
 	cout << endl;
 	interpreter inter;
 	ifstream expression;
+
+	cout << endl;
+	cout << "TESTING//////////////////////////////////" << endl;
+	cout << "testing determine_operation_for_symbols() function" << endl;
+	string result = "\"true\",";
+	string symbol = "\"not\",";
+	Environment environment;
+	bool result_bool;
+	result_bool = environment.determine_operation_for_procedures(inter, symbol, result);
+	cout << "result from the function outside : " << result_bool << endl;
+	cout << "TESTING//////////////////////////////////" << endl;
+	cout << endl;
 
 
 	if (argc <=	1) {

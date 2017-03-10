@@ -20,9 +20,62 @@ Environment::~Environment() {
 
 }
 
+//THIS WILL BE MY PROCEDURE MAP
+// DO THESE FOR STRINGS FOR NOW NEED TO CHANGE TO EXPRESSIONS EVENTUALLY
+                                                //interpreter
+//WHAT SHOULD THIS MAP RETURN?
+bool Environment::determine_operation_for_procedures(interpreter &inter, string symbol, string other) {
+
+	symbol.erase(symbol.begin());	//pop off "
+	symbol.pop_back();
+	symbol.pop_back();
+
+
+	cout << "SYMBOL: " << symbol << endl;
+	cout << "OTHER: " << other << endl;
+
+	cout << "determine_operation_for_symbols CALLED()" << endl;
+
+	Expression expression = inter.expression_factory(other);
+	cout << "NOT CONDITIONAL RESULT EXPRESSION: " << expression.Express.Data.boolean_value << endl;
+	if (symbol == "not") {
+		Expression expression = inter.expression_factory(other);
+		cout << "NOT CONDITIONAL RESULT EXPRESSION: " << expression.Express.Data.boolean_value << endl;
+		return inter.logical_not(expression);
+	}
+	//fill in the rest of the procedures that have boolean values
+
+	else {
+		cout << endl;
+		cout << "not going into any of the functions!!!!" << endl;
+		cout << endl;
+	}
+	// if (sumbol == "and") {
+	// 	Expression
+	// }
+	return false;
+}
+
+double Environment::determine_operation_for_arithmetic(interpreter &inter, string symbol, string lhs, string rhs) {
+	symbol.erase(symbol.begin());	//pop off "
+	symbol.pop_back();
+	symbol.pop_back();
+
+	cout << "SYMBOL: " << symbol << endl;
+	cout << "LHS: " << lhs << endl;
+	cout << "RHS: " << rhs << endl;
+
+	if (symbol == "+") {
+		return inter.addition(lhs, rhs);
+	}
+	return 987.654;
+}
+
+
+
 bool Environment::is_present_in_map(string symbol) {
-	
-	std::unordered_map<string, double>::const_iterator got_default = default_map.find(symbol); 
+
+	std::unordered_map<string, double>::const_iterator got_default = default_map.find(symbol);
 	// unordered_map<string.c_str(), string.c_str()>::const_iterator got_tree = tree_map.find(symbol);
 
 	//if default map
@@ -35,17 +88,17 @@ bool Environment::is_present_in_map(string symbol) {
 	}
 
 	//if dynamic tree map
-
-	for (auto it = tree_map.begin(); it != tree_map.end(); ++it) {
-		if (it->first == symbol) {
-			cout << endl;
-			cout << "if symbol is found in tree_map" << endl;
-			return true;
-		} else {
-			cout << "symbol not found in tree_map" << endl;
-			return false;
-		}
-	}
+	//THIS WORKS
+	// for (auto it = tree_map.begin(); it != tree_map.end(); ++it) {
+	// 	if (it->first == symbol) {
+	// 		cout << endl;
+	// 		cout << "if symbol is found in tree_map" << endl;
+	// 		return true;
+	// 	} else {
+	// 		cout << "symbol not found in tree_map" << endl;
+	// 		return false;
+	// 	}
+	// }
 
 	// if (got_tree == tree_map.end()) {
 	// 	cout << "not found in TREE_MAP" << endl;
@@ -74,8 +127,8 @@ void Environment::update_map_with_value(string symbol, double new_value) {
 	if (it != default_map.end()) {
 		it->second = new_value;
 	}
-		
-	
+
+
 }
 
 void Environment::add_element_to_map(string symbol, double value) {
