@@ -31,20 +31,11 @@ struct Node {
 };
 
 
-class test {
-public:
-	test(){};
-	~test(){};
-};
-
-
-class interpreter {
-
+class Interpreter {
 
 public:
-
-	interpreter();
-	~interpreter();
+	Interpreter();
+	~Interpreter();
 	bool parse(std::istream & expression) noexcept;
 	Expression eval();
 	void createTree();
@@ -55,8 +46,6 @@ public:
 	bool is_number(string s);
 	bool is_bool(string value);
 	bool is_string(string str);
-
-
 
 	bool logical_not(Expression x);
 	bool logical_and(Expression x, Expression y);
@@ -72,17 +61,8 @@ public:
 	double addition(Expression x, Expression y);
 	double multiplication(Expression x, Expression y);
 
-	// double addition(string x, string y);
-
-
 private:
-	test e;
-
-	//private tree default (empty tree)
 	Node * root;
-
-	//default enviornment variable
-	// Environment * environment;
 
 };
 

@@ -17,14 +17,14 @@ int main(int argc, char* argv[]) {
 	cout << "PROGRAM BEGIN" << endl;
 	cout << "////////////////////////" << endl;
 	cout << endl;
-	interpreter inter;
+	Interpreter inter;
 	ifstream expression;
 
+	// DEBUGGING CODE
 	// cout << "testing is_number()" << endl;
 	// string number = "1";
 	// bool result_is_number = inter.is_number(number);
 	// cout << "result of is_number() call on " << number << " is " << result_is_number << endl;
-	//
 	//
 	// cout << endl;
 	// cout << "TESTING//////////////////////////////////" << endl;

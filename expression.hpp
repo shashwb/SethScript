@@ -36,8 +36,6 @@ public:
 	Expression(const std::string & value);
 	bool operator==(const Expression & exp) const noexcept;	//TODO
 
-
-
 	data Data;
 	Express express;
 

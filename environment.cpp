@@ -2,8 +2,9 @@
 
 using namespace std;
 
-typedef unordered_map<string, double> UnorderedMapDynamic;
-extern UnorderedMapDynamic tree_map;
+
+typedef unordered_map<string, double> UnorderedMap;
+UnorderedMap default_map;
 
 Environment::Environment() {
 
@@ -16,15 +17,11 @@ Environment::Environment() {
 
 Environment::~Environment() {
 	default_map.clear();
-	tree_map.clear();
 
 }
 
-//THIS WILL BE MY PROCEDURE MAP
-// DO THESE FOR STRINGS FOR NOW NEED TO CHANGE TO EXPRESSIONS EVENTUALLY
-                                                //interpreter
-//WHAT SHOULD THIS MAP RETURN?
-bool Environment::determine_operation_for_procedures(interpreter &inter, string symbol, string other) {
+
+bool Environment::determine_operation_for_procedures(Interpreter &inter, string symbol, string other) {
 
 	symbol.erase(symbol.begin());	//pop off "
 	symbol.pop_back();
@@ -50,13 +47,11 @@ bool Environment::determine_operation_for_procedures(interpreter &inter, string 
 		cout << "not going into any of the functions!!!!" << endl;
 		cout << endl;
 	}
-	// if (sumbol == "and") {
-	// 	Expression
-	// }
 	return false;
 }
 
-double Environment::determine_operation_for_arithmetic(interpreter &inter, string symbol, string lhs, string rhs) {
+
+double Environment::determine_operation_for_arithmetic(Interpreter &inter, string symbol, string lhs, string rhs) {
 	symbol.erase(symbol.begin());	//pop off "
 	symbol.pop_back();
 	symbol.pop_back();
@@ -73,12 +68,10 @@ double Environment::determine_operation_for_arithmetic(interpreter &inter, strin
 
 
 
-bool Environment::is_present_in_map(string symbol) {
+bool Environment::is_present_in_map(unordered_map<string, double> &map, string symbol) {
 
 	std::unordered_map<string, double>::const_iterator got_default = default_map.find(symbol);
-	// unordered_map<string.c_str(), string.c_str()>::const_iterator got_tree = tree_map.find(symbol);
 
-	//if default map
 	if (got_default == default_map.end()) {
 		cout << "not found in DEFAULT_MAP" << endl;
 		return false;
@@ -89,19 +82,17 @@ bool Environment::is_present_in_map(string symbol) {
 
 }
 
-double Environment::value_at_element_in_map(string symbol) {
+double Environment::value_at_element_in_map(unordered_map<string, double> &map, string symbol) {
 	std::unordered_map<string, double>::const_iterator got = default_map.find(symbol);
 	if (got == default_map.end()) {
 		cout << "ERROR NOT IN MAP" << endl;
 	}
-	// else {
 		cout << "The value at elment: " << got->first << " is " << got->second << endl;
 		return got->second;
-	// }
-
 }
 
-void Environment::update_map_with_value(string symbol, double new_value) {
+
+void Environment::update_map_with_value(unordered_map<string, double> &map, string symbol, double new_value) {
 	auto it = default_map.find(symbol);
 	if (it != default_map.end()) {
 		it->second = new_value;

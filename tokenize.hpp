@@ -1,7 +1,6 @@
 #ifndef TOKENIZE_H					// avoid repeated expansion
 #define TOKENIZE_H
 
-
 #include <string>
 #include <iostream>
 #include <vector>
