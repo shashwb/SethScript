@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.7.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/sethbalodi/Desktop/project1/project1-shashwb
+CMAKE_SOURCE_DIR = /Users/sethbalodi/Desktop/Project1/project1-shashwb
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/sethbalodi/Desktop/project1/project1-shashwb
+CMAKE_BINARY_DIR = /Users/sethbalodi/Desktop/Project1/project1-shashwb
 
 # Include any dependencies generated for this target.
 include CMakeFiles/vtscript.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/vtscript.dir/flags.make
 
 CMakeFiles/vtscript.dir/tokenize.cpp.o: CMakeFiles/vtscript.dir/flags.make
 CMakeFiles/vtscript.dir/tokenize.cpp.o: tokenize.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/Desktop/project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vtscript.dir/tokenize.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtscript.dir/tokenize.cpp.o -c /Users/sethbalodi/Desktop/project1/project1-shashwb/tokenize.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vtscript.dir/tokenize.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtscript.dir/tokenize.cpp.o -c /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp
 
 CMakeFiles/vtscript.dir/tokenize.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vtscript.dir/tokenize.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/Desktop/project1/project1-shashwb/tokenize.cpp > CMakeFiles/vtscript.dir/tokenize.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp > CMakeFiles/vtscript.dir/tokenize.cpp.i
 
 CMakeFiles/vtscript.dir/tokenize.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vtscript.dir/tokenize.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/Desktop/project1/project1-shashwb/tokenize.cpp -o CMakeFiles/vtscript.dir/tokenize.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp -o CMakeFiles/vtscript.dir/tokenize.cpp.s
 
 CMakeFiles/vtscript.dir/tokenize.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/vtscript.dir/tokenize.cpp.o.provides.build: CMakeFiles/vtscript.dir/t
 
 CMakeFiles/vtscript.dir/expression.cpp.o: CMakeFiles/vtscript.dir/flags.make
 CMakeFiles/vtscript.dir/expression.cpp.o: expression.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/Desktop/project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vtscript.dir/expression.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtscript.dir/expression.cpp.o -c /Users/sethbalodi/Desktop/project1/project1-shashwb/expression.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vtscript.dir/expression.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtscript.dir/expression.cpp.o -c /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp
 
 CMakeFiles/vtscript.dir/expression.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vtscript.dir/expression.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/Desktop/project1/project1-shashwb/expression.cpp > CMakeFiles/vtscript.dir/expression.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp > CMakeFiles/vtscript.dir/expression.cpp.i
 
 CMakeFiles/vtscript.dir/expression.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vtscript.dir/expression.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/Desktop/project1/project1-shashwb/expression.cpp -o CMakeFiles/vtscript.dir/expression.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp -o CMakeFiles/vtscript.dir/expression.cpp.s
 
 CMakeFiles/vtscript.dir/expression.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/vtscript.dir/expression.cpp.o.provides.build: CMakeFiles/vtscript.dir
 
 CMakeFiles/vtscript.dir/environment.cpp.o: CMakeFiles/vtscript.dir/flags.make
 CMakeFiles/vtscript.dir/environment.cpp.o: environment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/Desktop/project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vtscript.dir/environment.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtscript.dir/environment.cpp.o -c /Users/sethbalodi/Desktop/project1/project1-shashwb/environment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vtscript.dir/environment.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtscript.dir/environment.cpp.o -c /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp
 
 CMakeFiles/vtscript.dir/environment.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vtscript.dir/environment.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/Desktop/project1/project1-shashwb/environment.cpp > CMakeFiles/vtscript.dir/environment.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp > CMakeFiles/vtscript.dir/environment.cpp.i
 
 CMakeFiles/vtscript.dir/environment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vtscript.dir/environment.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/Desktop/project1/project1-shashwb/environment.cpp -o CMakeFiles/vtscript.dir/environment.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp -o CMakeFiles/vtscript.dir/environment.cpp.s
 
 CMakeFiles/vtscript.dir/environment.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/vtscript.dir/environment.cpp.o.provides.build: CMakeFiles/vtscript.di
 
 CMakeFiles/vtscript.dir/interpreter.cpp.o: CMakeFiles/vtscript.dir/flags.make
 CMakeFiles/vtscript.dir/interpreter.cpp.o: interpreter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/Desktop/project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vtscript.dir/interpreter.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtscript.dir/interpreter.cpp.o -c /Users/sethbalodi/Desktop/project1/project1-shashwb/interpreter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vtscript.dir/interpreter.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtscript.dir/interpreter.cpp.o -c /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp
 
 CMakeFiles/vtscript.dir/interpreter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vtscript.dir/interpreter.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/Desktop/project1/project1-shashwb/interpreter.cpp > CMakeFiles/vtscript.dir/interpreter.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp > CMakeFiles/vtscript.dir/interpreter.cpp.i
 
 CMakeFiles/vtscript.dir/interpreter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vtscript.dir/interpreter.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/Desktop/project1/project1-shashwb/interpreter.cpp -o CMakeFiles/vtscript.dir/interpreter.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp -o CMakeFiles/vtscript.dir/interpreter.cpp.s
 
 CMakeFiles/vtscript.dir/interpreter.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/vtscript.dir/interpreter.cpp.o.provides.build: CMakeFiles/vtscript.di
 
 CMakeFiles/vtscript.dir/vtscript.cpp.o: CMakeFiles/vtscript.dir/flags.make
 CMakeFiles/vtscript.dir/vtscript.cpp.o: vtscript.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/Desktop/project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vtscript.dir/vtscript.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtscript.dir/vtscript.cpp.o -c /Users/sethbalodi/Desktop/project1/project1-shashwb/vtscript.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vtscript.dir/vtscript.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtscript.dir/vtscript.cpp.o -c /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp
 
 CMakeFiles/vtscript.dir/vtscript.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vtscript.dir/vtscript.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/Desktop/project1/project1-shashwb/vtscript.cpp > CMakeFiles/vtscript.dir/vtscript.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp > CMakeFiles/vtscript.dir/vtscript.cpp.i
 
 CMakeFiles/vtscript.dir/vtscript.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vtscript.dir/vtscript.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/Desktop/project1/project1-shashwb/vtscript.cpp -o CMakeFiles/vtscript.dir/vtscript.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp -o CMakeFiles/vtscript.dir/vtscript.cpp.s
 
 CMakeFiles/vtscript.dir/vtscript.cpp.o.requires:
 
@@ -195,7 +195,7 @@ vtscript: CMakeFiles/vtscript.dir/interpreter.cpp.o
 vtscript: CMakeFiles/vtscript.dir/vtscript.cpp.o
 vtscript: CMakeFiles/vtscript.dir/build.make
 vtscript: CMakeFiles/vtscript.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sethbalodi/Desktop/project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable vtscript"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable vtscript"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vtscript.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -216,6 +216,6 @@ CMakeFiles/vtscript.dir/clean:
 .PHONY : CMakeFiles/vtscript.dir/clean
 
 CMakeFiles/vtscript.dir/depend:
-	cd /Users/sethbalodi/Desktop/project1/project1-shashwb && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/sethbalodi/Desktop/project1/project1-shashwb /Users/sethbalodi/Desktop/project1/project1-shashwb /Users/sethbalodi/Desktop/project1/project1-shashwb /Users/sethbalodi/Desktop/project1/project1-shashwb /Users/sethbalodi/Desktop/project1/project1-shashwb/CMakeFiles/vtscript.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/sethbalodi/Desktop/Project1/project1-shashwb && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/sethbalodi/Desktop/Project1/project1-shashwb /Users/sethbalodi/Desktop/Project1/project1-shashwb /Users/sethbalodi/Desktop/Project1/project1-shashwb /Users/sethbalodi/Desktop/Project1/project1-shashwb /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeFiles/vtscript.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/vtscript.dir/depend
 

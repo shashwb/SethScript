@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/sethbalodi/Desktop/project1/project1-shashwb/environment.cpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp
 environment.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/environment.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp
 
-/Users/sethbalodi/Desktop/project1/project1-shashwb/environment.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp
 unordered_map
 -
 string
@@ -18,19 +18,19 @@ string
 cmath
 -
 interpreter.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/interpreter.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp
 expression.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/expression.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp
 
-/Users/sethbalodi/Desktop/project1/project1-shashwb/expression.cpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp
 expression.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/expression.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp
 cstring
 -
 string
 -
 
-/Users/sethbalodi/Desktop/project1/project1-shashwb/expression.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp
 string
 -
 iostream
@@ -38,15 +38,15 @@ iostream
 cstring
 -
 
-/Users/sethbalodi/Desktop/project1/project1-shashwb/interpreter.cpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp
 interpreter.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/interpreter.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp
 tokenize.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/tokenize.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp
 environment.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/environment.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp
 expression.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/expression.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp
 stack
 -
 algorithm
@@ -54,7 +54,7 @@ algorithm
 regex
 -
 
-/Users/sethbalodi/Desktop/project1/project1-shashwb/interpreter.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp
 iostream
 -
 string
@@ -70,13 +70,13 @@ sstream
 queue
 -
 expression.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/expression.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp
 
-/Users/sethbalodi/Desktop/project1/project1-shashwb/tokenize.cpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp
 tokenize.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/tokenize.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp
 
-/Users/sethbalodi/Desktop/project1/project1-shashwb/tokenize.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp
 string
 -
 iostream
@@ -90,7 +90,7 @@ algorithm
 stdio.h
 -
 
-/Users/sethbalodi/Desktop/project1/project1-shashwb/vtscript.cpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp
 iostream
 -
 fstream
@@ -100,7 +100,7 @@ string
 sstream
 -
 interpreter.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/interpreter.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp
 environment.hpp
-/Users/sethbalodi/Desktop/project1/project1-shashwb/environment.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp
 
