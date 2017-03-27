@@ -4,7 +4,6 @@
 CMakeFiles/vtscript.dir/environment.cpp.o: environment.cpp
 CMakeFiles/vtscript.dir/environment.cpp.o: environment.hpp
 CMakeFiles/vtscript.dir/environment.cpp.o: expression.hpp
-CMakeFiles/vtscript.dir/environment.cpp.o: interpreter.hpp
 
 CMakeFiles/vtscript.dir/expression.cpp.o: expression.cpp
 CMakeFiles/vtscript.dir/expression.cpp.o: expression.hpp

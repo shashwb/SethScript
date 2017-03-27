@@ -9,6 +9,8 @@
 /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp
 environment.hpp
 /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp
+math.h
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/math.h
 
 /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp
 unordered_map
@@ -17,8 +19,6 @@ string
 -
 cmath
 -
-interpreter.hpp
-/Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp
 expression.hpp
 /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp
 
@@ -43,8 +43,6 @@ interpreter.hpp
 /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp
 tokenize.hpp
 /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp
-environment.hpp
-/Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp
 expression.hpp
 /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp
 stack
@@ -71,6 +69,8 @@ queue
 -
 expression.hpp
 /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp
+environment.hpp
+/Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp
 
 /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp
 tokenize.hpp

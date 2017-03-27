@@ -5,13 +5,13 @@ using namespace std;
 
 vector<string> Tokenize::tokenize(string expression) {
 
-	cout << "tokenize() is called" << endl;
+	// cout << "tokenize() is called" << endl;
 
 	vector<string> vector_of_strings;
 	string str = expression;
 
-	cout << "String passed into Tokenize(): " << str << endl;
-	cout << endl;
+	// cout << "String passed into Tokenize(): " << str << endl;
+	// cout << endl;
 
 	string str_parentheses;
 	string str_special = "";
@@ -64,7 +64,7 @@ vector<string> Tokenize::tokenize(string expression) {
 			for (j = str_index; str[j] != ' ' && str[j] != ')'; j++) {
 				string_holder.append(1, str[j]);
 			}
-			
+
 			base.insert(1, string_holder);
 			iterate_counter = 1 + string_holder.length();
 			base.insert(iterate_counter, ending_quote);
@@ -88,8 +88,8 @@ vector<string> Tokenize::tokenize(string expression) {
 		}
 	}
 
-	cout << endl;
-	cout << "VECTOR CONTENTS: " << endl;
+	// cout << endl;
+	// cout << "VECTOR CONTENTS: " << endl;
 
 
 	return vector_of_strings;

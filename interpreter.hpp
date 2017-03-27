@@ -11,7 +11,7 @@
 #include <queue>
 
 #include "expression.hpp"
-// #include "environment.hpp"
+#include "environment.hpp"
 
 
 using namespace std;
@@ -38,7 +38,6 @@ public:
 	~Interpreter();
 	bool parse(std::istream & expression) noexcept;
 	Expression eval();
-	void createTree();
 	Node * processTokensToTree(vector<string> recursive_vector);
 	Expression evaluate_helper(Node * node);
 	Expression expression_factory(string changeToExpression);
@@ -60,6 +59,8 @@ public:
 	double division(Expression x, Expression y);
 	double addition(Expression x, Expression y);
 	double multiplication(Expression x, Expression y);
+
+	Environment * env;
 
 private:
 	Node * root;

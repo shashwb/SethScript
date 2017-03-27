@@ -1,0 +1,1349 @@
+Start testing: Mar 27 16:26 EDT
+----------------------------------------------------------
+1/1 Testing: unittests
+1/1 Test: unittests
+Command: "/Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests"
+Directory: /Users/sethbalodi/Desktop/Project1/project1-shashwb
+"unittests" start time: Mar 27 16:26 EDT
+Output:
+----------------------------------------------------------
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+DOUBLE Arg to expression constructor: 1000
+DOUBLE Type: 2
+Double value: 1000
+DOUBLE Arg to expression constructor: 2
+DOUBLE Type: 2
+Double value: 2
+DOUBLE Arg to expression constructor: 2
+DOUBLE Type: 2
+Double value: 2
+DOUBLE Arg to expression constructor: 1000
+DOUBLE Type: 2
+Double value: 1000
+DOUBLE Arg to expression constructor: 30
+DOUBLE Type: 2
+Double value: 30
+DOUBLE Arg to expression constructor: -20
+DOUBLE Type: 2
+Double value: -20
+DOUBLE Arg to expression constructor: -20
+DOUBLE Type: 2
+Double value: -20
+DOUBLE Arg to expression constructor: 30
+DOUBLE Type: 2
+Double value: 30
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+DOUBLE Arg to expression constructor: 1000
+DOUBLE Type: 2
+Double value: 1000
+DOUBLE Arg to expression constructor: 2
+DOUBLE Type: 2
+Double value: 2
+DOUBLE Arg to expression constructor: 2
+DOUBLE Type: 2
+Double value: 2
+DOUBLE Arg to expression constructor: 1000
+DOUBLE Type: 2
+Double value: 1000
+DOUBLE Arg to expression constructor: 30
+DOUBLE Type: 2
+Double value: 30
+DOUBLE Arg to expression constructor: -20
+DOUBLE Type: 2
+Double value: -20
+DOUBLE Arg to expression constructor: -20
+DOUBLE Type: 2
+Double value: -20
+DOUBLE Arg to expression constructor: -20
+DOUBLE Type: 2
+Double value: -20
+DOUBLE Arg to expression constructor: -20
+DOUBLE Type: 2
+Double value: -20
+DOUBLE Arg to expression constructor: 30
+DOUBLE Type: 2
+Double value: 30
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+DOUBLE Arg to expression constructor: 10
+DOUBLE Type: 2
+Double value: 10
+DOUBLE Arg to expression constructor: 2
+DOUBLE Type: 2
+Double value: 2
+DOUBLE Arg to expression constructor: 2
+DOUBLE Type: 2
+Double value: 2
+DOUBLE Arg to expression constructor: 10
+DOUBLE Type: 2
+Double value: 10
+DOUBLE Arg to expression constructor: 3
+DOUBLE Type: 2
+Double value: 3
+DOUBLE Arg to expression constructor: -2
+DOUBLE Type: 2
+Double value: -2
+DOUBLE Arg to expression constructor: -2
+DOUBLE Type: 2
+Double value: -2
+DOUBLE Arg to expression constructor: -2
+DOUBLE Type: 2
+Double value: -2
+DOUBLE Arg to expression constructor: -2
+DOUBLE Type: 2
+Double value: -2
+DOUBLE Arg to expression constructor: 3
+DOUBLE Type: 2
+Double value: 3
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+DOUBLE Arg to expression constructor: 10
+DOUBLE Type: 2
+Double value: 10
+DOUBLE Arg to expression constructor: 2
+DOUBLE Type: 2
+Double value: 2
+DOUBLE Arg to expression constructor: 2
+DOUBLE Type: 2
+Double value: 2
+DOUBLE Arg to expression constructor: 10
+DOUBLE Type: 2
+Double value: 10
+DOUBLE Arg to expression constructor: 2
+DOUBLE Type: 2
+Double value: 2
+DOUBLE Arg to expression constructor: -2
+DOUBLE Type: 2
+Double value: -2
+DOUBLE Arg to expression constructor: -2
+DOUBLE Type: 2
+Double value: -2
+DOUBLE Arg to expression constructor: -2
+DOUBLE Type: 2
+Double value: -2
+DOUBLE Arg to expression constructor: -2
+DOUBLE Type: 2
+Double value: -2
+DOUBLE Arg to expression constructor: 2
+DOUBLE Type: 2
+Double value: 2
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+DOUBLE Arg to expression constructor: 55
+DOUBLE Type: 2
+Double value: 55
+DOUBLE Arg to expression constructor: 55
+DOUBLE Type: 2
+Double value: 55
+DOUBLE Arg to expression constructor: 55
+DOUBLE Type: 2
+Double value: 55
+DOUBLE Arg to expression constructor: -10
+DOUBLE Type: 2
+Double value: -10
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+DOUBLE Arg to expression constructor: 50
+DOUBLE Type: 2
+Double value: 50
+DOUBLE Arg to expression constructor: -40
+DOUBLE Type: 2
+Double value: -40
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+STRING Arg to expression constructor: blahblahblah
+STRING Type: 3
+String value: blahblahblah
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+BOOL Arg to expression constructor: 0
+BOOL Type: 1
+bool value: 0
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: 42
+
+DOUBLE Arg to expression constructor: 42
+DOUBLE Type: 2
+Double value: 42
+DOUBLE Arg to expression constructor: 1050
+DOUBLE Type: 2
+Double value: 1050
+DOUBLE Arg to expression constructor: -28
+DOUBLE Type: 2
+Double value: -28
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+BOOL Arg to expression constructor: 0
+BOOL Type: 1
+bool value: 0
+BOOL Arg to expression constructor: 0
+BOOL Type: 1
+bool value: 0
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (begin (define r 10) (* pi (* r r)))
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : "begin",
+vector_of_strings[2] : "(",
+vector_of_strings[3] : "define",
+vector_of_strings[4] : "r",
+vector_of_strings[5] : "10",
+vector_of_strings[6] : ")",
+vector_of_strings[7] : "(",
+vector_of_strings[8] : "*",
+vector_of_strings[9] : "pi",
+vector_of_strings[10] : "(",
+vector_of_strings[11] : "*",
+vector_of_strings[12] : "r",
+vector_of_strings[13] : "r",
+vector_of_strings[14] : ")",
+vector_of_strings[15] : ")",
+vector_of_strings[16] : ")"
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "begin",
+2  --- "(",
+3  --- "define",
+4  --- "r",
+5  --- "10",
+6  --- ")",
+7  --- "(",
+8  --- "*",
+9  --- "pi",
+10  --- "(",
+11  --- "*",
+12  --- "r",
+13  --- "r",
+14  --- ")",
+15  --- ")",
+16  --- ")"
+Front is "(",
+Back is ")"
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: begin
+
+STRING Arg to expression constructor: begin
+STRING Type: 3
+String value: begin
+
+EXPRESSION value begin
+EXPRESSION newNode value: begin
+EXPRESSION newNode type: 3
+
+NEW EXPRESSION CHILD: "(",
+Building 
+parens: 1: "define",
+parens: 1: "r",
+parens: 1: "10",
+parens: 1: ")",
+tokens:
+0: "(",
+1: "define",
+2: "r",
+3: "10",
+4: ")",
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "define",
+2  --- "r",
+3  --- "10",
+4  --- ")",
+Front is "(",
+Back is ")",
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: define
+
+STRING Arg to expression constructor: define
+STRING Type: 3
+String value: define
+
+EXPRESSION value define
+EXPRESSION newNode value: define
+EXPRESSION newNode type: 3
+
+NEW SIMPLE CHILD: "r",
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: r
+
+STRING Arg to expression constructor: r
+STRING Type: 3
+String value: r
+
+EXPRESSION value r
+EXPRESSION child_value: 0
+EXPRESSION child_type: 3
+
+Pushed back 
+NEW SIMPLE CHILD: "10",
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: 10
+
+DOUBLE Arg to expression constructor: 10
+DOUBLE Type: 2
+Double value: 10
+
+EXPRESSION value 
+EXPRESSION child_value: 10
+EXPRESSION child_type: 2
+
+Pushed back 
+RETURNING: define
+WITH 2 CHILDREN
+!!!children[0] : 0
+!!!children[1] : 10
+Pushed back 
+NEW EXPRESSION CHILD: "(",
+Building 
+parens: 1: "*",
+parens: 1: "pi",
+parens: 1: "(",
+parens: 2: "*",
+parens: 2: "r",
+parens: 2: "r",
+parens: 2: ")",
+parens: 1: ")",
+tokens:
+0: "(",
+1: "*",
+2: "pi",
+3: "(",
+4: "*",
+5: "r",
+6: "r",
+7: ")",
+8: ")",
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "*",
+2  --- "pi",
+3  --- "(",
+4  --- "*",
+5  --- "r",
+6  --- "r",
+7  --- ")",
+8  --- ")",
+Front is "(",
+Back is ")",
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: *
+
+STRING Arg to expression constructor: *
+STRING Type: 3
+String value: *
+
+EXPRESSION value *
+EXPRESSION newNode value: *
+EXPRESSION newNode type: 3
+
+NEW SIMPLE CHILD: "pi",
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: pi
+
+STRING Arg to expression constructor: pi
+STRING Type: 3
+String value: pi
+
+EXPRESSION value pi
+EXPRESSION child_value: 10
+EXPRESSION child_type: 3
+
+Pushed back 
+NEW EXPRESSION CHILD: "(",
+Building 
+parens: 1: "*",
+parens: 1: "r",
+parens: 1: "r",
+parens: 1: ")",
+tokens:
+0: "(",
+1: "*",
+2: "r",
+3: "r",
+4: ")",
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "*",
+2  --- "r",
+3  --- "r",
+4  --- ")",
+Front is "(",
+Back is ")",
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: *
+
+STRING Arg to expression constructor: *
+STRING Type: 3
+String value: *
+
+EXPRESSION value *
+EXPRESSION newNode value: *
+EXPRESSION newNode type: 3
+
+NEW SIMPLE CHILD: "r",
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: r
+
+STRING Arg to expression constructor: r
+STRING Type: 3
+String value: r
+
+EXPRESSION value r
+EXPRESSION child_value: 0
+EXPRESSION child_type: 3
+
+Pushed back 
+NEW SIMPLE CHILD: "r",
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: r
+
+STRING Arg to expression constructor: r
+STRING Type: 3
+String value: r
+
+EXPRESSION value r
+EXPRESSION child_value: 0
+EXPRESSION child_type: 3
+
+Pushed back 
+RETURNING: *
+WITH 2 CHILDREN
+!!!children[0] : 0
+!!!children[1] : 0
+Pushed back 
+RETURNING: *
+WITH 2 CHILDREN
+!!!children[0] : 10
+!!!children[1] : 0
+Pushed back 
+RETURNING: begin
+WITH 2 CHILDREN
+!!!children[0] : 0
+!!!children[1] : 0
+
+
+what is in the tree: 
+ROOT string_value: begin
+
+SUCCESS: PARSED CORRECTLY
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (f
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : "f"
+ERROR: INVALID INPUT CHECK PARENTHESES
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (begin (define r 10) (* pi (* r r
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : "begin",
+vector_of_strings[2] : "(",
+vector_of_strings[3] : "define",
+vector_of_strings[4] : "r",
+vector_of_strings[5] : "10",
+vector_of_strings[6] : ")",
+vector_of_strings[7] : "(",
+vector_of_strings[8] : "*",
+vector_of_strings[9] : "pi",
+vector_of_strings[10] : "(",
+vector_of_strings[11] : "*",
+vector_of_strings[12] : "r",
+vector_of_strings[13] : "r"
+ERROR: INVALID INPUT CHECK PARENTHESES
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (begin (define r 10) (* pi (* r r))) )
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : "begin",
+vector_of_strings[2] : "(",
+vector_of_strings[3] : "define",
+vector_of_strings[4] : "r",
+vector_of_strings[5] : "10",
+vector_of_strings[6] : ")",
+vector_of_strings[7] : "(",
+vector_of_strings[8] : "*",
+vector_of_strings[9] : "pi",
+vector_of_strings[10] : "(",
+vector_of_strings[11] : "*",
+vector_of_strings[12] : "r",
+vector_of_strings[13] : "r",
+vector_of_strings[14] : ")",
+vector_of_strings[15] : ")",
+vector_of_strings[16] : ")",
+vector_of_strings[17] : ")"
+ERROR: INVALID INPUT CHECK PARENTHESES
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): hello
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Qn≈Wˇ
+
+¿h≈Wˇ
+
+êœ˙
+
+
+`÷8±ˇ
+
+®h≈Wˇ
+
+®h≈Wˇ
+
+®h≈Wˇ
+
+®h≈Wˇ
+
+
+
+
+
+
+
+
+
+∏h≈Wˇ
+
+
+
+
+
+
+
+
+
+∏h≈Wˇ
+
+pN≈Wˇ
+
+
+
+
+
+
+
+
+
+∏h≈Wˇ
+
+∏h≈Wˇ
+
+àN≈Wˇ
+
+êœ˙
+
+
+`÷8±ˇ
+
+êœ˙
+
+
+`÷8±ˇ
+
+‡M≈Wˇ
+
+‡M≈Wˇ
+
+‡M≈Wˇ
+
+‡M≈Wˇ
+
+‡M≈Wˇ
+
+‡M≈Wˇ
+
+Pn≈W
+
+
+‡M≈Wˇ
+
+‡M≈Wˇ
+
+‡M≈Wˇ
+
+‡M≈Wˇ
+
+≠Í	
+
+
+»M≈Wˇ
+
+≠Í	
+
+
+»M≈Wˇ
+
+»M≈Wˇ
+
+»M≈Wˇ
+
+»M≈Wˇ
+
+»M≈Wˇ
+
+∞M≈Wˇ
+
+∞M≈Wˇ
+
+∞M≈Wˇ
+
+∞M≈Wˇ
+
+∞M≈Wˇ
+
+∞M≈Wˇ
+
+",
+ERROR: INVALID INPUT CHECK PARENTHESES
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+ERROR: INVALID INPUT EMPTY STRING
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): ( )
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : ")"
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- ")"
+Front is "(",
+Back is ")"
+ERROR PROCESSING
+ERROR: INVALID INPUT ROOT IS NULL
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (1abc)
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (True)
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : "True",
+vector_of_strings[2] : ")"
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "True",
+2  --- ")"
+Front is "(",
+Back is ")"
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: True
+
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+
+EXPRESSION value 
+EXPRESSION newNode value: 
+EXPRESSION newNode type: 1
+
+RETURNING: 
+WITH 0 CHILDREN
+
+
+what is in the tree: 
+ROOT string_value: 
+
+SUCCESS: PARSED CORRECTLY
+
+evaluate() function called
+
+WHAT IS THE VALUE OF ROOT BEING PUT INTO EVAL_HELPER()??? 
+evaluate_helper() called
+
+node children size: 0
+didnt go through any of the if statements
+
+RESULT (bool): (True)
+
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (False)
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : "False",
+vector_of_strings[2] : ")"
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "False",
+2  --- ")"
+Front is "(",
+Back is ")"
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: False
+
+BOOL Arg to expression constructor: 0
+BOOL Type: 1
+bool value: 0
+
+EXPRESSION value 
+EXPRESSION newNode value: 
+EXPRESSION newNode type: 1
+
+RETURNING: 
+WITH 0 CHILDREN
+
+
+what is in the tree: 
+ROOT string_value: 
+
+SUCCESS: PARSED CORRECTLY
+
+evaluate() function called
+
+WHAT IS THE VALUE OF ROOT BEING PUT INTO EVAL_HELPER()??? 
+evaluate_helper() called
+
+node children size: 0
+didnt go through any of the if statements
+
+RESULT (bool): (False)
+
+BOOL Arg to expression constructor: 0
+BOOL Type: 1
+bool value: 0
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (4)
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : "4",
+vector_of_strings[2] : ")"
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "4",
+2  --- ")"
+Front is "(",
+Back is ")"
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: 4
+
+DOUBLE Arg to expression constructor: 4
+DOUBLE Type: 2
+Double value: 4
+
+EXPRESSION value 
+EXPRESSION newNode value: 
+EXPRESSION newNode type: 2
+
+RETURNING: 
+WITH 0 CHILDREN
+
+
+what is in the tree: 
+ROOT string_value: 
+
+SUCCESS: PARSED CORRECTLY
+
+evaluate() function called
+
+WHAT IS THE VALUE OF ROOT BEING PUT INTO EVAL_HELPER()??? 
+evaluate_helper() called
+
+node children size: 0
+
+RESULT (num): 4
+
+DOUBLE Arg to expression constructor: 4
+DOUBLE Type: 2
+Double value: 4
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (pi)
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : "pi",
+vector_of_strings[2] : ")"
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "pi",
+2  --- ")"
+Front is "(",
+Back is ")"
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: pi
+
+STRING Arg to expression constructor: pi
+STRING Type: 3
+String value: pi
+
+EXPRESSION value pi
+EXPRESSION newNode value: pi
+EXPRESSION newNode type: 3
+
+RETURNING: pi
+WITH 0 CHILDREN
+
+
+what is in the tree: 
+ROOT string_value: pi
+
+SUCCESS: PARSED CORRECTLY
+
+evaluate() function called
+
+WHAT IS THE VALUE OF ROOT BEING PUT INTO EVAL_HELPER()??? pi
+evaluate_helper() called
+
+node children size: 0
+pi is 3.14159BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+The value at elment: pi is 3.14159
+
+RESULT (num): 3.14159
+
+DOUBLE Arg to expression constructor: 3.14159
+DOUBLE Type: 2
+Double value: 3.14159
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (+ 1 2)
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : "+",
+vector_of_strings[2] : "1",
+vector_of_strings[3] : "2",
+vector_of_strings[4] : ")"
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "+",
+2  --- "1",
+3  --- "2",
+4  --- ")"
+Front is "(",
+Back is ")"
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: +
+
+STRING Arg to expression constructor: +
+STRING Type: 3
+String value: +
+
+EXPRESSION value +
+EXPRESSION newNode value: +
+EXPRESSION newNode type: 3
+
+NEW SIMPLE CHILD: "1",
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: 1
+
+DOUBLE Arg to expression constructor: 1
+DOUBLE Type: 2
+Double value: 1
+
+EXPRESSION value 
+EXPRESSION child_value: 1
+EXPRESSION child_type: 2
+
+Pushed back 
+NEW SIMPLE CHILD: "2",
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: 2
+
+DOUBLE Arg to expression constructor: 2
+DOUBLE Type: 2
+Double value: 2
+
+EXPRESSION value 
+EXPRESSION child_value: 2
+EXPRESSION child_type: 2
+
+Pushed back 
+RETURNING: +
+WITH 2 CHILDREN
+!!!children[0] : 1
+!!!children[1] : 2
+
+
+what is in the tree: 
+ROOT string_value: +
+
+SUCCESS: PARSED CORRECTLY
+
+evaluate() function called
+
+WHAT IS THE VALUE OF ROOT BEING PUT INTO EVAL_HELPER()??? +
+evaluate_helper() called
+
+node children size: 2
+!!!------ examining the + function
+NODE CHILD 1: 1
+NODE CHILD 1: 2
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+DOUBLE Arg to expression constructor: 3
+DOUBLE Type: 2
+Double value: 3
+
+RESULT (num): 3
+
+DOUBLE Arg to expression constructor: 3
+DOUBLE Type: 2
+Double value: 3
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (if True (4) (-4))
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : "if",
+vector_of_strings[2] : "True",
+vector_of_strings[3] : "(",
+vector_of_strings[4] : "4",
+vector_of_strings[5] : ")",
+vector_of_strings[6] : "(",
+vector_of_strings[7] : "-4",
+vector_of_strings[8] : ")",
+vector_of_strings[9] : ")"
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "if",
+2  --- "True",
+3  --- "(",
+4  --- "4",
+5  --- ")",
+6  --- "(",
+7  --- "-4",
+8  --- ")",
+9  --- ")"
+Front is "(",
+Back is ")"
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: if
+
+STRING Arg to expression constructor: if
+STRING Type: 3
+String value: if
+
+EXPRESSION value if
+EXPRESSION newNode value: if
+EXPRESSION newNode type: 3
+
+NEW SIMPLE CHILD: "True",
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: True
+
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+
+EXPRESSION value 
+EXPRESSION child_value: 6.95322e-310
+EXPRESSION child_type: 1
+
+Pushed back 
+NEW EXPRESSION CHILD: "(",
+Building 
+parens: 1: "4",
+parens: 1: ")",
+tokens:
+0: "(",
+1: "4",
+2: ")",
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "4",
+2  --- ")",
+Front is "(",
+Back is ")",
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: 4
+
+DOUBLE Arg to expression constructor: 4
+DOUBLE Type: 2
+Double value: 4
+
+EXPRESSION value 
+EXPRESSION newNode value: 
+EXPRESSION newNode type: 2
+
+RETURNING: 
+WITH 0 CHILDREN
+Pushed back 
+NEW EXPRESSION CHILD: "(",
+Building 
+parens: 1: "-4",
+parens: 1: ")",
+tokens:
+0: "(",
+1: "-4",
+2: ")",
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "-4",
+2  --- ")",
+Front is "(",
+Back is ")",
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: -4
+
+STRING Arg to expression constructor: -4
+STRING Type: 3
+String value: -4
+
+EXPRESSION value -4
+EXPRESSION newNode value: -4
+EXPRESSION newNode type: 3
+
+RETURNING: -4
+WITH 0 CHILDREN
+Pushed back 
+RETURNING: if
+WITH 3 CHILDREN
+!!!children[0] : 6.95322e-310
+!!!children[1] : 4
+!!!children[2] : 4
+
+
+what is in the tree: 
+ROOT string_value: if
+
+SUCCESS: PARSED CORRECTLY
+
+evaluate() function called
+
+WHAT IS THE VALUE OF ROOT BEING PUT INTO EVAL_HELPER()??? if
+evaluate_helper() called
+
+node children size: 3
+evaluate_helper() called
+
+node children size: 0
+didnt go through any of the if statements
+in the IF CONDITION, evaluates to: 1
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+evaluate_helper() called
+
+node children size: 0
+
+RESULT (num): 4
+
+DOUBLE Arg to expression constructor: 4
+DOUBLE Type: 2
+Double value: 4
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): (define answer 42)
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : "define",
+vector_of_strings[2] : "answer",
+vector_of_strings[3] : "42",
+vector_of_strings[4] : ")"
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- "define",
+2  --- "answer",
+3  --- "42",
+4  --- ")"
+Front is "(",
+Back is ")"
+Valid data
+
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: define
+
+STRING Arg to expression constructor: define
+STRING Type: 3
+String value: define
+
+EXPRESSION value define
+EXPRESSION newNode value: define
+EXPRESSION newNode type: 3
+
+NEW SIMPLE CHILD: "answer",
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: answer
+
+STRING Arg to expression constructor: answer
+STRING Type: 3
+String value: answer
+
+EXPRESSION value answer
+EXPRESSION child_value: 6.95322e-310
+EXPRESSION child_type: 3
+
+Pushed back 
+NEW SIMPLE CHILD: "42",
+THIS IS BEING PASSED INTO EXPRESSION_FACTORY: 42
+
+DOUBLE Arg to expression constructor: 42
+DOUBLE Type: 2
+Double value: 42
+
+EXPRESSION value 
+EXPRESSION child_value: 42
+EXPRESSION child_type: 2
+
+Pushed back 
+RETURNING: define
+WITH 2 CHILDREN
+!!!children[0] : 6.95322e-310
+!!!children[1] : 42
+
+
+what is in the tree: 
+ROOT string_value: define
+
+SUCCESS: PARSED CORRECTLY
+
+evaluate() function called
+
+WHAT IS THE VALUE OF ROOT BEING PUT INTO EVAL_HELPER()??? define
+evaluate_helper() called
+
+node children size: 2
+BOOL Arg to expression constructor: 1
+BOOL Type: 1
+bool value: 1
+not found in DEFAULT_MAP
+MAP CONTAINS: 
+ answer : 42 pi : 3.14159
+DOUBLE Arg to expression constructor: 42
+DOUBLE Type: 2
+Double value: 42
+
+RESULT (num): 42
+
+DOUBLE Arg to expression constructor: 42
+DOUBLE Type: 2
+Double value: 42
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+ERROR: INVALID INPUT EMPTY STRING
+an Environment is created with a default 3.14159
+MAP CONTAINS: 
+ pi : 3.14159
+
+parse() function called
+
+tokenize() is called
+String passed into Tokenize(): ()
+
+
+VECTOR CONTENTS: 
+vector_of_strings[0] : "(",
+vector_of_strings[1] : ")"
+
+we are currently in the processTokensToTree() function
+
+0  --- "(",
+1  --- ")"
+Front is "(",
+Back is ")"
+ERROR PROCESSING
+ERROR: INVALID INPUT ROOT IS NULL
+===============================================================================
+All tests passed (90 assertions in 25 test cases)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"unittests" end time: Mar 27 16:26 EDT
+"unittests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 27 16:26 EDT

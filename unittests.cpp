@@ -235,35 +235,25 @@ TEST_CASE("Testing Less Than and Greater Than functions", "interpreter.hpp")
 	express_less_equal_one.express.Data.number_value = 100;
 
 
-	REQUIRE(inter.less_than(express_one.express.Data.number_value,
-	 express_two.express.Data.number_value) == true);
+	REQUIRE(inter.less_than(express_one, express_two) == true);
 
-	REQUIRE(inter.less_than(express_two.express.Data.number_value,
-	 express_one.express.Data.number_value) == false);
+	REQUIRE(inter.less_than(express_two, express_one) == false);
 
-	REQUIRE(inter.less_than_or_equal(express_one.express.Data.number_value,
-	 express_two.express.Data.number_value) == true);
+	REQUIRE(inter.less_than_or_equal(express_one, express_two) == true);
 
-	REQUIRE(inter.less_than_or_equal(express_two.express.Data.number_value,
-	 express_one.express.Data.number_value) == false);
+	REQUIRE(inter.less_than_or_equal(express_two, express_one) == false);
 
-	REQUIRE(inter.less_than_or_equal(express_two.express.Data.number_value,
-	 express_two.express.Data.number_value) == true);
+	REQUIRE(inter.less_than_or_equal(express_two, express_two) == true);
 
-	REQUIRE(inter.greater_than(express_two.express.Data.number_value,
-	 express_one.express.Data.number_value) == true);
+	REQUIRE(inter.greater_than(express_two, express_one) == true);
 
-	REQUIRE(inter.greater_than(express_one.express.Data.number_value,
-	 express_two.express.Data.number_value) == false);
+	REQUIRE(inter.greater_than(express_one, express_two) == false);
 
-	REQUIRE(inter.greater_than_or_equal(express_less_equal_one.express.Data.number_value,
-	 express_less_equal_one.express.Data.number_value) == true);
+	REQUIRE(inter.greater_than_or_equal(express_less_equal_one, express_less_equal_one) == true);
 
-	REQUIRE(inter.greater_than_or_equal(express_one.express.Data.number_value,
-	 express_less_equal_one.express.Data.number_value) == true);
+	REQUIRE(inter.greater_than_or_equal(express_one, express_less_equal_one) == true);
 
-	REQUIRE(inter.greater_than_or_equal(express_two.express.Data.number_value,
-	 express_one.express.Data.number_value) == true);
+	REQUIRE(inter.greater_than_or_equal(express_two, express_one) == true);
 
 
 }
@@ -302,44 +292,44 @@ TEST_CASE("BooleanType testing through Constructor", "expression.hpp")
 }
 
 
-TEST_CASE("Tesing NumberType methods and constructors", "expression.hpp")
+TEST_CASE("Tesing NumberType methods and constructors (and expression_factory)", "expression.hpp")
 {
 	string value = "42";
 	Interpreter inter;
-	Expression express = new Expression(value);
-	express.express.Data.number_value = 42;
-	express.express.type = NumberType;
+	Expression express = inter.expression_factory(value);
 	REQUIRE(express.express.type == NumberType);
 	REQUIRE(express.express.Data.number_value == 42);
 
-	string value_two = "1050.0";
-	Expression express_two = new Expression(value_two);
-	express_two.express.Data.number_value = 1050.0;
-	express_two.express.type = NumberType;
+	double value_two = 1050.0;
+    Expression express_two(value_two);
 	REQUIRE(express_two.express.type ==  NumberType);
+    REQUIRE(express_two.express.Data.number_value == 1050.0);
 
-	string value_three = "28";
-	Expression express_three = new Expression(value_three);
-	express_three.express.type = NumberType;
+	double value_three = -28;
+    Expression express_three(value_three);
 	REQUIRE(express_three.express.type ==  NumberType);
+    REQUIRE(express_three.express.Data.number_value == -28);
 
 	REQUIRE(inter.negation(express_two) == -1050.0);
 
 }
 
 
-TEST_CASE("Testing Logical Not and negation", "interpreter.hpp")
+TEST_CASE("Testing Logical Not and Negation", "interpreter.hpp")
 {
 	bool value = true;
-	Expression express = new Expression(value);
+	Expression express(value);
 	Interpreter inter;
-	express.express.type = BooleanType;
-	REQUIRE(inter.logical_not(express) == false);
+    REQUIRE(express.express.Data.boolean_value == true);
+    Expression express_not = inter.logical_not(express);
+	REQUIRE(express_not.express.Data.boolean_value == false);
+    REQUIRE(express_not.express.Data.boolean_value == 0);
+    REQUIRE(express.express.type == BooleanType);
+    REQUIRE(express_not.express.type == BooleanType);
 
 	bool value_two = false;
-	Expression express_two = new Expression();
-	express_two.express.type = BooleanType;
-	express_two.express.Data.boolean_value = false;
-	REQUIRE(inter.logical_not(express_two) == true);
+    Expression express_two(value_two);
+    Expression express_not2 = inter.logical_not(express_two);
+	REQUIRE(express_not2 == true);
 
 }

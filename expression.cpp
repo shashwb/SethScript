@@ -12,27 +12,27 @@ Expression::Expression() {
 //when given a boolean value, return an Expression structure
 //	this structure will have the type BooleanType and the value in the parameter
 Expression::Expression(bool value) {
-	cout << "BOOL Arg to expression constructor: " << value << endl;
+	// cout << "BOOL Arg to expression constructor: " << value << endl;
 	express.type = BooleanType;
-	cout << "BOOL Type: " << express.type << endl;
+	// cout << "BOOL Type: " << express.type << endl;
 	express.Data.boolean_value = value;
-	cout << "bool: " << express.Data.boolean_value << endl;
+	// cout << "bool value: " << express.Data.boolean_value << endl;
 }
 
 Expression::Expression(double value) {
-	cout << "DOUBLE Arg to expression constructor: " << value << endl;
+	// cout << "DOUBLE Arg to expression constructor: " << value << endl;
 	express.type = NumberType;
-	cout << "DOUBLE Type: " << express.type << endl;
+	// cout << "DOUBLE Type: " << express.type << endl;
 	express.Data.number_value = value;
-	cout << "Double: " << express.Data.number_value << endl;
+	// cout << "Double value: " << express.Data.number_value << endl;
 }
 
 Expression::Expression(const std::string & value) {
-	cout << "STRING Arg to expression constructor: " << value << endl;
+	// cout << "STRING Arg to expression constructor: " << value << endl;
 	express.type = SymbolType;
-	cout << "STRING Type: " << express.type << endl;
+	// cout << "STRING Type: " << express.type << endl;
 	express.Data.string_value = value;
-	cout << "String: " << express.Data.string_value << endl;
+	// cout << "String value: " << express.Data.string_value << endl;
 }
 
 
