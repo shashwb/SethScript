@@ -177,17 +177,17 @@
      REQUIRE(result == Expression(3.));
    }
   
-//   { // add, 3-ary case
-//     std::string program = "(+ 1 2 3)";
-//     Expression result = run(program);
-//     REQUIRE(result == Expression(6.));
-//   }
-//
-//   { // add, 6-ary case
-//     std::string program = "(+ 1 2 3 4 5 6)";
-//     Expression result = run(program);
-//     REQUIRE(result == Expression(21.));
-//   }
+   { // add, 3-ary case
+     std::string program = "(+ 1 2 3)";
+     Expression result = run(program);
+     REQUIRE(result == Expression(6.));
+   }
+
+   { // add, 6-ary case
+     std::string program = "(+ 1 2 3 4 5 6)";
+     Expression result = run(program);
+     REQUIRE(result == Expression(21.));
+   }
  }
 
  TEST_CASE( "Test Interpreter special form: if", "[interpreter]" ) {
@@ -198,11 +198,11 @@
      REQUIRE(result == Expression(4.));
    }
   
-//   {
-//     std::string program = "(if False (4) (-4))";
-//     Expression result = run(program);
-//     REQUIRE(result == Expression(-4.));
-//   }
+   {
+     std::string program = "(if False (4) (-4))";
+     Expression result = run(program);
+     REQUIRE(result == Expression(-4.));
+   }
  }
 
  TEST_CASE( "Test Interpreter special forms: begin and define", "[interpreter]" ) {
@@ -213,67 +213,69 @@
      REQUIRE(result == Expression(42.));
    }
 
-//   {
+   {
 //     std::string program = "(begin (define answer 42)\n(answer))";
-//     Expression result = run(program);
-//     REQUIRE(result == Expression(42.));
-//   }
-//  
-//   {
-//     std::string program = "(begin (define answer (+ 9 11)) (answer))";
-//     Expression result = run(program);
-//     REQUIRE(result == Expression(20.));
-//   }
-//
-//   {
-//     std::string program = "(begin (define a 1) (define b 1) (+ a b))";
-//     Expression result = run(program);
-//     REQUIRE(result == Expression(2.));
-//   }
+     std::string program = "(begin (define answer 42)(answer))";
+     Expression result = run(program);
+     REQUIRE(result == Expression(42.));
+   }
+
+   {
+     std::string program = "(begin (define answer (+ 9 11)) (answer))";
+     Expression result = run(program);
+     REQUIRE(result == Expression(20.));
+   }
+
+   {
+     std::string program = "(begin (define a 1) (define b 1) (+ a b))";
+     Expression result = run(program);
+     REQUIRE(result == Expression(2.));
+   }
  }
 
-// TEST_CASE( "Test a complex expression", "[interpreter]" ) {
-//
-//   {
-//     std::string program = "(+ (+ 10 1) (+ 30 (+ 1 1)))";
-//     Expression result = run(program);
-//     REQUIRE(result == Expression(43.));
-//   }
-// }
+ TEST_CASE( "Test a complex expression", "[interpreter]" ) {
 
-// TEST_CASE( "Test relational procedures", "[interpreter]" ) {
+   {
+     std::string program = "(+ (+ 10 1) (+ 30 (+ 1 1)))";
+     Expression result = run(program);
+     REQUIRE(result == Expression(43.));
+   }
+ }
 
-//   {
-//     std::vector<std::string> programs = {"(< 1 2)",
-// 					 "(<= 1 2)",
-// 					 "(<= 1 1)",
-// 					 "(> 2 1)",
-// 					 "(>= 2 1)",
-// 					 "(>= 2 2)",
-// 					 "(= 4 4)"};
-//     for(auto s : programs){
-//       Expression result = run(s);
+ TEST_CASE( "Test relational procedures", "[interpreter]" ) {
+
+   {
+     std::vector<std::string> programs = {"(< 1 2)",
+ 					 "(<= 1 2)",
+ 					 "(<= 1 1)",
+ 					 "(> 2 1)",
+ 					 "(>= 2 1)",
+ 					 "(>= 2 2)",
+ 					 "(= 4 4)"};
+     for(auto s : programs){
+       Expression result = run(s);
 //       REQUIRE(result == Expression(true));
-//     }
-//   }
+     }
+   }
 
-//   {
-//     std::vector<std::string> programs = {"(< 2 1)",
-// 					 "(<= 2 1)",
-// 					 "(<= 1 0)",
-// 					 "(> 1 2)",
-// 					 "(>= 1 2)",
-// 					 "(>= 2 3)",
-// 					 "(= 0 4)"};
-//     for(auto s : programs){
-//       Expression result = run(s);
+
+   {
+     std::vector<std::string> programs = {"(< 2 1)",
+ 					 "(<= 2 1)",
+ 					 "(<= 1 0)",
+ 					 "(> 1 2)",
+ 					 "(>= 1 2)",
+ 					 "(>= 2 3)",
+ 					 "(= 0 4)"};
+     for(auto s : programs){
+       Expression result = run(s);
 //       REQUIRE(result == Expression(false));
-//     }
-//   }
-// }
+     }
+   }
+ }
 
 // TEST_CASE( "Test arithmetic procedures", "[interpreter]" ) {
-
+//
 //   {
 //     std::vector<std::string> programs = {"(+ 1 -2)",
 // 					 "(+ -3 1 1)",
@@ -283,7 +285,7 @@
 // 					 "(* 1 1 -1)",
 // 					 "(/ -1 1)",
 // 					 "(/ 1 -1)"};
-
+//
 //     for(auto s : programs){
 //       Expression result = run(s);
 //       REQUIRE(result == Expression(-1.));
@@ -291,23 +293,23 @@
 //   }
 // }
 
-// TEST_CASE( "Test logical procedures", "[interpreter]" ) {
+ TEST_CASE( "Test logical procedures", "[interpreter]" ) {
 
-//   REQUIRE(run("(not True)") == Expression(false));
-//   REQUIRE(run("(not False)") == Expression(true));
+   REQUIRE(run("(not True)") == Expression(false));
+   REQUIRE(run("(not False)") == Expression(true));
 
-//   REQUIRE(run("(and True True)") == Expression(true));
-//   REQUIRE(run("(and True False)") == Expression(false));
-//   REQUIRE(run("(and False True)") == Expression(false));
-//   REQUIRE(run("(and False False)") == Expression(false));
-//   REQUIRE(run("(and True True False)") == Expression(false));
+   REQUIRE(run("(and True True)") == Expression(true));
+   REQUIRE(run("(and True False)") == Expression(false));
+   REQUIRE(run("(and False True)") == Expression(false));
+   REQUIRE(run("(and False False)") == Expression(false));
+   REQUIRE(run("(and True True False)") == Expression(false));
 
-//   REQUIRE(run("(or True True)") == Expression(true));
-//   REQUIRE(run("(or True False)") == Expression(true));
-//   REQUIRE(run("(or False True)") == Expression(true));
-//   REQUIRE(run("(or False False)") == Expression(false));
-//   REQUIRE(run("(or True True False)") == Expression(true));
-// }
+   REQUIRE(run("(or True True)") == Expression(true));
+   REQUIRE(run("(or True False)") == Expression(true));
+   REQUIRE(run("(or False True)") == Expression(true));
+   REQUIRE(run("(or False False)") == Expression(false));
+   REQUIRE(run("(or True True False)") == Expression(true));
+ }
 
 // TEST_CASE( "Test some semantically invalid expresions", "[interpreter]" ) {
   

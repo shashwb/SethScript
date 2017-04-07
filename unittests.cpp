@@ -294,6 +294,7 @@ TEST_CASE("BooleanType testing through Constructor", "expression.hpp")
 
 TEST_CASE("Tesing NumberType methods and constructors (and expression_factory)", "expression.hpp")
 {
+    
 	string value = "42";
 	Interpreter inter;
 	Expression express = inter.expression_factory(value);

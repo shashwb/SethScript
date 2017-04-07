@@ -39,10 +39,10 @@ bool Environment::is_present_in_map(string symbol) {
 	std::unordered_map<string, double>::const_iterator got_default = default_map.find(symbol);
 
 	if (got_default == default_map.end()) {
-		cout << "not found in DEFAULT_MAP" << endl;
+		// cout << "not found in DEFAULT_MAP" << endl;
 		return false;
 	} else {
-		cout << got_default->first << " is " << got_default->second;
+		// cout << got_default->first << " is " << got_default->second;
 		return true;
 	}
 

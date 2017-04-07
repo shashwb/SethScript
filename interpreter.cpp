@@ -21,12 +21,14 @@ Interpreter::~Interpreter() {
 
 
 Node * Interpreter::processTokensToTree(vector<string> recursive_vector) {
-	// cout << endl;
-	// cout << "we are currently in the processTokensToTree() function" << endl;
-	// cout << endl;
+
 	for(int i=0;i<recursive_vector.size();i++)
 	{
-		// cout << i << "  --- " << recursive_vector[i] << endl;
+//		 cout << i << "  --- " << recursive_vector[i] << endl;
+//        if (recursive_vector[i] == "\"\n\"") {
+//            cout << "gonna pop this bitch: " << recursive_vector[i] << endl;
+//            recursive_vector.pop_back();
+//        }
 	}
 	// cout << "Done printing" << endl;
 	// cout << "Front is " << recursive_vector[0] << endl;
@@ -46,13 +48,6 @@ Node * Interpreter::processTokensToTree(vector<string> recursive_vector) {
 
 		Node* newNode = new Node(expression_factory(recursive_vector[0])); // new node holds first value
 
-		//DEBUGGING OUTPUT STATEMENTS
-		// cout << endl;
-		// cout << "EXPRESSION value " << newNode->data_expression.express.Data.string_value << endl;
-		// cout << "EXPRESSION newNode value: " << newNode->data_expression.express.Data.string_value << endl;
-		// cout << "EXPRESSION newNode type: " << newNode->data_expression.express.type << endl;
-		// cout << endl;
-
 		recursive_vector.erase(recursive_vector.begin());
 		// cout << "Ready to loop" << endl;
 		while (recursive_vector.size() > 0) {
@@ -62,12 +57,7 @@ Node * Interpreter::processTokensToTree(vector<string> recursive_vector) {
 				// cout << recursive_vector[0] << endl;
 				new_child = new Node(expression_factory(recursive_vector[0]));
 
-				//DEBUGGING OUTPUT STATEMENTS
-				// cout << endl;
-				// cout << "EXPRESSION value " << new_child->data_expression.express.Data.string_value << endl;
-				// cout << "EXPRESSION child_value: " << new_child->data_expression.express.Data.number_value << endl;
-				// cout << "EXPRESSION child_type: " << new_child->data_expression.express.type << endl;
-				// cout << endl;
+
 
 				recursive_vector.erase(recursive_vector.begin());
 			}
@@ -168,7 +158,7 @@ Expression Interpreter::expression_factory(string changeToExpression) {
 
 
 bool Interpreter::is_number(string s) {
-	return( strspn( s.c_str(), ".0123456789" ) == s.size() );
+	return( strspn( s.c_str(), "-.0123456789" ) == s.size() );
 }
 
 bool Interpreter::is_bool(string value) {
@@ -189,8 +179,6 @@ bool Interpreter::is_string(string str) {
 
 bool Interpreter::parse(std::istream & expression) noexcept
 {
-	// cout << endl;
-	// cout << "parse() function called" << endl;
 
 	string output = "";
 	string read_from_expression = "";
@@ -198,10 +186,8 @@ bool Interpreter::parse(std::istream & expression) noexcept
 		read_from_expression.insert(0, output);
 	}
 	getline(expression, read_from_expression);
-	// cout << endl;
 
 	if (read_from_expression.empty()) {
-		// cout << "ERROR: INVALID INPUT EMPTY STRING" << endl;
 		return false;
 	}
 
@@ -267,6 +253,7 @@ Expression Interpreter::evaluate_helper(Node * node) {
 	string divide = "/"; //check
 	string not_symbol = "not";	//check
 	string or_symbol = "or";	//
+    string and_symbol = "and";
 	string less_than_symbol = "<";
 	string less_than_equal = "<=";
 	string greater_than_symbol = ">";
@@ -292,51 +279,88 @@ Expression Interpreter::evaluate_helper(Node * node) {
 		}
 	}
 	if (node_string == "define") {
+
+
 		Expression exp = new Expression;
+
 		if (env->is_present_in_map(node->children[0]->data_expression.express.Data.string_value)) {
-			//overwrite this
-			// cout << endl;
-			// cout << node->children[0]->data_expression.express.Data.string_value << " IS FOUND IN MAP" << endl;
-			// cout << endl;
+
+            if (node->children[1]->children.size() >= 1) {
+                cout << "this is complex" << endl;
+                Expression complex_define = evaluate_helper(node->children[1]);
+                env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value, complex_define.express.Data.number_value);
+                return complex_define.express.Data.number_value;
+            }
 
 			//can either set to a number or a variable(symbol)
 			if (node->children[1]->data_expression.express.type == NumberType) {
+                cout << "this is not complex" << endl;
+
 				env->update_map_with_value(node->children[0]->data_expression.express.Data.string_value,
 					 node->children[1]->data_expression.express.Data.number_value);
-				// env->print_map();
 				return node->children[1]->data_expression.express.Data.number_value;
 			}
 			if (node->children[1]->data_expression.express.type == SymbolType) {
 				//get the value from the second child
 				double value_second_child = env->value_at_element_in_map(node->children[1]->data_expression.express.Data.string_value);
 				env->update_map_with_value(node->children[0]->data_expression.express.Data.string_value, value_second_child);
-				// env->print_map();
-				// return node->children[1]->data_expression.express.Data.string_value;
 				return value_second_child;
 			}
 			else {
 				// cout << "ERROR" << endl;
 			}
+
 		}
+
+        else if (node->children[1]->children.size() >= 1) {
+            cout << "this is complex" << endl;
+            Expression complex_define = evaluate_helper(node->children[1]);
+            env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value, complex_define.express.Data.number_value);
+            return complex_define.express.Data.number_value;
+        }
+
 		//add value to map
 		env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value,
 			 node->children[1]->data_expression.express.Data.number_value);
 
-	  // env->print_map(); //DEBUG
+        cout << "does it get to the print_map()?" << endl;
+	   env->print_map(); //DEBUG
 
 		exp.express.type = NumberType;
 		exp.express.Data.number_value = node->children[1]->data_expression.express.Data.number_value;
 		return exp.express.Data.number_value;
+
+
 	}
 
 	else if (node_string == "begin") {
-		//evaluate each expression in order, evaluating to the last
-		// cout << endl;
-		// cout << endl;
-		// cout << "LOLOL FUCK THIS SHIT begin" << endl;
-		// cout << endl;
-		// cout << endl;
+        Expression begin_one = new Expression;
+        for (int i = 0; i < node->children.size(); i++) {
+
+            if (node->children[i]->children.size() >= 1) {
+                cout << "this is complex, as it should be for BEGIN" << endl;
+                begin_one = evaluate_helper(node->children[i]);
+            }
+            else {
+                cout << "this is not complex" << endl;
+                begin_one = evaluate_helper(node->children[i]);
+            }
+        }
+        
+        if (begin_one.express.type == NumberType) {
+            return begin_one.express.Data.number_value;
+        }
+        else if (begin_one.express.type == SymbolType) {
+            return begin_one.express.Data.string_value;
+        }
+        else {
+            return begin_one.express.Data.boolean_value;
+        }
+
+
 	}
+    
+    
 	else if (node_string == "if") {
 		//if has 3 arguments
 		//	evaluate function - if true - if false
@@ -383,38 +407,83 @@ Expression Interpreter::evaluate_helper(Node * node) {
 
 	}
 	else if (node_string == add) {
-		// cout << "!!!------ examining the + function" << endl;
-		// cout << "NODE CHILD 1: " << node->children[0]->data_expression.express.Data.number_value << endl;
-		// cout << "NODE CHILD 1: " << node->children[1]->data_expression.express.Data.number_value << endl;
-//        cout << "INSIDE THE ADDITION" << endl;
+
 		Expression exp = new Expression;
 		exp.express.type = NumberType;
-		double result_add_sum = addition(node->children[0]->data_expression, node->children[1]->data_expression);
-//        cout << "result addition: " << result_add_sum << endl;
-		exp.express.Data.number_value = result_add_sum;
-		return exp.express.Data.number_value;
+
+
+        string node_rec = node->children[0]->data_expression.express.Data.string_value;
+//        cout << "RECURSIVE NODE: " << node_rec << endl;
+
+        double result_add_mary = 0;
+
+        for (int i = 0; i < node->children.size(); i++) {
+            if (node->children[i]->children.size() >= 1) {
+//                cout << "this is complex" << endl;
+                Expression recursive_result = evaluate_helper(node->children[i]);
+//                cout << "recursive result: " << recursive_result.express.Data.number_value << endl;
+                result_add_mary = result_add_mary + recursive_result.express.Data.number_value;
+            } else {
+//                cout << "this is not complex" << endl;
+                result_add_mary = result_add_mary + node->children[i]->data_expression.express.Data.number_value;
+            }
+        }
+        exp.express.Data.number_value = result_add_mary;
+        exp.express.type = NumberType;
+        return exp.express.Data.number_value;
+
 	}
 	else if (node_string == subtract) {
-		// cout << "!!!------ examining the - function" << endl;
-		// cout << "NODE CHILD 1: " << node->children[0]->data_expression.express.Data.number_value << endl;
-		// cout << "NODE CHILD 1: " << node->children[1]->data_expression.express.Data.number_value << endl;
-//        cout << "INSIDE THE SUBSTRACT" << endl;
+
 		Expression exp = new Expression;
 		exp.express.type = NumberType;
+        cout << "child 1" << node->children[0]->data_expression.express.Data.number_value << endl;
+        cout << "child 2" << node->children[1]->data_expression.express.Data.number_value << endl;
 		double result_subtract = subtract_expression(node->children[0]->data_expression, node->children[1]->data_expression);
-//        cout << "result subtract: " << result_subtract << endl;
+        cout << "result subtract: " << result_subtract << endl;
 		exp.express.Data.number_value = result_subtract;
 		return exp.express.Data.number_value;
 	}
 	else if (node_string == multiply) {
-		// cout << "!!!------ examining the * function" << endl;
-		// cout << "NODE CHILD 1: " << node->children[0]->data_expression.express.Data.number_value << endl;
-		// cout << "NODE CHILD 1: " << node->children[1]->data_expression.express.Data.number_value << endl;
-		Expression exp = new Expression;
-		exp.express.type = NumberType;
-		double result_mult = multiplication(node->children[0]->data_expression, node->children[1]->data_expression);
-		exp.express.Data.number_value = result_mult;
-		return exp.express.Data.number_value;
+
+
+        Expression exp = new Expression;
+        exp.express.type = NumberType;
+
+
+        string node_rec = node->children[0]->data_expression.express.Data.string_value;
+//        cout << "RECURSIVE NODE: " << node_rec << endl;
+
+        double result_multiply_mary = 1;
+
+        for (int i = 0; i < node->children.size(); i++) {
+//            cout << "NODE CHILD [ " << i << " ]: " << node->children[i]->data_expression.express.Data.number_value << endl;
+            if (node->children[i]->children.size() >= 1) {
+//                cout << "this is complex" << endl;
+
+                Expression recursive_result = evaluate_helper(node->children[i]);
+
+//                cout << "recursive result: " << recursive_result.express.Data.number_value << endl;
+                result_multiply_mary = result_multiply_mary * recursive_result.express.Data.number_value;
+//                cout << "result_multiply_mary: " << result_multiply_mary << endl;
+//                cout << endl;
+            } else {
+//                cout << "this is not complex" << endl;
+//                cout << "node->children[i]: " << node->children[i]->data_expression.express.Data.number_value << endl;
+                result_multiply_mary = result_multiply_mary * node->children[i]->data_expression.express.Data.number_value;
+//                result_multiply_mary = multiplication(node->children[0]->data_expression, node->children[1]->data_expression);
+//                cout << "result_multiply_mary: " << result_multiply_mary << endl;
+//                cout << endl;
+            }
+        }
+        exp.express.Data.number_value = result_multiply_mary;
+        exp.express.type = NumberType;
+        return exp.express.Data.number_value;
+
+
+
+
+
 	}
 	else if (node_string == divide) {
 		// cout << "!!!------ examining the / function" << endl;
@@ -437,15 +506,40 @@ Expression Interpreter::evaluate_helper(Node * node) {
 		return exp.express.Data.boolean_value;
 	}
 	else if (node_string == or_symbol) {
-		// cout << "!!!------ examining the OR function" << endl;
-		// cout << "NODE CHILD 1: " << node->children[0]->data_expression.express.Data.number_value << endl;
-		// cout << "NODE CHILD 1: " << node->children[1]->data_expression.express.Data.number_value << endl;
-		Expression exp = new Expression;
-		exp.express.type = BooleanType;
-		bool result_or = logical_or(node->children[0]->data_expression, node->children[1]->data_expression);
-		exp.express.Data.boolean_value = result_or;
-		return exp.express.Data.boolean_value;
+
+        Expression exp = new Expression;
+        exp.express.type = BooleanType;
+
+        for (int i = 0; i < node->children.size(); i++) {
+            if (node->children[i]->data_expression.express.Data.boolean_value == true) {
+                exp.express.Data.boolean_value = true;
+                return exp.express.Data.boolean_value;
+            } else {
+                exp.express.Data.boolean_value = false;
+            }
+        }
+        return exp.express.Data.boolean_value;
 	}
+    else if (node_string == and_symbol) {
+
+        Expression exp = new Expression;
+        exp.express.type = BooleanType;
+
+
+        cout << "value of node boolean value: " << node->children[0]->data_expression.express.Data.boolean_value << endl;
+
+        for (int i = 0; i < node->children.size(); i++) {
+            if (node->children[i]->data_expression.express.Data.boolean_value == false) {
+                exp.express.Data.boolean_value = false;
+                return exp.express.Data.boolean_value;
+            } else {
+                exp.express.Data.boolean_value = true;
+            }
+        }
+        return exp.express.Data.boolean_value;
+
+
+    }
 	else if (node_string == less_than_symbol) {
 		// cout << "!!!------ examining the LESS THAN function" << endl;
 		// cout << "NODE CHILD 1: " << node->children[0]->data_expression.express.Data.number_value << endl;
@@ -487,7 +581,7 @@ Expression Interpreter::evaluate_helper(Node * node) {
 		return exp.express.Data.boolean_value;
 	}
 	else {
-		// cout << "didnt go through any of the if statements" << endl;
+		//throw a semantic error
 	}
 	return node->data_expression;
 
@@ -496,19 +590,10 @@ Expression Interpreter::evaluate_helper(Node * node) {
 
 
 
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
-
-
-
 Expression Interpreter::eval() {
-	// cout << endl;
-	// cout << "evaluate() function called" << endl;
-	// cout << endl;
+
 	Expression expression_evaluate;
 	string result = "";
-		// cout << "WHAT IS THE VALUE OF ROOT BEING PUT INTO EVAL_HELPER()??? " << root->data_expression.express.Data.string_value << endl;
 	expression_evaluate = evaluate_helper(root);
 	if (expression_evaluate.express.type == NumberType) {
 		cout << "(" << expression_evaluate.express.Data.number_value << ")" << endl;

@@ -148,39 +148,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "interpreter.cpp"
-            timestampString = "512337816.167926"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "Interpreter::processTokensToTree(vector&lt;string&gt; recursive_vector)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "interpreter.cpp"
-            timestampString = "512337816.167926"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "Interpreter::processTokensToTree(vector&lt;string&gt; recursive_vector)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "interpreter.cpp"
-            timestampString = "512337816.167926"
+            timestampString = "513231290.069724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
@@ -195,12 +163,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "test_interpreter.cpp"
-            timestampString = "512183452.582972"
+            filePath = "interpreter.cpp"
+            timestampString = "513231290.069724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "351"
-            endingLineNumber = "351">
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "Interpreter::processTokensToTree(vector&lt;string&gt; recursive_vector)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -210,11 +180,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "interpreter.cpp"
-            timestampString = "512338141.104428"
+            timestampString = "513231290.069724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "Interpreter::processTokensToTree(vector&lt;string&gt; recursive_vector)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "test_interpreter.cpp"
+            timestampString = "513232071.124785"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "353"
+            endingLineNumber = "353"
+            landmarkName = "TEST_CASE( &quot;Test syntactically INCORRECT files&quot;, &quot;[interpreter]&quot; )"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "interpreter.cpp"
+            timestampString = "513231821.14686"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
             landmarkName = "Interpreter::evaluate_helper(Node * node)"
             landmarkType = "7">
             <Locations>
@@ -258,11 +260,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "interpreter.cpp"
-            timestampString = "512338141.104428"
+            timestampString = "513231821.14686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "284"
-            endingLineNumber = "284"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "Interpreter::evaluate_helper(Node * node)"
             landmarkType = "7">
          </BreakpointContent>
@@ -274,11 +276,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "interpreter.cpp"
-            timestampString = "512338141.104428"
+            timestampString = "513231821.14686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "Interpreter::evaluate_helper(Node * node)"
             landmarkType = "7">
             <Locations>
@@ -311,6 +313,112 @@
                   startingLineNumber = "275"
                   endingLineNumber = "275"
                   offsetFromSymbolStart = "2820">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "interpreter.cpp"
+            timestampString = "513231821.14686"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "237"
+            endingLineNumber = "237">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Interpreter::parse(std::__1::basic_istream&lt;char, std::__1::char_traits&lt;char&gt; &gt;&amp;)"
+                  moduleName = "unittests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp"
+                  timestampString = "513145036.035538"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "248"
+                  endingLineNumber = "248"
+                  offsetFromSymbolStart = "1480">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Interpreter::parse(std::__1::basic_istream&lt;char, std::__1::char_traits&lt;char&gt; &gt;&amp;)"
+                  moduleName = "unittests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp"
+                  timestampString = "513145036.038518"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "248"
+                  endingLineNumber = "248"
+                  offsetFromSymbolStart = "2498">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "interpreter.cpp"
+            timestampString = "513231821.14686"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "236"
+            endingLineNumber = "236">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "test_interpreter.cpp"
+            timestampString = "513235319.420689"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "357"
+            endingLineNumber = "357">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____C_A_T_C_H____T_E_S_T____358()"
+                  moduleName = "unittests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp"
+                  timestampString = "513235323.568777"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "360"
+                  endingLineNumber = "360"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__cxx_global_var_init.43"
+                  moduleName = "unittests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp"
+                  timestampString = "513235323.57344"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "358"
+                  endingLineNumber = "358"
+                  offsetFromSymbolStart = "4">
                </Location>
             </Locations>
          </BreakpointContent>
