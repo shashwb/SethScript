@@ -9,9 +9,9 @@
 /* Begin PBXAggregateTarget section */
 		34A40A3E0C4E4DD58E1BDABB /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = F63E1A45EFEF4297A67C486E /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 43D13041AE68426E8E90E78C /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				C7D0B4F07D2248EE98C34B5A /* CMake Rules */,
+				38C3E71C713544428369523B /* CMake Rules */,
 			);
 			dependencies = (
 			);
@@ -20,9 +20,9 @@
 		};
 		7E1F98E2654D44BC9F441084 /* RUN_TESTS */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 1C38AB8E95E04218A347A094 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildConfigurationList = 1FF620D976354793AF9F3175 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
 			buildPhases = (
-				5A4757ED74A749D48B7F36F2 /* CMake PostBuild Rules */,
+				0F83B5FDDF494DD7AA127CCB /* CMake PostBuild Rules */,
 			);
 			dependencies = (
 			);
@@ -31,14 +31,14 @@
 		};
 		ECA8BCADB00C428C9353E67C /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 12EFCD2316664105A5F88427 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 422D69EFF99E454BA3A982FB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				C593CEEA67E84A43A250CF77 /* CMake Rules */,
+				F91D751CBD924ECFB281CD06 /* CMake Rules */,
 			);
 			dependencies = (
-				13C8336F371E481593A985B5 /* PBXTargetDependency */,
-				52DBCE5CFEE149CFA65173E4 /* PBXTargetDependency */,
-				58221CAC93BB44A2828429B3 /* PBXTargetDependency */,
+				0992F99411514BC8A3E24909 /* PBXTargetDependency */,
+				01DFB32916764A8984F49682 /* PBXTargetDependency */,
+				E0BAB7F460E04D619DC392B7 /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
@@ -46,266 +46,266 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0F6D30A516F24AD4976CAAFE /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */ = {isa = PBXBuildFile; fileRef = FB26DC186D244D5699B24FB6 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */; };
-		147B9CE1AB9B420085A35CBA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */ = {isa = PBXBuildFile; fileRef = 3BB8367FDDA449A0A5ECE0A9 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */; };
-		1EFAF674512445CA8F2026ED /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */ = {isa = PBXBuildFile; fileRef = 1970500EF15C4AAAA8F32561 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */; };
-		21104B167BB04ECB9F2F2773 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */ = {isa = PBXBuildFile; fileRef = 985A447F230C48CF84105ECC /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */; };
-		37C17942A34F4B8D86809609 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */ = {isa = PBXBuildFile; fileRef = 4B322CC3C980493B9A693F33 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */; };
-		3DA462D65A6B4C37908DEA4E /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */ = {isa = PBXBuildFile; fileRef = 0145FE06D1FA482CA51E060A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */; };
-		45A18C2413104724A2FC9BC0 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */ = {isa = PBXBuildFile; fileRef = 83FF72DAA0D44BA787DDA1FA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */; };
-		5AF7D6C64814436198B71D15 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = BC762EC155C046C5ACE9C2A1 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */; };
-		5B190559F78F4F64892BC1B1 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */ = {isa = PBXBuildFile; fileRef = E797092079F34BB0B5A0A259 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */; };
-		6942FFBD52E14D17B0FF27AF /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */ = {isa = PBXBuildFile; fileRef = BB969D2970494CEFA1796EB6 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */; };
-		7265952510E942C8AADE67B9 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */ = {isa = PBXBuildFile; fileRef = 7A72E80141F04A7EA9F690EF /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */; };
-		7A645558A248435296E6500E /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp */ = {isa = PBXBuildFile; fileRef = 2006A14F02434BFD837795FE /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp */; };
-		AB847766D01E4DF3B83E83B0 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp */ = {isa = PBXBuildFile; fileRef = 0860B3DB1F46499B936D3EC7 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp */; };
-		BAFA3D771C594EAA8E373727 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */ = {isa = PBXBuildFile; fileRef = D035A4593A124CE0B5B94CDA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */; };
-		BBD380621DDF494781F85345 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */ = {isa = PBXBuildFile; fileRef = BA64EC9AEE87486DBAC5C8F8 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */; };
-		C4F0B6FB59D744C08C72F255 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = E0022B0B6C17463D9CB37990 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */; };
-		CAA8C3C84A67441CBC948E21 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests.cpp */ = {isa = PBXBuildFile; fileRef = FBA7340F93F94F3DA320C7BC /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests.cpp */; };
-		D053CB50262F4C20A78D0552 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */ = {isa = PBXBuildFile; fileRef = A61DC628C6714A528FF4CEEA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */; };
-		D5303A30D420429883999963 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */ = {isa = PBXBuildFile; fileRef = EFC78436A1E94A5EA9CABC55 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */; };
-		E14CEB1C6F58444487071D48 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */ = {isa = PBXBuildFile; fileRef = 5A11DFA5ECD5410687728BF6 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */; };
-		F627B2C2557C44DAAE3024E0 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/catch.hpp */ = {isa = PBXBuildFile; fileRef = A3E900C4C7F44FDFAC2BF5AF /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/catch.hpp */; };
-		FDF13C9D6E6041768230F7A5 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */ = {isa = PBXBuildFile; fileRef = 3BE5C42BAC334A23920935EA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */; };
+		01B864207887462BA87624AE /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */ = {isa = PBXBuildFile; fileRef = 2C3BB6CDEC8046CF860C69A7 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */; };
+		0B0327F090FB4B85AE50C7A3 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */ = {isa = PBXBuildFile; fileRef = B88717DEF36948B1BE68E530 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */; };
+		14E9F35CEE0C4FDFA200C566 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */ = {isa = PBXBuildFile; fileRef = 5970D76006FC4C2E85CEA851 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */; };
+		1BA7C7661A954D8AAB42B124 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */ = {isa = PBXBuildFile; fileRef = 66A97F2E118A440E907CF088 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */; };
+		31D2B5FB672C4C58BE539C58 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */ = {isa = PBXBuildFile; fileRef = ACF23AFA94FD474DB8E014AA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */; };
+		3D11C94EEF8C4FD5A5B0DE4D /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */ = {isa = PBXBuildFile; fileRef = FCCC834C4F4342D4B9EAF874 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */; };
+		3F3B511972D3409CADC9A16A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/catch.hpp */ = {isa = PBXBuildFile; fileRef = 5447A7643DA242AE82E7904A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/catch.hpp */; };
+		5EC802635F224BCDA8F6CE22 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests.cpp */ = {isa = PBXBuildFile; fileRef = 3502ACD2678A4E38A48FDD4A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests.cpp */; };
+		606E82DD8C51423EAC654667 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */ = {isa = PBXBuildFile; fileRef = 6E410223043941ED9A165567 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */; };
+		64D9489797AD464AA3F90923 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */ = {isa = PBXBuildFile; fileRef = FEF9E8D435114E849FAD7343 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */; };
+		6F891A8D1E984E5E95E12ED1 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = E207AD2F5D814786917042DB /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */; };
+		88967B359D7C4806A9FBF359 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */ = {isa = PBXBuildFile; fileRef = 3D2A6CD8FACF424C8F5C957A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */; };
+		89AD46EEBFAA4B9F86170D1C /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp */ = {isa = PBXBuildFile; fileRef = 837B6708443B49DDA36F991B /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp */; };
+		8BAA4C407AB742EB8317B03C /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */ = {isa = PBXBuildFile; fileRef = C2ED11CE5D51436DA97D90DC /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */; };
+		97B421A82838454BAEC61E10 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp */ = {isa = PBXBuildFile; fileRef = B0ED9BA25BDA4C38AF61374B /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp */; };
+		984968DE6FA0409E9E1883B5 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */ = {isa = PBXBuildFile; fileRef = 9A2DBEA6FFCE49BF9EC89E99 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */; };
+		9D4EA3CA1E9E4818A7E4C233 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = BCF96B61C0B14A1885498E9A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */; };
+		AF66358763B24D748D916437 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */ = {isa = PBXBuildFile; fileRef = 439EB07F2AF64E6B99691692 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */; };
+		B7CD667F32EF48719D38F708 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */ = {isa = PBXBuildFile; fileRef = C62C82689DE14FB3B4FFB04E /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */; };
+		CC83E0696E8D443DB490B11A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */ = {isa = PBXBuildFile; fileRef = 7645047483464BD982A7DA05 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */; };
+		E4326C18556246969BCD0AAF /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */ = {isa = PBXBuildFile; fileRef = E7B550ADACF34499B6DF4BB5 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */; };
+		F788DDAAD80E47BFA49FA00B /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */ = {isa = PBXBuildFile; fileRef = 023886AEF99E444B8E7155C1 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		33FB0B1456204244B0F6E9D9 /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		54D75E0223C04C77BA276C69 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		71451F754D124A968AE22D8C /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		A39DAA3F37124DACAFFEFCC7 = {
-			isa = PBXBuildStyle;
-		};
-		FB690E4B6B6F4F37A1D31CA2 /* RelWithDebInfo */ = {
+		4A88F6BF57B546E0A9A19A80 /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = RelWithDebInfo;
 		};
+		59ECE844B79E4A618010A0EB = {
+			isa = PBXBuildStyle;
+		};
+		A4F64C2AF1994C988C90D382 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		C5CA6F72D3D2478DB980C93D /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		D7C27BF3ABA9485295D7E6F0 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		382248DDBA114E9185D6CE06 /* PBXContainerItemProxy */ = {
+		15B2A4B7387A4C46934A979A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B27DA152BC154466A9911299 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B50FBD7F0543477C9F6894EE;
 			remoteInfo = vtscript;
 		};
-		3BD5E3EA4869456B83F5C137 /* PBXContainerItemProxy */ = {
+		1AD266BA2334428BA0A1E9B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B27DA152BC154466A9911299 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 34A40A3E0C4E4DD58E1BDABB;
 			remoteInfo = ZERO_CHECK;
 		};
-		69F5236D4C4944E2B57CE08F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B27DA152BC154466A9911299 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 34A40A3E0C4E4DD58E1BDABB;
-			remoteInfo = ZERO_CHECK;
-		};
-		7CB0A7AF00F5449D8B3D5182 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B27DA152BC154466A9911299 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 34A40A3E0C4E4DD58E1BDABB;
-			remoteInfo = ZERO_CHECK;
-		};
-		97E5B237742040E19A6D9C14 /* PBXContainerItemProxy */ = {
+		62C0A3C8A5124B8BA75F30E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B27DA152BC154466A9911299 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2C110A3A3E464DF28F643F91;
 			remoteInfo = unittests;
 		};
+		6AA2E44B93084B759F8AB1C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B27DA152BC154466A9911299 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34A40A3E0C4E4DD58E1BDABB;
+			remoteInfo = ZERO_CHECK;
+		};
+		D42C5F7308C74DA88F05EA27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B27DA152BC154466A9911299 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34A40A3E0C4E4DD58E1BDABB;
+			remoteInfo = ZERO_CHECK;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0145FE06D1FA482CA51E060A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = environment.hpp; path = environment.hpp; sourceTree = SOURCE_ROOT; };
-		0860B3DB1F46499B936D3EC7 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vtscript.cpp; path = vtscript.cpp; sourceTree = SOURCE_ROOT; };
-		1970500EF15C4AAAA8F32561 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = expression.cpp; path = expression.cpp; sourceTree = SOURCE_ROOT; };
-		2006A14F02434BFD837795FE /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = test_interpreter.cpp; path = test_interpreter.cpp; sourceTree = SOURCE_ROOT; };
-		3BB8367FDDA449A0A5ECE0A9 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = environment.cpp; path = environment.cpp; sourceTree = SOURCE_ROOT; };
-		3BE5C42BAC334A23920935EA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = interpreter.cpp; path = interpreter.cpp; sourceTree = SOURCE_ROOT; };
-		4B322CC3C980493B9A693F33 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = interpreter.hpp; path = interpreter.hpp; sourceTree = SOURCE_ROOT; };
-		5A11DFA5ECD5410687728BF6 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = interpreter.cpp; path = interpreter.cpp; sourceTree = SOURCE_ROOT; };
-		7A72E80141F04A7EA9F690EF /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = expression.hpp; path = expression.hpp; sourceTree = SOURCE_ROOT; };
-		83FF72DAA0D44BA787DDA1FA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tokenize.cpp; path = tokenize.cpp; sourceTree = SOURCE_ROOT; };
-		985A447F230C48CF84105ECC /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = environment.hpp; path = environment.hpp; sourceTree = SOURCE_ROOT; };
-		98A9F594D90B4920BE2E8463 /* vtscript */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = vtscript; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3E900C4C7F44FDFAC2BF5AF /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/catch.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = catch.hpp; path = catch.hpp; sourceTree = SOURCE_ROOT; };
-		A61DC628C6714A528FF4CEEA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tokenize.cpp; path = tokenize.cpp; sourceTree = SOURCE_ROOT; };
-		A743415E9CC74D02B1043B06 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		BA64EC9AEE87486DBAC5C8F8 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = interpreter.hpp; path = interpreter.hpp; sourceTree = SOURCE_ROOT; };
-		BB969D2970494CEFA1796EB6 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = expression.hpp; path = expression.hpp; sourceTree = SOURCE_ROOT; };
-		BC762EC155C046C5ACE9C2A1 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		BFC049497D5D43768A578A23 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		C072B4F4714A4E5E9A653A77 /* unittests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = unittests; sourceTree = BUILT_PRODUCTS_DIR; };
-		D035A4593A124CE0B5B94CDA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = tokenize.hpp; path = tokenize.hpp; sourceTree = SOURCE_ROOT; };
-		E0022B0B6C17463D9CB37990 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		E797092079F34BB0B5A0A259 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = tokenize.hpp; path = tokenize.hpp; sourceTree = SOURCE_ROOT; };
-		EFC78436A1E94A5EA9CABC55 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = environment.cpp; path = environment.cpp; sourceTree = SOURCE_ROOT; };
-		FB26DC186D244D5699B24FB6 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = expression.cpp; path = expression.cpp; sourceTree = SOURCE_ROOT; };
-		FBA7340F93F94F3DA320C7BC /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unittests.cpp; path = unittests.cpp; sourceTree = SOURCE_ROOT; };
+		023886AEF99E444B8E7155C1 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = interpreter.cpp; path = interpreter.cpp; sourceTree = SOURCE_ROOT; };
+		2C3BB6CDEC8046CF860C69A7 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = expression.hpp; path = expression.hpp; sourceTree = SOURCE_ROOT; };
+		3502ACD2678A4E38A48FDD4A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unittests.cpp; path = unittests.cpp; sourceTree = SOURCE_ROOT; };
+		3D2A6CD8FACF424C8F5C957A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = tokenize.hpp; path = tokenize.hpp; sourceTree = SOURCE_ROOT; };
+		439EB07F2AF64E6B99691692 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = expression.cpp; path = expression.cpp; sourceTree = SOURCE_ROOT; };
+		5447A7643DA242AE82E7904A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/catch.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = catch.hpp; path = catch.hpp; sourceTree = SOURCE_ROOT; };
+		5970D76006FC4C2E85CEA851 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = environment.cpp; path = environment.cpp; sourceTree = SOURCE_ROOT; };
+		5E34BF0DA2EC4612A10C88BB /* vtscript */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = vtscript; sourceTree = BUILT_PRODUCTS_DIR; };
+		66A97F2E118A440E907CF088 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = expression.cpp; path = expression.cpp; sourceTree = SOURCE_ROOT; };
+		6E410223043941ED9A165567 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = environment.hpp; path = environment.hpp; sourceTree = SOURCE_ROOT; };
+		71E672C3FFE940D588797826 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7645047483464BD982A7DA05 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = expression.hpp; path = expression.hpp; sourceTree = SOURCE_ROOT; };
+		7C2708D1D9DE437C8E8649F3 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		837B6708443B49DDA36F991B /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vtscript.cpp; path = vtscript.cpp; sourceTree = SOURCE_ROOT; };
+		9A2DBEA6FFCE49BF9EC89E99 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tokenize.cpp; path = tokenize.cpp; sourceTree = SOURCE_ROOT; };
+		ACF23AFA94FD474DB8E014AA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = environment.cpp; path = environment.cpp; sourceTree = SOURCE_ROOT; };
+		B0ED9BA25BDA4C38AF61374B /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = test_interpreter.cpp; path = test_interpreter.cpp; sourceTree = SOURCE_ROOT; };
+		B88717DEF36948B1BE68E530 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = environment.hpp; path = environment.hpp; sourceTree = SOURCE_ROOT; };
+		BCF96B61C0B14A1885498E9A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C2ED11CE5D51436DA97D90DC /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tokenize.cpp; path = tokenize.cpp; sourceTree = SOURCE_ROOT; };
+		C62C82689DE14FB3B4FFB04E /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = tokenize.hpp; path = tokenize.hpp; sourceTree = SOURCE_ROOT; };
+		E207AD2F5D814786917042DB /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		E7B550ADACF34499B6DF4BB5 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = interpreter.hpp; path = interpreter.hpp; sourceTree = SOURCE_ROOT; };
+		F8050FCEA55E40EDB746B7F0 /* unittests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = unittests; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCCC834C4F4342D4B9EAF874 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = interpreter.hpp; path = interpreter.hpp; sourceTree = SOURCE_ROOT; };
+		FEF9E8D435114E849FAD7343 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = interpreter.cpp; path = interpreter.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		0AF11351689F442A850E98A8 /* Resources */ = {
+		03C64CA712C04E80B36512D2 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				5970D76006FC4C2E85CEA851 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */,
+				439EB07F2AF64E6B99691692 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */,
+				FEF9E8D435114E849FAD7343 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */,
+				C2ED11CE5D51436DA97D90DC /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */,
+				837B6708443B49DDA36F991B /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		243BAB70B896483B8751F598 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8050FCEA55E40EDB746B7F0 /* unittests */,
+				5E34BF0DA2EC4612A10C88BB /* vtscript */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EE0D325E24043C1821659A0 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				5447A7643DA242AE82E7904A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/catch.hpp */,
+				6E410223043941ED9A165567 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */,
+				7645047483464BD982A7DA05 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */,
+				FCCC834C4F4342D4B9EAF874 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */,
+				3D2A6CD8FACF424C8F5C957A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		34AE04E2159D4D018EF9B44E /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		362987B1FB164CDBBE353556 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		4B0B49FB55084AC08E2F57D8 = {
+			isa = PBXGroup;
+			children = (
+				B58DB2801BCF462F876394F1 /* Sources */,
+				D344F3446D7342238443797C /* Resources */,
+				243BAB70B896483B8751F598 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C8A6F53B0054E8BBABCCB0B /* unittests */ = {
+			isa = PBXGroup;
+			children = (
+				2EE0D325E24043C1821659A0 /* Header Files */,
+				6B0E3013204D411CAAD584AB /* Source Files */,
+				E207AD2F5D814786917042DB /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */,
+			);
+			name = unittests;
+			sourceTree = "<group>";
+		};
+		6B0E3013204D411CAAD584AB /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACF23AFA94FD474DB8E014AA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */,
+				66A97F2E118A440E907CF088 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */,
+				023886AEF99E444B8E7155C1 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */,
+				B0ED9BA25BDA4C38AF61374B /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp */,
+				9A2DBEA6FFCE49BF9EC89E99 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */,
+				3502ACD2678A4E38A48FDD4A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		7E642FC7059C4F5D8B34BB4E /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				362987B1FB164CDBBE353556 /* CMake Rules */,
+				7C2708D1D9DE437C8E8649F3 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		9ECDC45EDA5D45B08B026210 /* vtscript */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC6819A17241F4BD19D89D /* Header Files */,
+				03C64CA712C04E80B36512D2 /* Source Files */,
+				BCF96B61C0B14A1885498E9A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */,
+			);
+			name = vtscript;
+			sourceTree = "<group>";
+		};
+		B58DB2801BCF462F876394F1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5C8A6F53B0054E8BBABCCB0B /* unittests */,
+				9ECDC45EDA5D45B08B026210 /* vtscript */,
+				DE647D7072CC44619DEECAFE /* ALL_BUILD */,
+				7E642FC7059C4F5D8B34BB4E /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		CEDC6819A17241F4BD19D89D /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				B88717DEF36948B1BE68E530 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */,
+				2C3BB6CDEC8046CF860C69A7 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */,
+				E7B550ADACF34499B6DF4BB5 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */,
+				C62C82689DE14FB3B4FFB04E /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		D344F3446D7342238443797C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		16893E17207249F9AAD03151 /* Products */ = {
+		DE647D7072CC44619DEECAFE /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				C072B4F4714A4E5E9A653A77 /* unittests */,
-				98A9F594D90B4920BE2E8463 /* vtscript */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		363478D63E314D6BB9541103 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				A3E900C4C7F44FDFAC2BF5AF /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/catch.hpp */,
-				0145FE06D1FA482CA51E060A /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */,
-				7A72E80141F04A7EA9F690EF /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */,
-				4B322CC3C980493B9A693F33 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */,
-				E797092079F34BB0B5A0A259 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		52A9B0620EB94F2D816CFB7A /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				3BB8367FDDA449A0A5ECE0A9 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */,
-				1970500EF15C4AAAA8F32561 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */,
-				3BE5C42BAC334A23920935EA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */,
-				83FF72DAA0D44BA787DDA1FA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */,
-				0860B3DB1F46499B936D3EC7 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		52D21BCB74AB4E77A93859A6 = {
-			isa = PBXGroup;
-			children = (
-				9292A868C4844B02A0E1C689 /* Sources */,
-				0AF11351689F442A850E98A8 /* Resources */,
-				16893E17207249F9AAD03151 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		5336F388CD554698A2FB64F8 /* unittests */ = {
-			isa = PBXGroup;
-			children = (
-				363478D63E314D6BB9541103 /* Header Files */,
-				E3D6731EBF48459B8FB17528 /* Source Files */,
-				E0022B0B6C17463D9CB37990 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */,
-			);
-			name = unittests;
-			sourceTree = "<group>";
-		};
-		9292A868C4844B02A0E1C689 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				5336F388CD554698A2FB64F8 /* unittests */,
-				9B0263122CD54F01A4DA5191 /* vtscript */,
-				F871F98AB8E74332B2996214 /* ALL_BUILD */,
-				A42FCFF3E838459EB763277C /* ZERO_CHECK */,
-			);
-			name = Sources;
-			sourceTree = "<group>";
-		};
-		9B0263122CD54F01A4DA5191 /* vtscript */ = {
-			isa = PBXGroup;
-			children = (
-				FC372E85692445838DEDC9E7 /* Header Files */,
-				52A9B0620EB94F2D816CFB7A /* Source Files */,
-				BC762EC155C046C5ACE9C2A1 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */,
-			);
-			name = vtscript;
-			sourceTree = "<group>";
-		};
-		A42FCFF3E838459EB763277C /* ZERO_CHECK */ = {
-			isa = PBXGroup;
-			children = (
-				F16FA0C8A0934042B8450176 /* CMake Rules */,
-				BFC049497D5D43768A578A23 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */,
-			);
-			name = ZERO_CHECK;
-			sourceTree = "<group>";
-		};
-		C5E7EABA684F482AB7B26B04 /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		E3D6731EBF48459B8FB17528 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				EFC78436A1E94A5EA9CABC55 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */,
-				FB26DC186D244D5699B24FB6 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */,
-				5A11DFA5ECD5410687728BF6 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */,
-				2006A14F02434BFD837795FE /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp */,
-				A61DC628C6714A528FF4CEEA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */,
-				FBA7340F93F94F3DA320C7BC /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		F16FA0C8A0934042B8450176 /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		F871F98AB8E74332B2996214 /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				C5E7EABA684F482AB7B26B04 /* CMake Rules */,
-				A743415E9CC74D02B1043B06 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */,
+				34AE04E2159D4D018EF9B44E /* CMake Rules */,
+				71E672C3FFE940D588797826 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		FC372E85692445838DEDC9E7 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				985A447F230C48CF84105ECC /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp */,
-				BB969D2970494CEFA1796EB6 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp */,
-				BA64EC9AEE87486DBAC5C8F8 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp */,
-				D035A4593A124CE0B5B94CDA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp */,
-			);
-			name = "Header Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,34 +313,34 @@
 /* Begin PBXNativeTarget section */
 		2C110A3A3E464DF28F643F91 /* unittests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8200170973354A5A851BFED4 /* Build configuration list for PBXNativeTarget "unittests" */;
+			buildConfigurationList = 8C24345C3E3A4C16AB8D6412 /* Build configuration list for PBXNativeTarget "unittests" */;
 			buildPhases = (
-				CCA34EE681014A1CB618E070 /* Sources */,
+				376EE42AF2BC4C3C981B4968 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				803CF4A1C49543589BBBAD9C /* PBXTargetDependency */,
+				F7B782A044B34F9AB778CA86 /* PBXTargetDependency */,
 			);
 			name = unittests;
 			productName = unittests;
-			productReference = C072B4F4714A4E5E9A653A77 /* unittests */;
+			productReference = F8050FCEA55E40EDB746B7F0 /* unittests */;
 			productType = "com.apple.product-type.tool";
 		};
 		B50FBD7F0543477C9F6894EE /* vtscript */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18E5CBE00B734AC594FAEB94 /* Build configuration list for PBXNativeTarget "vtscript" */;
+			buildConfigurationList = 71237A6247224C8AB0828723 /* Build configuration list for PBXNativeTarget "vtscript" */;
 			buildPhases = (
-				CD07811962BA408CA1E7FEA7 /* Sources */,
+				E9F6A8A8060347A69CA58D9B /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				96A0B05309904B6391EF4598 /* PBXTargetDependency */,
+				4F0A2CA1762B43BCA83A2A4F /* PBXTargetDependency */,
 			);
 			name = vtscript;
 			productName = vtscript;
-			productReference = 98A9F594D90B4920BE2E8463 /* vtscript */;
+			productReference = 5E34BF0DA2EC4612A10C88BB /* vtscript */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -352,18 +352,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 0820;
 			};
-			buildConfigurationList = 32B204958C1648D1B066D28A /* Build configuration list for PBXProject "VTSCRIPT" */;
+			buildConfigurationList = 05F0E6D9158147758F9042A2 /* Build configuration list for PBXProject "VTSCRIPT" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				71451F754D124A968AE22D8C /* Debug */,
-				54D75E0223C04C77BA276C69 /* Release */,
-				33FB0B1456204244B0F6E9D9 /* MinSizeRel */,
-				FB690E4B6B6F4F37A1D31CA2 /* RelWithDebInfo */,
+				A4F64C2AF1994C988C90D382 /* Debug */,
+				C5CA6F72D3D2478DB980C93D /* Release */,
+				D7C27BF3ABA9485295D7E6F0 /* MinSizeRel */,
+				4A88F6BF57B546E0A9A19A80 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 52D21BCB74AB4E77A93859A6;
+			mainGroup = 4B0B49FB55084AC08E2F57D8;
 			projectDirPath = ../;
 			projectRoot = "";
 			targets = (
@@ -377,7 +377,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5A3EA0DFCDBC415294E935BC = {
+		03A08EED9E324D50995600DF = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -392,7 +392,7 @@
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		5A4757ED74A749D48B7F36F2 /* CMake PostBuild Rules */ = {
+		0F83B5FDDF494DD7AA127CCB /* CMake PostBuild Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -403,33 +403,7 @@ exit 0";
 			shellScript = "make -C /Users/sethbalodi/Desktop/Project1/project1-shashwb/build2 -f /Users/sethbalodi/Desktop/Project1/project1-shashwb/build2/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		69EBAE0AD72E4C6090A64DC0 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		C593CEEA67E84A43A250CF77 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/sethbalodi/Desktop/Project1/project1-shashwb/build2 -f /Users/sethbalodi/Desktop/Project1/project1-shashwb/build2/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
-		C7D0B4F07D2248EE98C34B5A /* CMake Rules */ = {
+		38C3E71C713544428369523B /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -440,7 +414,7 @@ exit 0";
 			shellScript = "make -C /Users/sethbalodi/Desktop/Project1/project1-shashwb/build2 -f /Users/sethbalodi/Desktop/Project1/project1-shashwb/build2/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		E9A6EE5FFB544A21B0090EA9 = {
+		4F5BA30279194F44B0F02A67 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -455,407 +429,92 @@ exit 0";
 exit 0";
 			showEnvVarsInLog = 0;
 		};
+		A51AC1F6F30B4D84A0EDBBA6 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F91D751CBD924ECFB281CD06 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/sethbalodi/Desktop/Project1/project1-shashwb/build2 -f /Users/sethbalodi/Desktop/Project1/project1-shashwb/build2/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CCA34EE681014A1CB618E070 /* Sources */ = {
+		376EE42AF2BC4C3C981B4968 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5303A30D420429883999963 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */,
-				0F6D30A516F24AD4976CAAFE /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */,
-				E14CEB1C6F58444487071D48 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */,
-				7A645558A248435296E6500E /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp */,
-				D053CB50262F4C20A78D0552 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */,
-				CAA8C3C84A67441CBC948E21 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests.cpp */,
+				31D2B5FB672C4C58BE539C58 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */,
+				1BA7C7661A954D8AAB42B124 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */,
+				F788DDAAD80E47BFA49FA00B /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */,
+				97B421A82838454BAEC61E10 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/test_interpreter.cpp */,
+				984968DE6FA0409E9E1883B5 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */,
+				5EC802635F224BCDA8F6CE22 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD07811962BA408CA1E7FEA7 /* Sources */ = {
+		E9F6A8A8060347A69CA58D9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				147B9CE1AB9B420085A35CBA /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */,
-				1EFAF674512445CA8F2026ED /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */,
-				FDF13C9D6E6041768230F7A5 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */,
-				45A18C2413104724A2FC9BC0 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */,
-				AB847766D01E4DF3B83E83B0 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp */,
+				14E9F35CEE0C4FDFA200C566 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.cpp */,
+				AF66358763B24D748D916437 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.cpp */,
+				64D9489797AD464AA3F90923 /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp */,
+				8BAA4C407AB742EB8317B03C /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp */,
+				89AD46EEBFAA4B9F86170D1C /* /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		13C8336F371E481593A985B5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 34A40A3E0C4E4DD58E1BDABB /* ZERO_CHECK */;
-			targetProxy = 3BD5E3EA4869456B83F5C137 /* PBXContainerItemProxy */;
-		};
-		52DBCE5CFEE149CFA65173E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2C110A3A3E464DF28F643F91 /* unittests */;
-			targetProxy = 97E5B237742040E19A6D9C14 /* PBXContainerItemProxy */;
-		};
-		58221CAC93BB44A2828429B3 /* PBXTargetDependency */ = {
+		01DFB32916764A8984F49682 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B50FBD7F0543477C9F6894EE /* vtscript */;
-			targetProxy = 382248DDBA114E9185D6CE06 /* PBXContainerItemProxy */;
+			targetProxy = 15B2A4B7387A4C46934A979A /* PBXContainerItemProxy */;
 		};
-		803CF4A1C49543589BBBAD9C /* PBXTargetDependency */ = {
+		0992F99411514BC8A3E24909 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 34A40A3E0C4E4DD58E1BDABB /* ZERO_CHECK */;
-			targetProxy = 69F5236D4C4944E2B57CE08F /* PBXContainerItemProxy */;
+			targetProxy = 6AA2E44B93084B759F8AB1C0 /* PBXContainerItemProxy */;
 		};
-		96A0B05309904B6391EF4598 /* PBXTargetDependency */ = {
+		4F0A2CA1762B43BCA83A2A4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 34A40A3E0C4E4DD58E1BDABB /* ZERO_CHECK */;
-			targetProxy = 7CB0A7AF00F5449D8B3D5182 /* PBXContainerItemProxy */;
+			targetProxy = 1AD266BA2334428BA0A1E9B2 /* PBXContainerItemProxy */;
+		};
+		E0BAB7F460E04D619DC392B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C110A3A3E464DF28F643F91 /* unittests */;
+			targetProxy = 62C0A3C8A5124B8BA75F30E2 /* PBXContainerItemProxy */;
+		};
+		F7B782A044B34F9AB778CA86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34A40A3E0C4E4DD58E1BDABB /* ZERO_CHECK */;
+			targetProxy = D42C5F7308C74DA88F05EA27 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00B2DE4003914A3EAC09789F /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2/build";
-			};
-			name = RelWithDebInfo;
-		};
-		0B1726A9F4804996B848CD9F /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11' -I/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2   ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = vtscript;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		0C2E6ED4AFBA49A7A16BB4E5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = RUN_TESTS;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		334088F18EA546C7B3B9868D /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2/build";
-			};
-			name = MinSizeRel;
-		};
-		3E3600A475AA42A08B47A1A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11' -I/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2   ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = vtscript;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		3EA6A27138114CAB88237978 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		477350B3AD9C4FC391C0DAF6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		4C8959C11CFE41DCA1F5CD08 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		83E3FF25104E4942B0FE55F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11' -I/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2   ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = unittests;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		8A0F0868AA2C4F46A4DEAA80 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11' -I/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2   ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = unittests;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		8C9EA0EDA8FB435DA2908609 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		968AB2400D9342DDA14AB7A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2/build";
-			};
-			name = Debug;
-		};
-		9F3F9F0C3DB04EF69B9FBC9D /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		A49AC3F537294B45B15BB62D /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		A712171C4175402A9A0449CF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		A7A4F7ADEC5C4D54942F1BDA /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11' -I/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2   ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = unittests;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		C7737FBBE0D1425DACB4BC18 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		CD79CA4FA87A49E4910D710A /* Release */ = {
+		0AA3226FEFAA4AA5A1B7951D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -880,49 +539,16 @@ exit 0";
 			};
 			name = Release;
 		};
-		D431E45159354DC3AB6D5B62 /* RelWithDebInfo */ = {
+		15DC4ECBB9E141EAB20DF68A /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = RUN_TESTS;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		D5B4D13841624AF5BB9D7348 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = RUN_TESTS;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2/build";
 			};
 			name = MinSizeRel;
 		};
-		D9D8E0172E7D4547B2CF4904 /* MinSizeRel */ = {
+		1F5B8E1EFE434454988A064F /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -947,7 +573,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		DB14FCE6821C4163A0A798AC /* Debug */ = {
+		24C675F8ADB24938B9558B8D /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -966,9 +592,274 @@ exit 0";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
+			name = RelWithDebInfo;
+		};
+		29F39EAE0AA4402CB2299A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		33C0CD9FCB344C6B8E8A81FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2/build";
+			};
+			name = Release;
+		};
+		36CC4A3C597E4E02A9A0C79E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		3BA855FEC13F42689650C8E7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2/build";
+			};
+			name = RelWithDebInfo;
+		};
+		3BBD7DE7AB6F4922B77DB067 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11' -I/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		430D8A000CA34505A3FE8B1D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		49B7173FA92B4807BD9C0E71 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11' -I/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5B3BB07FF5B045189D6CDC52 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		65ED49B3830043A885F89D15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11' -I/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
 			name = Debug;
 		};
-		DFC5AF31AA0A4D8C82C9FC0B /* Debug */ = {
+		6E336E3765054E1F89F7BDDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11' -I/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtscript;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		B0A100D52A094F6789BD01A7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B23EBD9282A54F3CBE83DA49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		B269B3BAD5AA47569DCD7362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C028EE1488B94739920263DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -993,80 +884,189 @@ exit 0";
 			};
 			name = Debug;
 		};
-		F7256684BF654F28B9192E67 /* Release */ = {
+		C27BC4F6011D472AB80B2789 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		CFC2E42076AE4985B6338315 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
 				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2/build";
 			};
+			name = Debug;
+		};
+		D5A88678FDD54D6C8498010E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
 			name = Release;
+		};
+		E426D4B1FBE54C188BB3423C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11' -I/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtscript;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F3B36B5BFEB8406184272002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		FB1AE417FE434A0A965E0F4E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/Desktop/Project1/project1-shashwb/build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12EFCD2316664105A5F88427 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		05F0E6D9158147758F9042A2 /* Build configuration list for PBXProject "VTSCRIPT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				477350B3AD9C4FC391C0DAF6 /* Debug */,
-				C7737FBBE0D1425DACB4BC18 /* Release */,
-				4C8959C11CFE41DCA1F5CD08 /* MinSizeRel */,
-				A49AC3F537294B45B15BB62D /* RelWithDebInfo */,
+				CFC2E42076AE4985B6338315 /* Debug */,
+				33C0CD9FCB344C6B8E8A81FA /* Release */,
+				15DC4ECBB9E141EAB20DF68A /* MinSizeRel */,
+				3BA855FEC13F42689650C8E7 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		18E5CBE00B734AC594FAEB94 /* Build configuration list for PBXNativeTarget "vtscript" */ = {
+		1FF620D976354793AF9F3175 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DFC5AF31AA0A4D8C82C9FC0B /* Debug */,
-				3E3600A475AA42A08B47A1A4 /* Release */,
-				D9D8E0172E7D4547B2CF4904 /* MinSizeRel */,
-				0B1726A9F4804996B848CD9F /* RelWithDebInfo */,
+				C27BC4F6011D472AB80B2789 /* Debug */,
+				B23EBD9282A54F3CBE83DA49 /* Release */,
+				36CC4A3C597E4E02A9A0C79E /* MinSizeRel */,
+				24C675F8ADB24938B9558B8D /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		1C38AB8E95E04218A347A094 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+		422D69EFF99E454BA3A982FB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB14FCE6821C4163A0A798AC /* Debug */,
-				0C2E6ED4AFBA49A7A16BB4E5 /* Release */,
-				D5B4D13841624AF5BB9D7348 /* MinSizeRel */,
-				D431E45159354DC3AB6D5B62 /* RelWithDebInfo */,
+				F3B36B5BFEB8406184272002 /* Debug */,
+				29F39EAE0AA4402CB2299A24 /* Release */,
+				5B3BB07FF5B045189D6CDC52 /* MinSizeRel */,
+				430D8A000CA34505A3FE8B1D /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		32B204958C1648D1B066D28A /* Build configuration list for PBXProject "VTSCRIPT" */ = {
+		43D13041AE68426E8E90E78C /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				968AB2400D9342DDA14AB7A5 /* Debug */,
-				F7256684BF654F28B9192E67 /* Release */,
-				334088F18EA546C7B3B9868D /* MinSizeRel */,
-				00B2DE4003914A3EAC09789F /* RelWithDebInfo */,
+				B269B3BAD5AA47569DCD7362 /* Debug */,
+				D5A88678FDD54D6C8498010E /* Release */,
+				FB1AE417FE434A0A965E0F4E /* MinSizeRel */,
+				B0A100D52A094F6789BD01A7 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		8200170973354A5A851BFED4 /* Build configuration list for PBXNativeTarget "unittests" */ = {
+		71237A6247224C8AB0828723 /* Build configuration list for PBXNativeTarget "vtscript" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				83E3FF25104E4942B0FE55F5 /* Debug */,
-				CD79CA4FA87A49E4910D710A /* Release */,
-				8A0F0868AA2C4F46A4DEAA80 /* MinSizeRel */,
-				A7A4F7ADEC5C4D54942F1BDA /* RelWithDebInfo */,
+				C028EE1488B94739920263DE /* Debug */,
+				6E336E3765054E1F89F7BDDD /* Release */,
+				1F5B8E1EFE434454988A064F /* MinSizeRel */,
+				E426D4B1FBE54C188BB3423C /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F63E1A45EFEF4297A67C486E /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		8C24345C3E3A4C16AB8D6412 /* Build configuration list for PBXNativeTarget "unittests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C9EA0EDA8FB435DA2908609 /* Debug */,
-				A712171C4175402A9A0449CF /* Release */,
-				9F3F9F0C3DB04EF69B9FBC9D /* MinSizeRel */,
-				3EA6A27138114CAB88237978 /* RelWithDebInfo */,
+				65ED49B3830043A885F89D15 /* Debug */,
+				0AA3226FEFAA4AA5A1B7951D /* Release */,
+				3BBD7DE7AB6F4922B77DB067 /* MinSizeRel */,
+				49B7173FA92B4807BD9C0E71 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

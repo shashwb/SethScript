@@ -4,6 +4,8 @@
 #include <stack>
 #include <algorithm>
 #include <regex>
+#include <tuple>
+#include "interpreter_semantic_error.hpp"
 
 using namespace std;
 
@@ -183,9 +185,10 @@ bool Interpreter::parse(std::istream & expression) noexcept
 	string output = "";
 	string read_from_expression = "";
 	while (getline(expression, output)) {
-		read_from_expression.insert(0, output);
+//		read_from_expression.insert(0, output);
+        read_from_expression.append(output);
 	}
-	getline(expression, read_from_expression);
+//	getline(expression, read_from_expression);
 
 	if (read_from_expression.empty()) {
 		return false;
@@ -261,6 +264,21 @@ Expression Interpreter::evaluate_helper(Node * node) {
 	string equals = "=";
 
 	string node_string = node->data_expression.express.Data.string_value;
+//	cout << "NODE STRING: " << node->data_expression.express.Data.string_value << endl;
+
+	if (node_string == subtract) {
+
+		cout << "DOES IT GET INTO THE SUBTRACT FUNCTION???" << endl;
+
+		Expression exp = new Expression;
+		exp.express.type = NumberType;
+        cout << "child 1" << node->children[0]->data_expression.express.Data.number_value << endl;
+        cout << "child 2" << node->children[1]->data_expression.express.Data.number_value << endl;
+		double result_subtract = subtract_expression(node->children[0]->data_expression, node->children[1]->data_expression);
+        cout << "result subtract: " << result_subtract << endl;
+		exp.express.Data.number_value = result_subtract;
+		return exp.express.Data.number_value;
+	}
 
 	//if its the last node, then just return that
 	if (node->children.size() == 0) {
@@ -283,52 +301,217 @@ Expression Interpreter::evaluate_helper(Node * node) {
 
 		Expression exp = new Expression;
 
-		if (env->is_present_in_map(node->children[0]->data_expression.express.Data.string_value)) {
-
-            if (node->children[1]->children.size() >= 1) {
-                cout << "this is complex" << endl;
-                Expression complex_define = evaluate_helper(node->children[1]);
-                env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value, complex_define.express.Data.number_value);
-                return complex_define.express.Data.number_value;
+//        env->print_map();
+        
+//        try {
+            if (node->children[0]->data_expression.express.Data.string_value != "define" && node->children[0]->data_expression.express.Data.string_value != "if" &&
+                node->children[0]->data_expression.express.Data.string_value != "begin" && node->children[0]->data_expression.express.Data.string_value != "pi") {
+                
+//                cout << "child 1 is not DEFINE BEGIN IF or PI, so proceed" << endl;
+                
+                if (env->is_present_in_map(node->children[0]->data_expression.express.Data.string_value)) {
+                    
+//                    cout << node->children[0]->data_expression.express.Data.string_value << " is present in the map" << endl;
+                    
+                    if (node->children[1]->children.size() >= 1) {
+                        //                cout << "this is complex" << endl;
+                        Expression complex_define = evaluate_helper(node->children[1]);
+                        env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value, complex_define.express.Data.number_value);
+                        return complex_define.express.Data.number_value;
+                    }
+                    
+                    //can either set to a number or a variable(symbol)
+                    if (node->children[1]->data_expression.express.type == NumberType) {
+                        //                cout << "this is not complex" << endl;
+                        
+                        env->update_map_with_value(node->children[0]->data_expression.express.Data.string_value,
+                                                   node->children[1]->data_expression.express.Data.number_value);
+                        return node->children[1]->data_expression.express.Data.number_value;
+                    }
+                    if (node->children[1]->data_expression.express.type == SymbolType) {
+                        //get the value from the second child
+                        double value_second_child = env->value_at_element_in_map(node->children[1]->data_expression.express.Data.string_value);
+                        env->update_map_with_value(node->children[0]->data_expression.express.Data.string_value, value_second_child);
+                        return value_second_child;
+                    }
+                    if (node->children[1]->data_expression.express.type == BooleanType) {
+                        //                cout << "overwrite boolean value PLEASE WORK" << endl;
+                        //                double value_second_child = env->value_at_element_in_map(node->children[1]->data_expression.express.Data.string_value);
+                        env->update_map_with_value(node->children[0]->data_expression.express.Data.string_value, node->children[1]->data_expression.express.Data.boolean_value);
+                        return node->children[1]->data_expression.express.Data.boolean_value;
+                    }
+                    else {
+                        // cout << "ERROR" << endl;
+                    }
+                    
+                }
+                
+                else if (node->children[1]->children.size() >= 1) {
+                    //            cout << "this is complex" << endl;
+                    Expression complex_define = evaluate_helper(node->children[1]);
+                    env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value, complex_define.express.Data.number_value);
+                    
+                    //            env->print_map();
+                    
+                    return complex_define.express.Data.number_value;
+                }
+                
+                
+                
+                else if (node->children[1]->data_expression.express.type == BooleanType) {
+                    
+                    //            cout << "normal string value add to map: " << node->children[0]->data_expression.express.Data.string_value << endl;
+                    //            cout << "normal boolean value add to map: " << node->children[1]->data_expression.express.Data.boolean_value << endl;
+                    
+                    env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value,
+                                            node->children[1]->data_expression.express.Data.boolean_value);
+                    exp.express.Data.boolean_value = node->children[1]->data_expression.express.Data.boolean_value;
+                    
+                    //            env->print_map();
+                    
+                    return exp.express.Data.boolean_value;
+                }
+                
+                else if (node->children[0]->data_expression.express.type == SymbolType && node->children[1]->data_expression.express.type == SymbolType) {
+                    
+                    //            if (env->is_present_in_map(node->children[1]->data_expression.express.Data.string_value) == false) {
+                    //                cout << "this shouldn't work...should it?" << endl;
+                    //            }
+                    
+                    //            cout << "THIS IS THE CASE I NEED sheeeit" << endl;
+                    //            cout << "second argument: " << node->children[1]->data_expression.express.Data.string_value;
+                    //            cout << "normal string value add to map: " << node->children[0]->data_expression.express.Data.string_value << endl;
+                    //            cout << "first argument: " << node->children[0]->data_expression.express.Data.string_value << endl;
+                    
+                    
+                    bool bool_result = env->value_at_element_in_map(node->children[1]->data_expression.express.Data.string_value);
+                    //            cout << "bool result" << bool_result << endl;
+                    
+                    env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value,
+                                            bool_result);
+                    exp.express.Data.boolean_value = bool_result;
+                    
+                    //            env->print_map();
+                    
+                    return exp.express.Data.boolean_value;
+                    
+                }
+                
+                env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value,
+                                        node->children[1]->data_expression.express.Data.number_value);
+                
+                //        cout << "does it get to the print_map()?" << endl;
+//                env->print_map(); //DEBUG
+                
+                exp.express.type = NumberType;
+                exp.express.Data.number_value = node->children[1]->data_expression.express.Data.number_value;
+                return exp.express.Data.number_value;
             }
+            else {
+                throw InterpreterSemanticError("Error: cannot redefine");
+            }
+        
 
-			//can either set to a number or a variable(symbol)
-			if (node->children[1]->data_expression.express.type == NumberType) {
-                cout << "this is not complex" << endl;
+        
+        
 
-				env->update_map_with_value(node->children[0]->data_expression.express.Data.string_value,
-					 node->children[1]->data_expression.express.Data.number_value);
-				return node->children[1]->data_expression.express.Data.number_value;
-			}
-			if (node->children[1]->data_expression.express.type == SymbolType) {
-				//get the value from the second child
-				double value_second_child = env->value_at_element_in_map(node->children[1]->data_expression.express.Data.string_value);
-				env->update_map_with_value(node->children[0]->data_expression.express.Data.string_value, value_second_child);
-				return value_second_child;
-			}
-			else {
-				// cout << "ERROR" << endl;
-			}
-
-		}
-
-        else if (node->children[1]->children.size() >= 1) {
-            cout << "this is complex" << endl;
-            Expression complex_define = evaluate_helper(node->children[1]);
-            env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value, complex_define.express.Data.number_value);
-            return complex_define.express.Data.number_value;
-        }
-
-		//add value to map
-		env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value,
-			 node->children[1]->data_expression.express.Data.number_value);
-
-        cout << "does it get to the print_map()?" << endl;
-	   env->print_map(); //DEBUG
-
-		exp.express.type = NumberType;
-		exp.express.Data.number_value = node->children[1]->data_expression.express.Data.number_value;
-		return exp.express.Data.number_value;
+//		if (env->is_present_in_map(node->children[0]->data_expression.express.Data.string_value)) {
+//
+//            cout << node->children[0]->data_expression.express.Data.string_value << " is present in the map" << endl;
+//
+//            if (node->children[1]->children.size() >= 1) {
+////                cout << "this is complex" << endl;
+//                Expression complex_define = evaluate_helper(node->children[1]);
+//                env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value, complex_define.express.Data.number_value);
+//                return complex_define.express.Data.number_value;
+//            }
+//
+//			//can either set to a number or a variable(symbol)
+//			if (node->children[1]->data_expression.express.type == NumberType) {
+////                cout << "this is not complex" << endl;
+//
+//				env->update_map_with_value(node->children[0]->data_expression.express.Data.string_value,
+//					 node->children[1]->data_expression.express.Data.number_value);
+//				return node->children[1]->data_expression.express.Data.number_value;
+//			}
+//			if (node->children[1]->data_expression.express.type == SymbolType) {
+//				//get the value from the second child
+//				double value_second_child = env->value_at_element_in_map(node->children[1]->data_expression.express.Data.string_value);
+//				env->update_map_with_value(node->children[0]->data_expression.express.Data.string_value, value_second_child);
+//				return value_second_child;
+//			}
+//            if (node->children[1]->data_expression.express.type == BooleanType) {
+////                cout << "overwrite boolean value PLEASE WORK" << endl;
+////                double value_second_child = env->value_at_element_in_map(node->children[1]->data_expression.express.Data.string_value);
+//                env->update_map_with_value(node->children[0]->data_expression.express.Data.string_value, node->children[1]->data_expression.express.Data.boolean_value);
+//                return node->children[1]->data_expression.express.Data.boolean_value;
+//            }
+//			else {
+//				// cout << "ERROR" << endl;
+//			}
+//
+//		}
+//
+//        else if (node->children[1]->children.size() >= 1) {
+////            cout << "this is complex" << endl;
+//            Expression complex_define = evaluate_helper(node->children[1]);
+//            env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value, complex_define.express.Data.number_value);
+//
+////            env->print_map();
+//
+//            return complex_define.express.Data.number_value;
+//        }
+//
+//
+//
+//        else if (node->children[1]->data_expression.express.type == BooleanType) {
+//
+////            cout << "normal string value add to map: " << node->children[0]->data_expression.express.Data.string_value << endl;
+////            cout << "normal boolean value add to map: " << node->children[1]->data_expression.express.Data.boolean_value << endl;
+//
+//            env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value,
+//                                    node->children[1]->data_expression.express.Data.boolean_value);
+//            exp.express.Data.boolean_value = node->children[1]->data_expression.express.Data.boolean_value;
+//
+////            env->print_map();
+//
+//            return exp.express.Data.boolean_value;
+//        }
+//
+//        else if (node->children[0]->data_expression.express.type == SymbolType && node->children[1]->data_expression.express.type == SymbolType) {
+//
+////            if (env->is_present_in_map(node->children[1]->data_expression.express.Data.string_value) == false) {
+////                cout << "this shouldn't work...should it?" << endl;
+////            }
+//
+////            cout << "THIS IS THE CASE I NEED sheeeit" << endl;
+////            cout << "second argument: " << node->children[1]->data_expression.express.Data.string_value;
+////            cout << "normal string value add to map: " << node->children[0]->data_expression.express.Data.string_value << endl;
+////            cout << "first argument: " << node->children[0]->data_expression.express.Data.string_value << endl;
+//
+//
+//            bool bool_result = env->value_at_element_in_map(node->children[1]->data_expression.express.Data.string_value);
+////            cout << "bool result" << bool_result << endl;
+//
+//            env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value,
+//                                    bool_result);
+//            exp.express.Data.boolean_value = bool_result;
+//
+////            env->print_map();
+//
+//            return exp.express.Data.boolean_value;
+//
+//        }
+//
+//		env->add_element_to_map(node->children[0]->data_expression.express.Data.string_value,
+//			 node->children[1]->data_expression.express.Data.number_value);
+//
+////        cout << "does it get to the print_map()?" << endl;
+//	   env->print_map(); //DEBUG
+//
+//		exp.express.type = NumberType;
+//		exp.express.Data.number_value = node->children[1]->data_expression.express.Data.number_value;
+//		return exp.express.Data.number_value;
 
 
 	}
@@ -338,15 +521,15 @@ Expression Interpreter::evaluate_helper(Node * node) {
         for (int i = 0; i < node->children.size(); i++) {
 
             if (node->children[i]->children.size() >= 1) {
-                cout << "this is complex, as it should be for BEGIN" << endl;
+//                cout << "this is complex, as it should be for BEGIN" << endl;
                 begin_one = evaluate_helper(node->children[i]);
             }
             else {
-                cout << "this is not complex" << endl;
+//                cout << "this is not complex" << endl;
                 begin_one = evaluate_helper(node->children[i]);
             }
         }
-        
+
         if (begin_one.express.type == NumberType) {
             return begin_one.express.Data.number_value;
         }
@@ -357,10 +540,9 @@ Expression Interpreter::evaluate_helper(Node * node) {
             return begin_one.express.Data.boolean_value;
         }
 
-
 	}
-    
-    
+
+
 	else if (node_string == "if") {
 		//if has 3 arguments
 		//	evaluate function - if true - if false
@@ -433,17 +615,17 @@ Expression Interpreter::evaluate_helper(Node * node) {
         return exp.express.Data.number_value;
 
 	}
-	else if (node_string == subtract) {
-
-		Expression exp = new Expression;
-		exp.express.type = NumberType;
-        cout << "child 1" << node->children[0]->data_expression.express.Data.number_value << endl;
-        cout << "child 2" << node->children[1]->data_expression.express.Data.number_value << endl;
-		double result_subtract = subtract_expression(node->children[0]->data_expression, node->children[1]->data_expression);
-        cout << "result subtract: " << result_subtract << endl;
-		exp.express.Data.number_value = result_subtract;
-		return exp.express.Data.number_value;
-	}
+	// else if (node_string == subtract) {
+	//
+	// 	Expression exp = new Expression;
+	// 	exp.express.type = NumberType;
+  //       cout << "child 1" << node->children[0]->data_expression.express.Data.number_value << endl;
+  //       cout << "child 2" << node->children[1]->data_expression.express.Data.number_value << endl;
+	// 	double result_subtract = subtract_expression(node->children[0]->data_expression, node->children[1]->data_expression);
+  //       cout << "result subtract: " << result_subtract << endl;
+	// 	exp.express.Data.number_value = result_subtract;
+	// 	return exp.express.Data.number_value;
+	// }
 	else if (node_string == multiply) {
 
 
@@ -526,7 +708,23 @@ Expression Interpreter::evaluate_helper(Node * node) {
         exp.express.type = BooleanType;
 
 
-        cout << "value of node boolean value: " << node->children[0]->data_expression.express.Data.boolean_value << endl;
+//        cout << "value of node boolean value: " << node->children[0]->data_expression.express.Data.boolean_value << endl;
+        if (node->children[0]->data_expression.express.type == SymbolType && node->children[1]->data_expression.express.type == SymbolType) {
+
+            bool boolean_one = env->value_at_element_in_map(node->children[0]->data_expression.express.Data.string_value);
+            bool boolean_two = env->value_at_element_in_map(node->children[1]->data_expression.express.Data.string_value);
+
+//            cout << "boolean one: " << boolean_one << endl;
+//            cout << "boolean two: " << boolean_two << endl;
+
+            Expression first(boolean_one);
+            Expression second(boolean_two);
+
+            bool result_and = logical_and(first.express.Data.boolean_value, second.express.Data.boolean_value);
+
+            Expression result_expression(result_and);
+            return result_expression.express.Data.boolean_value;
+        }
 
         for (int i = 0; i < node->children.size(); i++) {
             if (node->children[i]->data_expression.express.Data.boolean_value == false) {
@@ -580,6 +778,25 @@ Expression Interpreter::evaluate_helper(Node * node) {
 		exp.express.Data.boolean_value = result_greater_than_or_equal;
 		return exp.express.Data.boolean_value;
 	}
+    
+    else if (node_string == "point") {
+        Expression exp = new Expression;
+        //if both inputs are numbers...
+        if (node->children[0]->data_expression.express.type == NumberType && node->children[0]->data_expression.express.type == NumberType) {
+            
+            tuple<double, double> point_tuple(node->children[0]->data_expression.express.Data.number_value, node->children[1]->data_expression.express.Data.number_value);
+            exp.express.Data.point_value = point_tuple;
+        }
+        //else this should throw an error!
+        
+        return exp.express.Data.point_value;
+    }
+    
+//    else if (node_string == "line") {
+//        if (node-)
+//    }
+    
+    
 	else {
 		//throw a semantic error
 	}
@@ -609,6 +826,9 @@ Expression Interpreter::eval() {
 	else if (expression_evaluate.express.type == SymbolType) {
 		cout << "(" << expression_evaluate.express.Data.string_value << ")" << endl;
 	}
+    else if (expression_evaluate.express.type == PointType) {
+        cout << "(" << get<0>(expression_evaluate.express.Data.point_value) << "," << get<1>(expression_evaluate.express.Data.point_value) << ")" << endl;
+    }
 	else {
 		cout << "INVALID TYPE OF EXPRESSION: " << endl;
 	}

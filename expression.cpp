@@ -35,6 +35,41 @@ Expression::Expression(const std::string & value) {
 	// cout << "String value: " << express.Data.string_value << endl;
 }
 
+// Construct an Expression with a single Point atom with value
+Expression::Expression(std::tuple<double,double> value) {
+    express.type = PointType;
+    
+    express.Data.point_value = value;
+}
+
+
+// Construct an Expression with a single Line atom with starting
+// point start and ending point end
+Expression::Expression(std::tuple<double,double> start,
+                       std::tuple<double,double> end) {
+    
+    express.type = LineType;
+    
+    express.Data.line_value_start = start;
+    express.Data.line_value_end = end;
+    
+}
+
+
+// Construct an Expression with a single Arc atom with center
+// point center, starting point start, and spanning angle angle in radians
+Expression::Expression(std::tuple<double,double> center,
+           std::tuple<double,double> start,
+                       double angle) {
+    
+    express.type = ArcType;
+    
+    express.Data.center_value = center;
+    express.Data.center_value = start;
+    express.Data.arc_value = angle;
+    
+}
+
 
 
 //overrride the "==" operator so that we can compare expressions

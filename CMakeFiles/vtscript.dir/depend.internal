@@ -13,6 +13,7 @@ CMakeFiles/vtscript.dir/interpreter.cpp.o
  /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp
  /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.cpp
  /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp
+ /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter_semantic_error.hpp
  /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.hpp
 CMakeFiles/vtscript.dir/tokenize.cpp.o
  /Users/sethbalodi/Desktop/Project1/project1-shashwb/tokenize.cpp
@@ -21,4 +22,5 @@ CMakeFiles/vtscript.dir/vtscript.cpp.o
  /Users/sethbalodi/Desktop/Project1/project1-shashwb/environment.hpp
  /Users/sethbalodi/Desktop/Project1/project1-shashwb/expression.hpp
  /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter.hpp
+ /Users/sethbalodi/Desktop/Project1/project1-shashwb/interpreter_semantic_error.hpp
  /Users/sethbalodi/Desktop/Project1/project1-shashwb/vtscript.cpp

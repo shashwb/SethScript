@@ -5,6 +5,7 @@
 
 #include "interpreter.hpp"
 #include "environment.hpp"
+#include "interpreter_semantic_error.hpp"
 
 using namespace std;
 
@@ -25,30 +26,43 @@ int main(int argc, char* argv[]) {
 				inter.eval();
 			}
 			catch(exception& e) {
-				cout << "Error: " << e.what() << endl;
+				cout << e.what() << endl;
 			}
 		}
 	}
 	else {
 		string argument_string(argv[1]);
 		if (argv[1] && !argv[2]) {
+            
 			expression.open(argv[1]);
-			inter.parse(expression);
+            if (!expression.is_open()) {
+//                throw InterpreterSemanticError("Error: this file is not present in directory");
+                cout << "Error: this file is not present in directory" << endl;
+                return EXIT_FAILURE;
+            } else {
+//                cout << "opened file " << argv[1] << " totally fine" << endl;
+                inter.parse(expression);
+//                return EXIT_SUCCESS;
+            }
+//            return EXIT_SUCCESS; 
+//			inter.parse(expression);
 		}
 		else if (argument_string == "-e"){
 			istringstream stream(argv[2]);
 			inter.parse(stream);
 		}
 		else {
+//            cout << "Error: not enough arguments after -e" << endl;
+//            throw InterpreterSemanticError("Error: !!!!");
 			return EXIT_FAILURE;
 		}
 	}
-    
 	try {
 		inter.eval();
 	}
 	catch(exception& e) {
-		cout << "Error: " << e.what() << endl;
+		cout << e.what() << endl;
+		return EXIT_SUCCESS;
 	}
 	return EXIT_SUCCESS;
 
