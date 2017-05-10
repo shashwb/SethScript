@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/vtscript.dir/tokenize.cpp.o CMakeFiles/vtscript.dir/expression.cpp.o CMakeFiles/vtscript.dir/environment.cpp.o CMakeFiles/vtscript.dir/interpreter.cpp.o CMakeFiles/vtscript.dir/vtscript.cpp.o  -o vtscript 

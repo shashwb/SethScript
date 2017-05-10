@@ -12,7 +12,6 @@ CMakeFiles/unittests.dir/interpreter.cpp.o: environment.hpp
 CMakeFiles/unittests.dir/interpreter.cpp.o: expression.hpp
 CMakeFiles/unittests.dir/interpreter.cpp.o: interpreter.cpp
 CMakeFiles/unittests.dir/interpreter.cpp.o: interpreter.hpp
-CMakeFiles/unittests.dir/interpreter.cpp.o: interpreter_semantic_error.hpp
 CMakeFiles/unittests.dir/interpreter.cpp.o: tokenize.hpp
 
 CMakeFiles/unittests.dir/test_interpreter.cpp.o: catch.hpp

@@ -5,6 +5,7 @@
 #include "interpreter.hpp"
 #include "tokenize.hpp"
 
+
 using namespace std;
 
 
@@ -188,9 +189,6 @@ TEST_CASE("Testing the Interpreter's equality", "interpreter.hpp")
 	REQUIRE(inter.equals(left.express.Data.number_value,
 	 right.express.Data.number_value) == true);
 
-	REQUIRE(inter.equals(left.express.Data.number_value,
-	 one_more.express.Data.number_value) == true);
-
 }
 
 
@@ -294,7 +292,7 @@ TEST_CASE("BooleanType testing through Constructor", "expression.hpp")
 
 TEST_CASE("Tesing NumberType methods and constructors (and expression_factory)", "expression.hpp")
 {
-    
+
 	string value = "42";
 	Interpreter inter;
 	Expression express = inter.expression_factory(value);
@@ -332,5 +330,50 @@ TEST_CASE("Testing Logical Not and Negation", "interpreter.hpp")
     Expression express_two(value_two);
     Expression express_not2 = inter.logical_not(express_two);
 	REQUIRE(express_not2 == true);
+
+}
+
+TEST_CASE("testing overall", "interpreter.hpp")
+{
+
+    Interpreter inter;
+    Environment env;
+    vector<string> recursive_vector;
+    string hello_world = "(begin (define a 50))";
+    string hello_people = "(define b 200)";
+    string addition("(+ 1 2 3 4 5)");
+    string yup = "True";
+    string nope = "False";
+
+    istringstream stream(addition);
+    istringstream stream_two(hello_people);
+    istringstream stream_three(hello_world);
+
+    inter.parse(stream);
+    inter.eval();
+
+    inter.parse(stream_two);
+    inter.eval();
+
+    inter.parse(stream_three);
+    inter.eval();
+
+    inter.drawVectorGetter();
+    inter.equals(Expression(4.), Expression(4.));
+    inter.is_bool(yup);
+    inter.is_bool(nope);
+
+    Expression exp = new Expression(2.);
+    Expression exp_new = new Expression(true);
+    string hello = "hello";
+    env.add_element_to_map(hello, &exp);
+    bool inMap = env.is_present_in_map(hello);
+    env.update_map_with_value(hello, &exp_new);
+    env.print_map();
+    env.clearMap();
+
+    REQUIRE(inMap == true);
+
+
 
 }

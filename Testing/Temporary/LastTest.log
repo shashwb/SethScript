@@ -1,0 +1,29 @@
+Start testing: Apr 05 20:46 EDT
+----------------------------------------------------------
+1/1 Testing: unittests
+1/1 Test: unittests
+Command: "/Users/sethbalodi/Desktop/Project1/project1-shashwb/unittests"
+Directory: /Users/sethbalodi/Desktop/Project1/project1-shashwb
+"unittests" start time: Apr 05 20:46 EDT
+Output:
+----------------------------------------------------------
+(True)
+(False)
+(4)
+pi is 3.14159(3.14159)
+(3)
+(4)
+not found in DEFAULT_MAP
+(42)
+===============================================================================
+All tests passed (90 assertions in 25 test cases)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"unittests" end time: Apr 05 20:46 EDT
+"unittests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 05 20:46 EDT

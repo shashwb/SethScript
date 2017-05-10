@@ -1,5 +1,5 @@
-#ifndef TOKENIZE_H					// avoid repeated expansion
-#define TOKENIZE_H
+#ifndef TOKENIZE_HPP					// avoid repeated expansion
+#define TOKENIZE_HPP
 
 #include <string>
 #include <iostream>
@@ -13,7 +13,7 @@ using namespace std;
 class Tokenize {
 
 public:
-	vector<string> tokenize(string expression);
+    vector<string> tokenize(string expression);
 };
 
 #endif

@@ -1,6 +1,5 @@
-#ifndef INTERPRETER_H					// avoid repeated expansion
-#define INTERPRETER_H
-
+#ifndef INTERPRETER_HPP					// avoid repeated expansion
+#define INTERPRETER_HPP
 
 #include <iostream>
 #include <string>
@@ -18,52 +17,57 @@ using namespace std;
 
 
 struct Node {
-	public:
-		vector<Node*> children;
-		string data;
-		Expression data_expression;
-		Node(string data) {
-			this->data = data;
-		}
-		Node(Expression data_expression) {
-			this->data_expression = data_expression;
-		}
+    public:
+        vector<Node*> children;
+        string data;
+        Expression data_expression;
+        Node(string data) {
+            this->data = data;
+        }
+        Node(Expression data_expression) {
+            this->data_expression = data_expression;
+        }
 };
 
 
 class Interpreter {
 
 public:
-	Interpreter();
-	~Interpreter();
-	bool parse(std::istream & expression) noexcept;
-	Expression eval();
-	Node * processTokensToTree(vector<string> recursive_vector);
-	Expression evaluate_helper(Node * node);
-	Expression expression_factory(string changeToExpression);
+    Interpreter();
+    ~Interpreter();
+    bool parse(std::istream & expression) noexcept;
+    Expression eval();
+    Node * processTokensToTree(vector<string> recursive_vector);
+    Expression evaluate_helper(Node * node);
+    Expression expression_factory(string changeToExpression);
+    Expression evaluateDefine(Node* node);
+    Expression evaluateBegin(Node* node);
+    Expression evaluateIf(Node* node);
+    Expression evaluateAddition(Node* node);
+    Expression weirdStuff(Node* node);
+    bool is_number(string s);
+    bool is_bool(string value);
+    bool is_string(string str);
+    vector<Expression*> drawVectorGetter();
+    bool logical_not(Expression x);
+    bool logical_and(Expression x, Expression y);
+    bool logical_or(Expression x, Expression y);
+    bool equals(Expression x, Expression y);
+    bool greater_than(Expression x, Expression y);
+    bool greater_than_or_equal(Expression x, Expression y);
+    bool less_than_or_equal(Expression x, Expression y);
+    bool less_than(Expression x, Expression y);
+    double subtract_expression(Expression x, Expression y);
+    double negation(Expression x);
+    double division(Expression x, Expression y);
+    double addition(Expression x, Expression y);
+    double multiplication(Expression x, Expression y);
 
-	bool is_number(string s);
-	bool is_bool(string value);
-	bool is_string(string str);
-
-	bool logical_not(Expression x);
-	bool logical_and(Expression x, Expression y);
-	bool logical_or(Expression x, Expression y);
-	bool equals(Expression x, Expression y);
-	bool greater_than(Expression x, Expression y);
-	bool greater_than_or_equal(Expression x, Expression y);
-	bool less_than_or_equal(Expression x, Expression y);
-	bool less_than(Expression x, Expression y);
-	double subtract_expression(Expression x, Expression y);
-	double negation(Expression x);
-	double division(Expression x, Expression y);
-	double addition(Expression x, Expression y);
-	double multiplication(Expression x, Expression y);
-
-	Environment * env;
+    Environment * env;
 
 private:
-	Node * root;
+    Node * root;
+    vector <Expression *> drawVector;
 
 };
 
