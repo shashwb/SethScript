@@ -1,5 +1,0 @@
-/Users/sethbalodi/CODE/project1-shashwb/_build/CMakeFiles/test.dir
-/Users/sethbalodi/CODE/project1-shashwb/_build/CMakeFiles/rebuild_cache.dir
-/Users/sethbalodi/CODE/project1-shashwb/_build/CMakeFiles/edit_cache.dir
-/Users/sethbalodi/CODE/project1-shashwb/_build/CMakeFiles/unittests.dir
-/Users/sethbalodi/CODE/project1-shashwb/_build/CMakeFiles/vtscript.dir

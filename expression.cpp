@@ -22,7 +22,6 @@ Expression::Expression(double value) {
 }
 
 Expression::Expression(const std::string & value) {
-    
     if (is_number(value)) {
         express.type = NumberType;
         express.Data.number_value = stod(value);
@@ -38,28 +37,21 @@ Expression::Expression(std::tuple<double,double> value) {
 }
 
 //this is the line expression
-Expression::Expression(std::tuple<double,double> start,
-                       std::tuple<double,double> end) {
-
+Expression::Expression(std::tuple<double,double> start, std::tuple<double,double> end) {
     express.type = LineType;
     express.Data.Line.line_value_start.point_value = start;
     express.Data.Line.line_value_end.point_value = end;
 }
 
 
-Expression::Expression(std::tuple<double,double> center,
-           std::tuple<double,double> start,
-                       double angle) {
-
+Expression::Expression(std::tuple<double,double> center, std::tuple<double,double> start, double angle) {
     express.type = ArcType;
     express.Data.center_value = center;
     express.Data.center_value = start;
     express.Data.arc_value = angle;
-
 }
 
 bool Expression::is_number(string s) {
-    //    return( strspn( s.c_str(), "-.0123456789" ) == s.size() );
     char * p;
     strtol(s.c_str(), &p, 10);
     return *p == 0;

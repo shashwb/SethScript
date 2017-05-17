@@ -8,7 +8,6 @@
 
 using namespace std;
 
-
 enum Type {
     NoneType = 0,
     BooleanType,
@@ -18,7 +17,6 @@ enum Type {
     LineType,
     ArcType
 };
-
 
 typedef struct {
     std::tuple<double,double> point_value;
@@ -40,15 +38,17 @@ typedef struct {
     double arc_value;
 } data;
 
-
 typedef struct {
     Type type;
     data Data;
 } Express;
 
+
+
 class Expression {
 
 public:
+    
     Expression();
     Expression(bool value);
     Expression(double value);
