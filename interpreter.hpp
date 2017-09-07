@@ -8,6 +8,7 @@
 #include <algorithm>
 #include <sstream>
 #include <queue>
+
 #include "expression.hpp"
 #include "environment.hpp"
 
@@ -32,7 +33,6 @@ struct Node {
 class Interpreter {
 
 public:
-    
     Interpreter();
     ~Interpreter();
     bool parse(std::istream & expression) noexcept;
@@ -66,7 +66,6 @@ public:
     Environment * env;
 
 private:
-    
     Node * root;
     vector <Expression *> drawVector;
 

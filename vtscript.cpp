@@ -37,6 +37,8 @@ int main(int argc, char* argv[]) {
            else {
                inter.parse(expression);
            }
+//            return EXIT_SUCCESS;
+//			inter.parse(expression);
        } else if (argument_string == "-e"){
            istringstream stream(argv[2]);
            inter.parse(stream);

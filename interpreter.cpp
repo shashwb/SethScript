@@ -9,6 +9,8 @@
 
 using namespace std;
 
+//does this shit work?
+
 
 Interpreter::Interpreter() {
     root = nullptr;
@@ -20,6 +22,7 @@ Interpreter::~Interpreter() {
     delete root;
 }
 
+
 Node * Interpreter::processTokensToTree(vector<string> recursive_vector) {
     if (recursive_vector[0] == "\"(\"," && (recursive_vector.back() == "\")\""
         || recursive_vector.back() == "\")\",")) {
@@ -28,6 +31,7 @@ Node * Interpreter::processTokensToTree(vector<string> recursive_vector) {
         }
         recursive_vector.erase(recursive_vector.begin());
         recursive_vector.pop_back();
+//        Node* newNode = new Node(expression_factory(recursive_vector[0])); // new node holds first value
         recursive_vector[0].erase(recursive_vector[0].begin());
         recursive_vector[0].pop_back();
         recursive_vector[0].pop_back();
@@ -63,6 +67,7 @@ Node * Interpreter::processTokensToTree(vector<string> recursive_vector) {
     else {
         return nullptr;
     }
+
 }
 
 
@@ -291,11 +296,13 @@ Expression Interpreter::evaluateAddition(Node* node) {
     exp.express.Data.number_value = result_add_mary;
     exp.express.type = NumberType;
     Expression final_result = Expression(result_add_mary);
+//    return exp.express.Data.number_value;
     return final_result;
 }
 
 
 Expression Interpreter::evaluate_helper(Node * node) {
+
     string result;
     string add = "+", subtract = "-", multiply = "*", divide = "/", not_symbol = "not",
     or_symbol = "or", and_symbol = "and", less_than_symbol = "<", less_than_equal = "<=",
@@ -314,7 +321,7 @@ Expression Interpreter::evaluate_helper(Node * node) {
         double result_subtract = 0;
         Expression exp = new Expression;
         exp.express.type = NumberType;
-        
+
         if (node->children.size() > 2) {
             throw InterpreterSemanticError("Error: this is a binary type, input doesn't make sense");
         }
@@ -325,8 +332,8 @@ Expression Interpreter::evaluate_helper(Node * node) {
         result_subtract = subtract_expression(node->children[0]->data_expression, node->children[1]->data_expression);
         return exp.express.Data.number_value = result_subtract;
     }
-    
-    
+
+
     if (node->children.size() == 0) {
         if (node->data_expression.express.type == SymbolType) {
             if (env->is_present_in_map(node->data_expression.express.Data.string_value)) {
@@ -370,7 +377,9 @@ Expression Interpreter::evaluate_helper(Node * node) {
 
         for (int i = 0; i < node->children.size(); i++) {
             if (node->children[i]->children.size() >= 1) {
+
                 Expression recursive_result = evaluate_helper(node->children[i]);
+
                 result_multiply_mary = result_multiply_mary * recursive_result.express.Data.number_value;
             } else {
                 result_multiply_mary = result_multiply_mary * node->children[i]->data_expression.express.Data.number_value;
@@ -381,6 +390,7 @@ Expression Interpreter::evaluate_helper(Node * node) {
         return exp.express.Data.number_value;
     }
     else if (node_string == divide) {
+
         Expression exp = new Expression;
         exp.express.type = NumberType;
         double result_division = division(node->children[0]->data_expression, node->children[1]->data_expression);
@@ -395,6 +405,7 @@ Expression Interpreter::evaluate_helper(Node * node) {
         return exp.express.Data.boolean_value;
     }
     else if (node_string == or_symbol) {
+
         Expression exp = new Expression;
         exp.express.type = BooleanType;
 
@@ -409,14 +420,21 @@ Expression Interpreter::evaluate_helper(Node * node) {
         return exp.express.Data.boolean_value;
     }
     else if (node_string == and_symbol) {
+
         Expression exp = new Expression;
         exp.express.type = BooleanType;
+
+
         if (node->children[0]->data_expression.express.type == SymbolType && node->children[1]->data_expression.express.type == SymbolType) {
+
             bool boolean_one = env->value_at_element_in_map(node->children[0]->data_expression.express.Data.string_value);
             bool boolean_two = env->value_at_element_in_map(node->children[1]->data_expression.express.Data.string_value);
+
             Expression first(boolean_one);
             Expression second(boolean_two);
+
             bool result_and = logical_and(first.express.Data.boolean_value, second.express.Data.boolean_value);
+
             Expression result_expression(result_and);
             return result_expression.express.Data.boolean_value;
         }
@@ -476,6 +494,7 @@ Expression Interpreter::evaluate_helper(Node * node) {
             Expression complex_exp = new Expression;
             complex_exp = evaluate_helper(node->children[0]);
             Expression expression_map = new Expression;
+
             if (node->children[1]->data_expression.express.type == SymbolType) {
                 //check map
                 if (env->is_present_in_map(node->children[1]->data_expression.express.Data.string_value)) {
@@ -497,16 +516,19 @@ Expression Interpreter::evaluate_helper(Node * node) {
             Expression complex_exp = new Expression;
             complex_exp = evaluate_helper(node->children[1]);
             Expression expression_map = new Expression;
+
             if (node->children[0]->data_expression.express.type == SymbolType) {
                 //check map
                 if (env->is_present_in_map(node->children[0]->data_expression.express.Data.string_value)) {
                     expression_map = env->value_at_element_in_map(node->children[0]->data_expression.express.Data.string_value);
                 }
                 tuple<double, double> point_value(expression_map.express.Data.number_value, complex_exp.express.Data.number_value);
+//                final.express.Data.point_value = point_value;
                 final.express.Data.point.point_value = point_value;
                 return final.express.Data.point.point_value;
             }
             if (node->children[0]->data_expression.express.type == NumberType) {
+
                 tuple<double, double> point_value(complex_exp.express.Data.number_value, node->children[1]->data_expression.express.Data.number_value);
                 final.express.Data.point.point_value = point_value;
                 return final.express.Data.point.point_value;
@@ -516,7 +538,9 @@ Expression Interpreter::evaluate_helper(Node * node) {
             Expression express_one = new Expression;
             Expression express_two = new Expression;
             Expression final_result = new Expression;
+
             if (node->children[0]->data_expression.express.type == SymbolType && node->children[1]->data_expression.express.type == SymbolType) {
+
                 if ((env->is_present_in_map(node->children[0]->data_expression.express.Data.string_value)) && (env->is_present_in_map(node->children[1]->data_expression.express.Data.string_value))) {
                     express_one.express.Data.number_value = env->value_at_element_in_map(node->children[0]->data_expression.express.Data.string_value);
                     express_two.express.Data.number_value = env->value_at_element_in_map(node->children[1]->data_expression.express.Data.string_value);
@@ -548,6 +572,7 @@ Expression Interpreter::evaluate_helper(Node * node) {
                 else {
                     throw InterpreterSemanticError("Error: Missing map");
                 }
+
                 tuple<double, double> point_value(express_one.express.Data.number_value, node->children[0]->data_expression.express.Data.number_value);
                 final_result.express.Data.point.point_value = point_value;
                 return final_result.express.Data.point.point_value;
@@ -566,10 +591,12 @@ Expression Interpreter::evaluate_helper(Node * node) {
         Expression child1 = new Expression;
         Expression child2= new Expression;
         Expression result;
+        //children now contain the proper evaluated value...just in another location
         child1 = evaluate_helper(node->children[0]);
         child2 = evaluate_helper(node->children[1]);
         child1.express.Data.Line.line_value_start.point_value = child1.express.Data.point.point_value;
         child2.express.Data.Line.line_value_end.point_value = child2.express.Data.point.point_value;
+
         tuple<double, double> tuple_one(get<0>(child1.express.Data.Line.line_value_start.point_value), get<1>(child1.express.Data.Line.line_value_start.point_value));
         tuple<double, double> tuple_two(get<0>(child2.express.Data.Line.line_value_end.point_value), get<1>(child2.express.Data.Line.line_value_end.point_value));
         result.express.Data.Line.line_value_start.point_value = tuple_one;
@@ -592,6 +619,7 @@ Expression Interpreter::evaluate_helper(Node * node) {
                     drawVector.push_back(&draw_exp);
                 }
             }
+//            return draw_exp;
         }
     }
     return node->data_expression;
@@ -602,6 +630,7 @@ Expression Interpreter::evaluate_helper(Node * node) {
 vector<Expression *> Interpreter::drawVectorGetter() {
     return drawVector;
 }
+
 
 Expression Interpreter::eval() {
     Expression expression_evaluate;
@@ -639,6 +668,9 @@ Expression Interpreter::eval() {
     return expression_evaluate;
 }
 
+
+
+//_-nary functions
 bool Interpreter::logical_not(Expression x) {
     if (x.express.Data.boolean_value == false) {
         return true;

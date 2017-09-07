@@ -13,9 +13,7 @@ using namespace std;
 class Tokenize {
 
 public:
-    
     vector<string> tokenize(string expression);
-    
 };
 
 #endif
