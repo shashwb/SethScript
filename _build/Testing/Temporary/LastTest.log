@@ -1,10 +1,10 @@
-Start testing: Sep 07 13:10 EDT
+Start testing: Sep 07 14:16 EDT
 ----------------------------------------------------------
 1/1 Testing: unittests
 1/1 Test: unittests
-Command: "/Users/sethbalodi/Desktop/VTScript/_build/unittests"
-Directory: /Users/sethbalodi/Desktop/VTScript/_build
-"unittests" start time: Sep 07 13:10 EDT
+Command: "/Users/sethbalodi/CODE/Dev/PROGRAMMING/C++/VTScript/_build/unittests"
+Directory: /Users/sethbalodi/CODE/Dev/PROGRAMMING/C++/VTScript/_build
+"unittests" start time: Sep 07 14:16 EDT
 Output:
 ----------------------------------------------------------
 (15)
@@ -59,15 +59,43 @@ Output:
 (True)
 (False)
 (True)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+unittests is a Catch v1.5.4 host application.
+Run with -? for options
+
+-------------------------------------------------------------------------------
+Test file tests/test0.vts
+-------------------------------------------------------------------------------
+/Users/sethbalodi/CODE/project1-shashwb/test_interpreter.cpp:332
+...............................................................................
+
+/Users/sethbalodi/CODE/project1-shashwb/test_interpreter.cpp:337: FAILED:
+  REQUIRE( ifs.good() == true )
+with expansion:
+  false == true
+
+-------------------------------------------------------------------------------
+Test syntactically INCORRECT files
+-------------------------------------------------------------------------------
+/Users/sethbalodi/CODE/project1-shashwb/test_interpreter.cpp:345
+...............................................................................
+
+/Users/sethbalodi/CODE/project1-shashwb/test_interpreter.cpp:350: FAILED:
+  REQUIRE( ifs.good() == true )
+with expansion:
+  false == true
+
 ===============================================================================
-All tests passed (218 assertions in 31 test cases)
+test cases:  31 |  29 passed | 2 failed
+assertions: 216 | 214 passed | 2 failed
 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
-Test Passed.
-"unittests" end time: Sep 07 13:10 EDT
+Test Failed.
+"unittests" end time: Sep 07 14:16 EDT
 "unittests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 07 13:10 EDT
+End testing: Sep 07 14:16 EDT
