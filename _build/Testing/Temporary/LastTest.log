@@ -1,10 +1,10 @@
-Start testing: Sep 07 12:57 EDT
+Start testing: Sep 07 13:10 EDT
 ----------------------------------------------------------
 1/1 Testing: unittests
 1/1 Test: unittests
-Command: "/Users/sethbalodi/CODE/project1-shashwb/_build/unittests"
-Directory: /Users/sethbalodi/CODE/project1-shashwb/_build
-"unittests" start time: Sep 07 12:57 EDT
+Command: "/Users/sethbalodi/Desktop/VTScript/_build/unittests"
+Directory: /Users/sethbalodi/Desktop/VTScript/_build
+"unittests" start time: Sep 07 13:10 EDT
 Output:
 ----------------------------------------------------------
 (15)
@@ -63,11 +63,11 @@ Output:
 All tests passed (218 assertions in 31 test cases)
 
 <end of output>
-Test time =   0.02 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"unittests" end time: Sep 07 12:57 EDT
+"unittests" end time: Sep 07 13:10 EDT
 "unittests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 07 12:57 EDT
+End testing: Sep 07 13:10 EDT
