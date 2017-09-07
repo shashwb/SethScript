@@ -9,10 +9,7 @@
 
 using namespace std;
 
-//does this shit work?
-//okay let's try this again
-//okay nice
-
+//helsjdf;lajd
 
 Interpreter::Interpreter() {
     root = nullptr;
